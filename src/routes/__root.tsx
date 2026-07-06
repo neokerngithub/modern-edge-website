@@ -11,20 +11,52 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SiteHeader } from "../components/site/SiteHeader";
+import { SiteFooter } from "../components/site/SiteFooter";
+
+const TITLE = "Modern Edge Architects & Engineers Pvt. Ltd. | Nepal";
+const DESCRIPTION =
+  "A multidisciplinary consultancy delivering architecture, civil engineering, property valuation, construction, interior and landscape design across Nepal.";
+
+const ORG_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Modern Edge Architects & Engineers Pvt. Ltd.",
+  description: DESCRIPTION,
+  url: "/",
+  telephone: "+977-9852059599",
+  email: "info@modernedge.com.np",
+  areaServed: "Nepal",
+  address: [
+    {
+      "@type": "PostalAddress",
+      streetAddress: "Duhabi-06",
+      addressLocality: "Sunsari",
+      addressCountry: "NP",
+    },
+    {
+      "@type": "PostalAddress",
+      streetAddress: "Biratnagar-10",
+      addressLocality: "Morang",
+      addressCountry: "NP",
+    },
+  ],
+  sameAs: [],
+};
 
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
+        <h1 className="font-display text-7xl text-ink">404</h1>
+        <h2 className="mt-4 text-xl text-ink">Page not found</h2>
+        <p className="mt-2 text-sm text-ink-muted">
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="mt-6">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90"
           >
             Go home
           </Link>
@@ -44,10 +76,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
-        </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
+        <h1 className="text-xl text-ink">This page didn't load</h1>
+        <p className="mt-2 text-sm text-ink-muted">
           Something went wrong on our end. You can try refreshing or head back home.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
@@ -56,13 +86,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90"
           >
             Try again
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="inline-flex items-center justify-center rounded-full border border-hairline bg-background px-5 py-2.5 text-sm font-medium text-ink hover:bg-surface"
           >
             Go home
           </a>
@@ -77,21 +107,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { name: "author", content: "Modern Edge Architects & Engineers Pvt. Ltd." },
+      { property: "og:site_name", content: "Modern Edge" },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: DESCRIPTION },
+      { name: "theme-color", content: "#004AAD" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(ORG_JSONLD),
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -119,8 +161,11 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <SiteHeader />
+      <main className="min-h-screen">
+        <Outlet />
+      </main>
+      <SiteFooter />
     </QueryClientProvider>
   );
 }

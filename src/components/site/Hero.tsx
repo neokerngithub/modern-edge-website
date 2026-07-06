@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import hero from "@/assets/hero-architecture.jpg";
 
 const INDEX = [
-  { k: "10", v: "Practice areas" },
+  { k: "09", v: "Core disciplines" },
   { k: "02", v: "Offices in Nepal" },
   { k: "15+", v: "Years combined" },
   { k: "Bank-grade", v: "Valuation reporting" },
@@ -14,7 +14,7 @@ export function Hero() {
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-ink text-white">
       <img
         src={hero}
-        alt="Modern architectural building at dusk"
+        alt="Contemporary architectural facade at dusk"
         width={1920}
         height={1280}
         fetchPriority="high"
@@ -29,8 +29,8 @@ export function Hero() {
         className="absolute inset-0 bg-[radial-gradient(ellipse_at_15%_10%,oklch(0.45_0.19_262/0.28),transparent_55%)]"
       />
 
-      {/* subtle top-right index mark */}
-      <div className="pointer-events-none absolute top-24 right-6 md:right-10 hidden md:flex items-center gap-3 text-white/50 text-[10px] uppercase tracking-[0.32em] z-10">
+      {/* subtle top-right location index */}
+      <div className="pointer-events-none absolute top-24 right-6 md:right-10 hidden md:flex items-center gap-3 text-white/55 text-[10px] uppercase tracking-[0.32em] z-10">
         <span>Est. Nepal</span>
         <span aria-hidden className="h-px w-6 bg-white/30" />
         <span>Duhabi · Biratnagar</span>
@@ -40,8 +40,8 @@ export function Hero() {
         <div className="max-w-5xl animate-rise">
           <div className="flex items-center gap-4">
             <span className="h-px w-14 bg-primary animate-line" />
-            <span className="text-[11px] uppercase tracking-[0.34em] text-white/75">
-              Modern Edge · Architects &amp; Engineers Pvt. Ltd.
+            <span className="text-[11px] uppercase tracking-[0.34em] text-white/80">
+              Multidisciplinary Engineering Consultancy · Nepal
             </span>
           </div>
 
@@ -55,10 +55,10 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="mt-10 max-w-xl text-[15px] md:text-base leading-[1.75] text-white/70">
-            A multidisciplinary consultancy delivering architecture, civil engineering,
-            property valuation, construction, interior and landscape solutions across
-            Nepal — for homeowners, businesses, banks, industries and government agencies.
+          <p className="mt-10 max-w-2xl text-[15px] md:text-[17px] leading-[1.7] text-white/80">
+            Modern Edge Architects &amp; Engineers Pvt. Ltd. delivers architecture, civil
+            engineering, construction and bank-grade property valuation — for homeowners,
+            businesses, banks, industries and government agencies across Nepal.
           </p>
 
           <div className="mt-12 flex flex-wrap items-center gap-3">
@@ -68,7 +68,7 @@ export function Hero() {
             >
               Request Consultation
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-ink text-white transition-transform duration-500 group-hover:translate-x-0.5 group-hover:bg-white group-hover:text-primary">
-                <ArrowRight size={15} />
+                <ArrowRight size={15} aria-hidden />
               </span>
             </Link>
             <Link
@@ -77,6 +77,14 @@ export function Hero() {
             >
               Explore Services
             </Link>
+            <a
+              href="tel:+9779852059599"
+              className="hidden sm:inline-flex items-center gap-2 px-3 py-3 text-[13px] text-white/70 hover:text-white transition-colors"
+              aria-label="Call Modern Edge"
+            >
+              <Phone size={14} aria-hidden />
+              +977 98520 59599
+            </a>
           </div>
         </div>
 

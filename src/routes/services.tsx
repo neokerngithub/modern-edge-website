@@ -1,19 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
 import { ServicesGrid } from "@/components/site/ServicesGrid";
+import { ProcessTimelines } from "@/components/site/ProcessTimelines";
+import { PageHeader } from "@/components/site/PageHeader";
+
+const SERVICES_TITLE =
+  "Services — Architecture, Engineering, Construction & Valuation | Nepal";
+const SERVICES_DESC =
+  "Nine core disciplines under one roof: property valuation, construction, architecture, civil engineering, municipal drawings, DPR, interiors, landscape and real estate consultancy — across Nepal.";
 
 export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({
     meta: [
-      { title: "Services — Modern Edge Architects & Engineers" },
-      {
-        name: "description",
-        content:
-          "Architecture, civil engineering, property valuation, construction, interior & landscape design, municipal drawings, DPR, real estate consultancy and CAD training.",
-      },
-      { property: "og:title", content: "Services — Modern Edge" },
+      { title: SERVICES_TITLE },
+      { name: "description", content: SERVICES_DESC },
+      { property: "og:title", content: SERVICES_TITLE },
+      { property: "og:description", content: SERVICES_DESC },
       { property: "og:url", content: "/services" },
+      { name: "twitter:title", content: SERVICES_TITLE },
+      { name: "twitter:description", content: SERVICES_DESC },
     ],
     links: [{ rel: "canonical", href: "/services" }],
   }),
@@ -22,25 +28,40 @@ export const Route = createFileRoute("/services")({
 function ServicesPage() {
   return (
     <>
-      <section className="pt-40 pb-16 md:pt-48 md:pb-24 border-b border-hairline">
-        <div className="container-x max-w-4xl">
-          <div className="eyebrow">Our services</div>
-          <h1 className="mt-5 font-display text-5xl md:text-7xl leading-[1.02] tracking-[-0.02em] text-ink">
-            Ten disciplines.
+      <PageHeader
+        index="02 / Services"
+        breadcrumb="Services"
+        eyebrow="What we do"
+        title={
+          <>
+            Nine core disciplines.
             <span className="block text-ink-muted italic font-normal">
-              One accountable team.
+              Two signature practices.
             </span>
-          </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-muted">
-            From concept design and municipal approval through construction, finishing and
-            handover — every service is delivered in-house, with property valuation as our
-            signature institutional practice.
-          </p>
-        </div>
-      </section>
+          </>
+        }
+        intro="From concept design and municipal approval through structural works, finishing and handover — every service is delivered in-house by one accountable team. Property Valuation and Construction Services anchor the practice."
+        meta={
+          <div className="text-[11px] uppercase tracking-[0.24em] text-ink-muted space-y-2">
+            <div>Residential · Commercial</div>
+            <div>Industrial · Institutional</div>
+            <div className="text-primary">Nepal-wide</div>
+          </div>
+        }
+      />
 
-      <Section className="pt-24">
+      <Section className="pt-20 md:pt-28">
         <ServicesGrid />
+      </Section>
+
+      <Section
+        className="bg-surface"
+        index="03 / Process"
+        eyebrow="How we deliver"
+        title="Structured workflows for every engagement."
+        intro="Three transparent processes tailored to construction, valuation and interior & exterior work — designed for predictable delivery."
+      >
+        <ProcessTimelines />
       </Section>
     </>
   );

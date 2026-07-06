@@ -2,77 +2,111 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import hero from "@/assets/hero-architecture.jpg";
 
+const INDEX = [
+  { k: "10", v: "Practice areas" },
+  { k: "02", v: "Offices in Nepal" },
+  { k: "15+", v: "Years combined" },
+  { k: "Bank-grade", v: "Valuation reporting" },
+];
+
 export function Hero() {
   return (
-    <section className="relative min-h-[100svh] w-full overflow-hidden bg-ink">
+    <section className="relative min-h-[100svh] w-full overflow-hidden bg-ink text-white">
       <img
         src={hero}
         alt="Modern architectural building at dusk"
         width={1920}
         height={1280}
         fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover opacity-70"
+        className="absolute inset-0 h-full w-full object-cover opacity-[0.55] scale-[1.02]"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/55 to-ink/85"
+        className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/50 to-ink/95"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,oklch(0.45_0.19_262/0.35),transparent_60%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_15%_10%,oklch(0.45_0.19_262/0.28),transparent_55%)]"
       />
 
-      <div className="relative z-10 container-x flex min-h-[100svh] flex-col justify-end pb-20 pt-40">
-        <div className="max-w-4xl animate-rise">
+      {/* subtle top-right index mark */}
+      <div className="pointer-events-none absolute top-24 right-6 md:right-10 hidden md:flex items-center gap-3 text-white/50 text-[10px] uppercase tracking-[0.32em] z-10">
+        <span>Est. Nepal</span>
+        <span aria-hidden className="h-px w-6 bg-white/30" />
+        <span>Duhabi · Biratnagar</span>
+      </div>
+
+      <div className="relative z-10 container-x flex min-h-[100svh] flex-col justify-end pb-16 md:pb-24 pt-40">
+        <div className="max-w-5xl animate-rise">
           <div className="flex items-center gap-4">
-            <span className="h-px w-12 bg-primary animate-line" />
-            <span className="text-[11px] uppercase tracking-[0.32em] text-white/80">
+            <span className="h-px w-14 bg-primary animate-line" />
+            <span className="text-[11px] uppercase tracking-[0.34em] text-white/75">
               Modern Edge · Architects &amp; Engineers Pvt. Ltd.
             </span>
           </div>
 
-          <h1 className="mt-8 font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-[-0.03em] text-white">
-            Engineering Excellence.
-            <span className="block text-white/80 italic font-normal">Designing Tomorrow.</span>
+          <h1 className="mt-10 font-display font-light text-[13vw] sm:text-[11vw] md:text-[8vw] lg:text-[6.4vw] xl:text-[5.6vw] leading-[0.96] tracking-[-0.035em] text-white max-w-[16ch]">
+            <span className="block">Engineering</span>
+            <span className="block">
+              Excellence<span className="text-primary">.</span>
+            </span>
+            <span className="block italic font-normal text-white/70">
+              Designing Tomorrow<span className="text-primary not-italic">.</span>
+            </span>
           </h1>
 
-          <p className="mt-8 max-w-2xl text-base md:text-lg leading-relaxed text-white/75">
+          <p className="mt-10 max-w-xl text-[15px] md:text-base leading-[1.75] text-white/70">
             A multidisciplinary consultancy delivering architecture, civil engineering,
-            property valuation, construction, interior and landscape solutions across Nepal —
-            for homeowners, businesses, banks, industries and government agencies.
+            property valuation, construction, interior and landscape solutions across
+            Nepal — for homeowners, businesses, banks, industries and government agencies.
           </p>
 
-          <div className="mt-12 flex flex-wrap items-center gap-4">
+          <div className="mt-12 flex flex-wrap items-center gap-3">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-medium text-ink hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="group inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-[13px] font-medium text-ink hover:bg-primary hover:text-primary-foreground transition-colors duration-500"
             >
-              Request Consultation <ArrowRight size={16} />
+              Request Consultation
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-ink text-white transition-transform duration-500 group-hover:translate-x-0.5 group-hover:bg-white group-hover:text-primary">
+                <ArrowRight size={15} />
+              </span>
             </Link>
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-sm font-medium text-white hover:bg-white/10 transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 text-[13px] font-medium text-white/90 hover:bg-white/10 hover:border-white/50 transition-colors"
             >
               Explore Services
             </Link>
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/15 pt-8 text-white/80">
-          {[
-            { k: "10", v: "Practice areas" },
-            { k: "2", v: "Offices in Nepal" },
-            { k: "15+", v: "Years combined experience" },
-            { k: "Bank-grade", v: "Valuation reporting" },
-          ].map((s) => (
-            <div key={s.v}>
-              <div className="font-display text-3xl md:text-4xl text-white">{s.k}</div>
-              <div className="mt-1 text-xs uppercase tracking-[0.22em] text-white/60">
+        {/* Editorial index row */}
+        <div className="mt-20 md:mt-24 border-t border-white/12 pt-8 grid grid-cols-2 md:grid-cols-4">
+          {INDEX.map((s, i) => (
+            <div
+              key={s.v}
+              className={`px-0 md:px-6 py-3 md:py-0 ${
+                i > 0 ? "md:border-l border-white/12" : ""
+              }`}
+            >
+              <div className="font-display text-2xl md:text-3xl text-white tracking-tight">
+                {s.k}
+              </div>
+              <div className="mt-2 text-[10px] uppercase tracking-[0.28em] text-white/55">
                 {s.v}
               </div>
             </div>
           ))}
         </div>
+      </div>
+
+      {/* scroll cue */}
+      <div
+        aria-hidden
+        className="hidden md:flex absolute bottom-6 right-8 items-center gap-2 text-white/50 text-[10px] uppercase tracking-[0.3em] z-10"
+      >
+        Scroll
+        <span className="block h-6 w-px bg-white/40" />
       </div>
     </section>
   );

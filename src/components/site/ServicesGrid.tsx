@@ -105,31 +105,65 @@ export function ServicesGrid() {
         {CORE_SERVICES.map((s, i) => {
           const Icon = s.icon;
           const idx = String(i + 3).padStart(2, "0");
+          const isLast = i === CORE_SERVICES.length - 1;
           return (
             <article
               key={s.title}
-              className="group relative bg-white p-9 md:p-10 transition-colors duration-500 hover:bg-surface"
+              className={`group relative bg-white p-9 md:p-10 transition-colors duration-500 hover:bg-surface ${
+                isLast ? "lg:col-span-3" : ""
+              }`}
             >
-              <div className="flex items-start justify-between">
-                <div className="flex h-11 w-11 items-center justify-center rounded-md border border-hairline text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors duration-500">
-                  <Icon size={20} strokeWidth={1.5} aria-hidden />
+              {isLast ? (
+                <div className="grid gap-8 md:grid-cols-12 items-center">
+                  <div className="md:col-span-1 flex items-center justify-between md:justify-start md:flex-col md:items-start gap-4">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-md border border-hairline text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors duration-500">
+                      <Icon size={20} strokeWidth={1.5} aria-hidden />
+                    </div>
+                    <span className="font-display text-xs text-ink-muted tabular-nums tracking-[0.14em]">
+                      {idx}
+                    </span>
+                  </div>
+                  <div className="md:col-span-8 md:pl-4">
+                    <h3 className="text-xl md:text-[26px] font-display font-medium tracking-[-0.012em] text-ink">
+                      {s.title}
+                    </h3>
+                    <p className="mt-3 max-w-2xl text-[14.5px] leading-[1.7] text-ink-muted">
+                      {s.description}
+                    </p>
+                  </div>
+                  <div className="md:col-span-3 flex md:justify-end">
+                    <ArrowUpRight
+                      size={22}
+                      strokeWidth={1.4}
+                      aria-hidden
+                      className="text-ink/60 transition-all duration-500 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    />
+                  </div>
                 </div>
-                <span className="font-display text-xs text-ink-muted tabular-nums tracking-[0.14em]">
-                  {idx}
-                </span>
-              </div>
-              <h3 className="mt-8 text-xl md:text-[22px] font-display font-medium tracking-[-0.01em] text-ink">
-                {s.title}
-              </h3>
-              <p className="mt-3 text-[14px] leading-[1.7] text-ink-muted">
-                {s.description}
-              </p>
-              <ArrowUpRight
-                size={18}
-                strokeWidth={1.5}
-                aria-hidden
-                className="mt-8 text-ink/60 transition-all duration-500 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
+              ) : (
+                <>
+                  <div className="flex items-start justify-between">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-md border border-hairline text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors duration-500">
+                      <Icon size={20} strokeWidth={1.5} aria-hidden />
+                    </div>
+                    <span className="font-display text-xs text-ink-muted tabular-nums tracking-[0.14em]">
+                      {idx}
+                    </span>
+                  </div>
+                  <h3 className="mt-8 text-xl md:text-[22px] font-display font-medium tracking-[-0.01em] text-ink">
+                    {s.title}
+                  </h3>
+                  <p className="mt-3 text-[14px] leading-[1.7] text-ink-muted">
+                    {s.description}
+                  </p>
+                  <ArrowUpRight
+                    size={18}
+                    strokeWidth={1.5}
+                    aria-hidden
+                    className="mt-8 text-ink/60 transition-all duration-500 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
+                </>
+              )}
             </article>
           );
         })}

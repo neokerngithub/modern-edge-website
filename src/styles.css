@@ -103,6 +103,21 @@
     background: var(--primary);
     color: var(--primary-foreground);
   }
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 @utility container-x {

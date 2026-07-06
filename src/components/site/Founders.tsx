@@ -16,7 +16,7 @@ const FOUNDERS = [
     name: "Md. Samir Hussain",
     role: "Director & Co-Founder",
     img: samir,
-    experience: "5+ years",
+    experience: "9+ years",
     bio: "Mr. Md. Samir Hussain has led major industrial, commercial and residential projects with a focus on quality, innovation and structural excellence. His expertise spans civil and earthquake engineering, construction supervision and property valuation.",
     highlights: ["Swastik Oil Industries","OCB Processing Industries","Global Plastic Industries","Ruchi Khadya Udhyog","Itahari Stadium"],
     discipline: "Civil & Earthquake Engineering",

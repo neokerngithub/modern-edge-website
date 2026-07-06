@@ -21,24 +21,24 @@ const ITEMS = [
 
 export function Testimonials() {
   return (
-    <div className="grid gap-6 md:grid-cols-3">
+    <div className="grid gap-px bg-hairline border border-hairline rounded-[20px] overflow-hidden md:grid-cols-3">
       {ITEMS.map((t, i) => (
         <figure
           key={i}
-          className="relative rounded-2xl border border-hairline bg-white p-8 card-lift"
+          className="relative bg-white p-10 md:p-12 flex flex-col"
         >
-          <div
-            aria-hidden
-            className="font-display text-6xl leading-none text-primary/20 select-none"
-          >
-            &ldquo;
+          <div className="flex items-center gap-3 text-primary">
+            <span className="font-display text-xs tabular-nums tracking-[0.14em]">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <span aria-hidden className="h-px w-8 bg-primary/50" />
           </div>
-          <blockquote className="mt-2 text-base leading-relaxed text-ink">
-            {t.quote}
+          <blockquote className="mt-6 font-display text-lg md:text-xl leading-[1.5] tracking-[-0.01em] text-ink">
+            &ldquo;{t.quote}&rdquo;
           </blockquote>
-          <figcaption className="mt-8 pt-6 border-t border-hairline">
-            <div className="text-sm font-medium text-ink">{t.name}</div>
-            <div className="text-xs text-ink-muted mt-0.5">{t.org}</div>
+          <figcaption className="mt-auto pt-10">
+            <div className="text-[13px] font-medium text-ink">{t.name}</div>
+            <div className="text-xs text-ink-muted mt-1">{t.org}</div>
           </figcaption>
         </figure>
       ))}

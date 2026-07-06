@@ -3,15 +3,7 @@ const PROCESSES = [
     key: "construction",
     title: "Construction",
     kicker: "End-to-end delivery",
-    steps: [
-      "Consultation",
-      "Site Analysis",
-      "Concept Design",
-      "Estimation",
-      "Construction",
-      "Finishing",
-      "Handover",
-    ],
+    steps: ["Consultation","Site Analysis","Concept Design","Estimation","Construction","Finishing","Handover"],
     description:
       "A structured, client-centered execution — from a detailed consultation and site analysis, through refined concept design and transparent estimation, to precise construction, elegant finishing and a seamless handover.",
   },
@@ -19,13 +11,7 @@ const PROCESSES = [
     key: "valuation",
     title: "Valuation",
     kicker: "Bank & institutional reporting",
-    steps: [
-      "Documents Collection",
-      "Site Inspection",
-      "Verification",
-      "Preliminary Report",
-      "Final Report",
-    ],
+    steps: ["Documents Collection","Site Inspection","Verification","Preliminary Report","Final Report"],
     description:
       "Beginning with the assignment from the bank, we collect and verify ownership documents, conduct a thorough site inspection, and deliver a preliminary report followed by an accurate, transparent final valuation.",
   },
@@ -33,17 +19,7 @@ const PROCESSES = [
     key: "interior",
     title: "Interior & Exterior",
     kicker: "Design to delivery, one roof",
-    steps: [
-      "3D Approval",
-      "Drawings",
-      "BOQ",
-      "Site Survey",
-      "Team Mobilization",
-      "Execution",
-      "Finishing",
-      "Styling",
-      "Handover",
-    ],
+    steps: ["3D Approval","Drawings","BOQ","Site Survey","Team Mobilization","Execution","Finishing","Styling","Handover"],
     description:
       "After 3D approval, drawings and the BOQ are prepared in-house. A site survey verifies measurements before our own team executes civil, electrical, carpentry and finishing works — closed by styling, quality checks and handover.",
   },
@@ -51,41 +27,46 @@ const PROCESSES = [
 
 export function ProcessTimelines() {
   return (
-    <div className="space-y-16 md:space-y-24">
+    <div className="space-y-24 md:space-y-32">
       {PROCESSES.map((p, i) => (
-        <div key={p.key} className="grid gap-10 lg:grid-cols-12 lg:gap-16 items-start">
-          <div className="lg:col-span-4">
-            <div className="flex items-baseline gap-4">
-              <span className="font-display text-5xl text-primary">
+        <div
+          key={p.key}
+          className="grid gap-12 lg:grid-cols-12 lg:gap-20 items-start border-t border-hairline pt-14"
+        >
+          <div className="lg:col-span-5">
+            <div className="flex items-baseline gap-6">
+              <span className="font-display font-light text-7xl md:text-8xl text-ink leading-none tracking-[-0.04em]">
                 0{i + 1}
               </span>
-              <div>
+              <div className="pb-1">
                 <div className="eyebrow">{p.kicker}</div>
-                <h3 className="mt-1 text-3xl md:text-4xl text-ink">{p.title}</h3>
+                <h3 className="mt-2 font-display text-3xl md:text-4xl text-ink tracking-[-0.02em]">
+                  {p.title}
+                </h3>
               </div>
             </div>
-            <p className="mt-6 text-sm leading-relaxed text-ink-muted">
+            <p className="mt-8 max-w-md text-[15px] leading-[1.75] text-ink-muted">
               {p.description}
             </p>
           </div>
 
-          <div className="lg:col-span-8">
-            <ol className="relative">
-              <div className="absolute left-[11px] top-2 bottom-2 w-px bg-hairline" aria-hidden />
+          <div className="lg:col-span-7">
+            <ol className="relative divide-y divide-hairline">
               {p.steps.map((step, idx) => (
-                <li key={step} className="relative flex items-start gap-5 py-4">
-                  <span
-                    className={`relative z-10 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border ${
-                      idx === 0
-                        ? "border-primary bg-primary text-primary-foreground"
-                        : "border-hairline bg-white text-ink-muted"
-                    } text-[10px] font-semibold`}
-                  >
-                    {idx + 1}
+                <li
+                  key={step}
+                  className="group flex items-baseline gap-8 py-5 transition-colors hover:text-primary"
+                >
+                  <span className="font-display text-xs text-ink-muted tabular-nums tracking-[0.14em] w-8">
+                    {String(idx + 1).padStart(2, "0")}
                   </span>
-                  <div className="flex-1 pt-0.5">
-                    <div className="text-base md:text-lg text-ink">{step}</div>
-                  </div>
+                  <span className="flex-1 font-display text-lg md:text-xl text-ink tracking-[-0.01em] group-hover:text-primary transition-colors">
+                    {step}
+                  </span>
+                  <span
+                    aria-hidden
+                    className="hidden md:block h-px w-0 bg-primary transition-all duration-500 group-hover:w-16"
+                  />
                 </li>
               ))}
             </ol>

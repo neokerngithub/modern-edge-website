@@ -38,17 +38,20 @@ function HomePage() {
       {/* About preview */}
       <Section
         id="about"
-        eyebrow="About Modern Edge"
+        index="01 — About"
+        eyebrow="The practice"
         title={
           <>
-            A multidisciplinary practice shaping
-            <span className="text-primary"> Nepal's built environment.</span>
+            A multidisciplinary practice
+            <span className="block text-ink-muted italic font-normal">
+              shaping Nepal's built environment.
+            </span>
           </>
         }
       >
-        <div className="grid gap-14 lg:grid-cols-12 items-start">
+        <div className="grid gap-16 lg:grid-cols-12 items-start">
           <div className="lg:col-span-7">
-            <div className="overflow-hidden rounded-2xl border border-hairline">
+            <div className="relative overflow-hidden rounded-[20px] bg-surface">
               <img
                 src={aboutImg}
                 alt="Architects reviewing blueprints"
@@ -58,40 +61,43 @@ function HomePage() {
                 className="w-full h-auto object-cover"
               />
             </div>
+            <div className="mt-6 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-ink-muted">
+              <span>Studio · Duhabi</span>
+              <span className="h-px flex-1 mx-6 bg-hairline" />
+              <span>Established Nepal</span>
+            </div>
           </div>
           <div className="lg:col-span-5">
-            <p className="text-lg leading-relaxed text-ink">
+            <p className="text-lg md:text-xl leading-[1.55] tracking-[-0.005em] text-ink">
               Founded by a team of seasoned professionals, Modern Edge was created with a
               vision to become a leading force in Nepal's engineering and architectural
               landscape.
             </p>
-            <p className="mt-5 text-base leading-relaxed text-ink-muted">
+            <p className="mt-6 text-[15px] leading-[1.75] text-ink-muted">
               We offer a comprehensive range of services — architectural design, planning,
               estimation, interiors and landscape, property valuation and construction
-              management — for residential, commercial and government clients alike. Driven by
-              innovation, precision and a passion for excellence, we strive to redefine
-              modern infrastructure and design standards.
+              management — for residential, commercial and government clients alike.
             </p>
 
-            <div className="mt-10 grid grid-cols-2 gap-8">
+            <div className="mt-12 grid grid-cols-2 gap-10 border-t border-hairline pt-8">
               <div>
                 <div className="eyebrow">Vision</div>
-                <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-                  To become Nepal's leading multidisciplinary firm — delivering innovative,
-                  sustainable and high-quality solutions that shape modern living.
+                <p className="mt-3 text-[13.5px] leading-relaxed text-ink-muted">
+                  To become Nepal's leading multidisciplinary firm — delivering innovative
+                  and sustainable solutions that shape modern living.
                 </p>
               </div>
               <div>
                 <div className="eyebrow">Mission</div>
-                <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-                  To deliver end-to-end design and engineering services through
-                  collaboration, creativity and technical excellence.
+                <p className="mt-3 text-[13.5px] leading-relaxed text-ink-muted">
+                  End-to-end design and engineering delivered through collaboration and
+                  technical excellence.
                 </p>
               </div>
             </div>
 
-            <Link to="/about" className="mt-10 link-underline">
-              Read the full story <ArrowRight size={16} />
+            <Link to="/about" className="link-underline mt-12">
+              Read the full story <ArrowRight size={14} />
             </Link>
           </div>
         </div>
@@ -101,6 +107,7 @@ function HomePage() {
       <Section
         id="services"
         className="bg-surface"
+        index="02 — Services"
         eyebrow="What we do"
         title={<>Ten disciplines. One accountable team.</>}
         intro="Every service is delivered in-house — from concept and drawings through construction, finishing and handover — with property valuation as our signature institutional practice."
@@ -111,7 +118,8 @@ function HomePage() {
       {/* Why choose us */}
       <Section
         id="why"
-        eyebrow="Why Modern Edge"
+        index="03 — Why Modern Edge"
+        eyebrow="Our approach"
         title="Precision, trust and disciplined delivery."
         intro="What sets our practice apart in Nepal's architecture and engineering landscape."
       >
@@ -122,8 +130,9 @@ function HomePage() {
       <Section
         id="process"
         className="bg-surface"
+        index="04 — Process"
         eyebrow="How we work"
-        title="Three processes. One standard of excellence."
+        title="Three workflows. One standard of excellence."
         intro="Every engagement — whether construction, valuation, or interior & exterior — follows a structured, transparent workflow."
       >
         <ProcessTimelines />
@@ -132,9 +141,10 @@ function HomePage() {
       {/* Founders */}
       <Section
         id="founders"
-        eyebrow="Leadership"
-        title="Meet our founders."
-        intro="The engineers and directors leading Modern Edge — with decades of combined experience across valuation, construction and design."
+        index="05 — Leadership"
+        eyebrow="Meet our founders"
+        title="The directors behind Modern Edge."
+        intro="Decades of combined experience across valuation, construction and design — leading every project with precision and accountability."
       >
         <Founders />
       </Section>
@@ -143,7 +153,8 @@ function HomePage() {
       <Section
         id="testimonials"
         className="bg-surface"
-        eyebrow="Client voices"
+        index="06 — Client voices"
+        eyebrow="Trusted"
         title="Trusted by institutions and homeowners alike."
       >
         <Testimonials />
@@ -152,6 +163,7 @@ function HomePage() {
       {/* Contact */}
       <Section
         id="contact"
+        index="07 — Contact"
         eyebrow="Get in touch"
         title="Start a conversation."
         intro="Consultations, valuations and project inquiries — we respond within one business day."

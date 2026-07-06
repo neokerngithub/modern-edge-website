@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 export function Section({
   id,
+  index,
   eyebrow,
   title,
   intro,
@@ -10,6 +11,7 @@ export function Section({
   className = "",
 }: {
   id?: string;
+  index?: string;
   eyebrow?: string;
   title?: ReactNode;
   intro?: ReactNode;
@@ -17,23 +19,44 @@ export function Section({
   children?: ReactNode;
   className?: string;
 }) {
+  const centered = align === "center";
   return (
-    <section id={id} className={`py-24 md:py-32 ${className}`}>
+    <section id={id} className={`py-28 md:py-40 ${className}`}>
       <div className="container-x">
         {(eyebrow || title || intro) && (
-          <div
-            className={`max-w-3xl ${align === "center" ? "mx-auto text-center" : ""} mb-16 md:mb-20`}
+          <header
+            className={`mb-20 md:mb-28 ${
+              centered ? "mx-auto max-w-3xl text-center" : "max-w-4xl"
+            }`}
           >
-            {eyebrow && <div className="eyebrow">{eyebrow}</div>}
+            {(index || eyebrow) && (
+              <div
+                className={`flex items-center gap-4 ${
+                  centered ? "justify-center" : ""
+                }`}
+              >
+                {index && (
+                  <span className="font-display text-xs text-primary tabular-nums tracking-[0.14em]">
+                    {index}
+                  </span>
+                )}
+                {index && eyebrow && (
+                  <span aria-hidden className="h-px w-8 bg-primary/60" />
+                )}
+                {eyebrow && <span className="eyebrow">{eyebrow}</span>}
+              </div>
+            )}
             {title && (
-              <h2 className="mt-4 text-4xl md:text-5xl leading-[1.05] text-ink">
+              <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl leading-[1.02] tracking-[-0.022em] text-ink">
                 {title}
               </h2>
             )}
             {intro && (
-              <p className="mt-6 text-lg leading-relaxed text-ink-muted">{intro}</p>
+              <p className="mt-7 max-w-2xl text-base md:text-lg leading-relaxed text-ink-muted">
+                {intro}
+              </p>
             )}
-          </div>
+          </header>
         )}
         {children}
       </div>

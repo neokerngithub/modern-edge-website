@@ -130,15 +130,15 @@ export function ContactBlock() {
           )}
         </form>
 
-        <div className="mt-10 rounded-xl overflow-hidden border border-hairline">
+        <div className="mt-12 rounded-[16px] overflow-hidden border border-hairline">
           <iframe
             title="Modern Edge — Duhabi Office location"
             src="https://www.google.com/maps?q=Duhabi%2C%20Sunsari%2C%20Nepal&output=embed"
             width="100%"
-            height="260"
+            height="340"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="block w-full"
+            className="block w-full grayscale contrast-[1.05]"
           />
         </div>
       </div>

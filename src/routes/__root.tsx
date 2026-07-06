@@ -14,33 +14,70 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/site/SiteHeader";
 import { SiteFooter } from "../components/site/SiteFooter";
 
-const TITLE = "Modern Edge Architects & Engineers Pvt. Ltd. | Nepal";
+const TITLE =
+  "Modern Edge — Multidisciplinary Engineering Consultancy in Nepal";
 const DESCRIPTION =
-  "A multidisciplinary consultancy delivering architecture, civil engineering, property valuation, construction, interior and landscape design across Nepal.";
+  "Modern Edge Architects & Engineers Pvt. Ltd. — architecture, civil engineering, construction and bank-grade property valuation for homeowners, businesses, banks, industries and government across Nepal.";
+
+const CORE_DISCIPLINES = [
+  "Architecture",
+  "Civil Engineering",
+  "Construction Services",
+  "Property Valuation",
+  "Municipal Drawings",
+  "DPR Preparation",
+  "Interior Design",
+  "Landscape Design",
+  "Real Estate Consultancy",
+];
 
 const ORG_JSONLD = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["ProfessionalService", "GeneralContractor"],
   name: "Modern Edge Architects & Engineers Pvt. Ltd.",
+  alternateName: "Modern Edge",
   description: DESCRIPTION,
   url: "/",
   telephone: "+977-9852059599",
   email: "info@modernedge.com.np",
-  areaServed: "Nepal",
+  areaServed: { "@type": "Country", name: "Nepal" },
+  knowsAbout: CORE_DISCIPLINES,
+  founder: [
+    {
+      "@type": "Person",
+      name: "Kiran Neupane",
+      jobTitle: "Director & Co-Founder",
+    },
+    {
+      "@type": "Person",
+      name: "Md. Samir Hussain",
+      jobTitle: "Director & Co-Founder",
+    },
+  ],
   address: [
     {
       "@type": "PostalAddress",
       streetAddress: "Duhabi-06",
       addressLocality: "Sunsari",
+      addressRegion: "Koshi",
       addressCountry: "NP",
     },
     {
       "@type": "PostalAddress",
       streetAddress: "Biratnagar-10",
       addressLocality: "Morang",
+      addressRegion: "Koshi",
       addressCountry: "NP",
     },
   ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Engineering & Design Services",
+    itemListElement: CORE_DISCIPLINES.map((s) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: s },
+    })),
+  },
   sameAs: [],
 };
 

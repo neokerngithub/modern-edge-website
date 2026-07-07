@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/site/SiteHeader";
 import { SiteFooter } from "../components/site/SiteFooter";
+import { WhatsAppFloat, MobileContactBar } from "../components/site/FloatingContact";
 
 const TITLE =
   "Modern Edge — Multidisciplinary Engineering Consultancy in Nepal";
@@ -78,7 +79,11 @@ const ORG_JSONLD = {
       itemOffered: { "@type": "Service", name: s },
     })),
   },
-  sameAs: [],
+  sameAs: [
+    "https://www.facebook.com/meae.np/",
+    "https://www.linkedin.com/company/meaenp",
+    "https://www.instagram.com/meae.np",
+  ],
 };
 
 function NotFoundComponent() {
@@ -155,12 +160,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
       { name: "theme-color", content: "#004AAD" },
-      { title: "Modern Edge Architects And Engineers" },
-      { property: "og:title", content: "Modern Edge Architects And Engineers" },
-      { name: "twitter:title", content: "Modern Edge Architects And Engineers" },
-      { name: "description", content: "Apex Architects builds premium corporate websites for engineering consultancies, showcasing expertise in architecture, civil engineering, and property valuation" },
-      { property: "og:description", content: "Apex Architects builds premium corporate websites for engineering consultancies, showcasing expertise in architecture, civil engineering, and property valuation" },
-      { name: "twitter:description", content: "Apex Architects builds premium corporate websites for engineering consultancies, showcasing expertise in architecture, civil engineering, and property valuation" },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/90592416-d6df-47c7-8453-8e6f00d15841/id-preview-0b9065ac--acafc277-f740-40c9-a7a0-418cad362e26.lovable.app-1783356311314.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/90592416-d6df-47c7-8453-8e6f00d15841/id-preview-0b9065ac--acafc277-f740-40c9-a7a0-418cad362e26.lovable.app-1783356311314.png" },
     ],
@@ -207,10 +206,12 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <SiteHeader />
-      <main className="min-h-screen">
+      <main className="min-h-screen pb-16 md:pb-0">
         <Outlet />
       </main>
       <SiteFooter />
+      <WhatsAppFloat />
+      <MobileContactBar />
     </QueryClientProvider>
   );
 }

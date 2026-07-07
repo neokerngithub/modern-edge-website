@@ -163,13 +163,14 @@ function HomePage() {
         <Founders />
       </Section>
 
-      {/* Testimonials */}
+      {/* Google Reviews */}
       <Section
-        id="testimonials"
+        id="reviews"
         className="bg-surface"
-        index="06 — Client voices"
-        eyebrow="Trusted"
-        title="Trusted by institutions and homeowners alike."
+        index="06 — What our clients say"
+        eyebrow="Google reviews"
+        title="Trusted by institutions and homeowners across Nepal."
+        intro="Every review on our profile comes from a verified client on our Google Business Profile."
       >
         <Testimonials />
       </Section>

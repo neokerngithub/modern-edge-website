@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight, Facebook, Linkedin, Instagram } from "lucide-react";
 
 const SERVICES = [
   "Property Valuation",
@@ -150,10 +150,28 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/40">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-t border-white/10 pt-8 text-xs text-white/40">
           <div>
             © {new Date().getFullYear()} Modern Edge Architects &amp; Engineers
             Pvt. Ltd. All rights reserved.
+          </div>
+          <div className="flex items-center gap-3">
+            {[
+              { href: "https://www.facebook.com/meae.np/", label: "Facebook", Icon: Facebook },
+              { href: "https://www.linkedin.com/company/meaenp", label: "LinkedIn", Icon: Linkedin },
+              { href: "https://www.instagram.com/meae.np", label: "Instagram", Icon: Instagram },
+            ].map(({ href, label, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/70 hover:text-white hover:border-primary hover:bg-primary transition-colors"
+              >
+                <Icon size={15} />
+              </a>
+            ))}
           </div>
           <div className="uppercase tracking-[0.22em]">
             Duhabi · Biratnagar · Nepal

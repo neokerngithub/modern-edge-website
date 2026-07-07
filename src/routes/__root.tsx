@@ -79,7 +79,11 @@ const ORG_JSONLD = {
       itemOffered: { "@type": "Service", name: s },
     })),
   },
-  sameAs: [],
+  sameAs: [
+    "https://www.facebook.com/meae.np/",
+    "https://www.linkedin.com/company/meaenp",
+    "https://www.instagram.com/meae.np",
+  ],
 };
 
 function NotFoundComponent() {

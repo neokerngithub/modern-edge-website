@@ -72,17 +72,17 @@ function HomePage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <p className="text-lg md:text-xl leading-[1.55] tracking-[-0.005em] text-ink">
+            <p className="max-w-prose text-lg md:text-xl leading-[1.55] tracking-[-0.005em] text-ink">
               Modern Edge Architects &amp; Engineers Pvt. Ltd. is a
-              multidisciplinary consultancy delivering architecture, civil
-              engineering, construction, property valuation and interior &amp;
-              landscape design under one accountable team.
+              multidisciplinary engineering consultancy delivering construction,
+              property valuation, architecture, civil engineering and interior
+              &amp; landscape design under one accountable team.
             </p>
-            <p className="mt-6 text-[15px] leading-[1.75] text-ink-muted">
-              Founded by seasoned professionals with combined experience across
-              banking valuation, industrial construction and residential design,
-              the practice serves homeowners, businesses, banks, industries and
-              government agencies across Nepal.
+            <p className="mt-6 max-w-prose text-[15px] leading-[1.75] text-ink-muted">
+              Founded by experienced civil engineers with nearly two decades of
+              combined professional experience, the practice serves homeowners,
+              businesses, banks, industries and government agencies across
+              Nepal.
             </p>
 
             <div className="mt-12 grid grid-cols-2 gap-10 border-t border-hairline pt-8">
@@ -158,7 +158,7 @@ function HomePage() {
         index="05 — Leadership"
         eyebrow="Meet our founders"
         title="The directors behind Modern Edge."
-        intro="Two directors leading every project personally — with combined experience across banking valuation, industrial construction and earthquake-resistant civil engineering."
+        intro="Founded by experienced civil engineers with nearly two decades of combined professional experience, Modern Edge Architects & Engineers Pvt. Ltd. is built on technical excellence, integrity and a commitment to delivering high-quality engineering solutions."
       >
         <Founders />
       </Section>

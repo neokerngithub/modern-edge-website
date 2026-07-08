@@ -4,7 +4,7 @@ import samir from "@/assets/founder-samir.jpg";
 const FOUNDERS = [
   {
     name: "Kiran Neupane",
-    role: "Director & Co-Founder",
+    role: "Co-Founder & Director · Civil Engineer",
     img: kiran,
     experience: "10+ years",
     bio: "Mr. Kiran Neupane brings over a decade of experience in property valuation, design and construction supervision. He has collaborated with major banks and financial institutions across Nepal and contributed to notable projects including City Cinema, Centurion Mall, St. Mary's School and several residential developments across Morang and Sunsari.",
@@ -14,10 +14,10 @@ const FOUNDERS = [
   },
   {
     name: "Md. Samir Hussain",
-    role: "Managing Director · Civil Engineer",
+    role: "Co-Founder & Director · Civil Engineer",
     img: samir,
     experience: "9+ years",
-    bio: "Mr. Md. Samir Hussain leads the practice as Managing Director with over nine years of professional experience across construction, property valuation and project management. His work spans industrial, commercial and residential projects delivered with a focus on quality, discipline and structural excellence.",
+    bio: "Mr. Md. Samir Hussain brings over nine years of professional experience across construction, property valuation and project management. His work spans industrial, commercial and residential projects delivered with a focus on quality, discipline and structural excellence.",
     highlights: ["Construction","Property Valuation","Project Management","Swastik Oil Industries","OCB Processing Industries","Itahari Stadium"],
     discipline: "Construction · Valuation · Project Management",
     initial: "02",

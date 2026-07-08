@@ -21,11 +21,11 @@ export function Section({
 }) {
   const centered = align === "center";
   return (
-    <section id={id} className={`py-28 md:py-40 ${className}`}>
+    <section id={id} className={`py-20 md:py-28 ${className}`}>
       <div className="container-x">
         {(eyebrow || title || intro) && (
           <header
-            className={`mb-20 md:mb-28 ${
+            className={`mb-14 md:mb-20 ${
               centered ? "mx-auto max-w-3xl text-center" : "max-w-4xl"
             }`}
           >

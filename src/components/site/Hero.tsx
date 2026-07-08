@@ -5,7 +5,7 @@ import hero from "@/assets/hero-architecture.jpg";
 const INDEX = [
   { k: "09", v: "Core disciplines" },
   { k: "02", v: "Offices in Nepal" },
-  { k: "15+", v: "Years combined" },
+  { k: "19+", v: "Years combined" },
   { k: "Bank-grade", v: "Valuation reporting" },
 ];
 

@@ -9,7 +9,7 @@ import { Founders } from "@/components/site/Founders";
 import { Testimonials } from "@/components/site/Testimonials";
 import { ContactBlock } from "@/components/site/ContactBlock";
 import { TrustStrip } from "@/components/site/TrustStrip";
-import aboutImg from "@/assets/about-work.jpg";
+
 
 const HOME_TITLE =
   "Modern Edge — Multidisciplinary Engineering Consultancy in Nepal";
@@ -52,26 +52,45 @@ function HomePage() {
           </>
         }
       >
-        <div className="grid gap-16 lg:grid-cols-12 items-start">
-          <div className="lg:col-span-7">
-            <div className="relative overflow-hidden rounded-[20px] bg-surface">
-              <img
-                src={aboutImg}
-                alt="Modern Edge engineers reviewing project drawings"
-                width={1400}
-                height={1000}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="mt-6 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-ink-muted">
-              <span>Studio · Duhabi</span>
-              <span className="h-px flex-1 mx-6 bg-hairline" />
-              <span>Branch · Biratnagar</span>
+        <div className="grid gap-16 lg:gap-24 lg:grid-cols-12 items-start">
+          <div className="lg:col-span-5">
+            <div className="relative rounded-[20px] border border-hairline bg-surface p-10 md:p-14">
+              <div className="eyebrow">Est. Nepal</div>
+              <div className="mt-6 font-serif text-[64px] md:text-[88px] leading-[0.95] tracking-[-0.02em] text-brand">
+                19<span className="text-ink">+</span>
+              </div>
+              <div className="mt-3 text-[13px] uppercase tracking-[0.24em] text-ink-muted">
+                Years combined experience
+              </div>
+
+              <div className="mt-10 grid grid-cols-2 gap-8 border-t border-hairline pt-8">
+                <div>
+                  <div className="font-serif text-3xl tracking-[-0.01em] text-ink">
+                    09
+                  </div>
+                  <div className="mt-2 text-[11px] uppercase tracking-[0.22em] text-ink-muted">
+                    Core disciplines
+                  </div>
+                </div>
+                <div>
+                  <div className="font-serif text-3xl tracking-[-0.01em] text-ink">
+                    02
+                  </div>
+                  <div className="mt-2 text-[11px] uppercase tracking-[0.22em] text-ink-muted">
+                    Offices in Nepal
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-10 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-ink-muted">
+                <span>Studio · Duhabi</span>
+                <span className="h-px flex-1 mx-6 bg-hairline" />
+                <span>Branch · Biratnagar</span>
+              </div>
             </div>
           </div>
-          <div className="lg:col-span-5">
+
+          <div className="lg:col-span-7">
             <p className="max-w-prose text-lg md:text-xl leading-[1.55] tracking-[-0.005em] text-ink">
               Modern Edge Architects &amp; Engineers Pvt. Ltd. is a
               multidisciplinary engineering consultancy delivering construction,
@@ -85,7 +104,7 @@ function HomePage() {
               Nepal.
             </p>
 
-            <div className="mt-12 grid grid-cols-2 gap-10 border-t border-hairline pt-8">
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-10 border-t border-hairline pt-8">
               <div>
                 <div className="eyebrow">Vision</div>
                 <p className="mt-3 text-[13.5px] leading-relaxed text-ink-muted">
@@ -108,6 +127,7 @@ function HomePage() {
             </Link>
           </div>
         </div>
+
       </Section>
 
       {/* Services */}

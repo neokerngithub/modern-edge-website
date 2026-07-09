@@ -9,7 +9,7 @@ import { Founders } from "@/components/site/Founders";
 import { Testimonials } from "@/components/site/Testimonials";
 import { ContactBlock } from "@/components/site/ContactBlock";
 import { TrustStrip } from "@/components/site/TrustStrip";
-import aboutImg from "@/assets/about-work.jpg";
+
 
 const HOME_TITLE =
   "Modern Edge — Multidisciplinary Engineering Consultancy in Nepal";

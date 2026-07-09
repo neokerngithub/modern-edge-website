@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { MessageCircle, X } from "lucide-react";
+const WHATSAPP_MSG =
+  "Hello Modern Edge Architects & Engineers Pvt. Ltd., I would like to discuss my project.";
+
 
 const WHATSAPP_URL =
   "https://wa.me/9779852059599?text=" +

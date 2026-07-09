@@ -74,8 +74,6 @@ export function MobileContactBar() {
   );
 }
 
-// Suppress unused import warning
-export const _unused = { MessageCircle, X };
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (

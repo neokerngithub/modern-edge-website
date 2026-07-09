@@ -3,7 +3,7 @@ import { Section } from "@/components/site/Section";
 import { Founders } from "@/components/site/Founders";
 import { WhyChooseUs } from "@/components/site/WhyChooseUs";
 import { PageHeader } from "@/components/site/PageHeader";
-import aboutImg from "@/assets/about-work.jpg";
+
 
 const ABOUT_TITLE = "About — Modern Edge Engineering Consultancy | Nepal";
 const ABOUT_DESC =

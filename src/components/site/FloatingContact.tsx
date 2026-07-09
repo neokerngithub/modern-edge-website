@@ -8,36 +8,36 @@ const WHATSAPP_URL =
   );
 
 export function WhatsAppFloat() {
-  const [hover, setHover] = useState(false);
   return (
     <a
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      className="group fixed z-40 right-5 bottom-24 md:bottom-6 flex items-center gap-2"
+      className="group fixed z-40 right-5 md:right-6 bottom-24 md:bottom-8 flex items-center gap-3"
     >
+      {/* Hover label (desktop only) */}
       <span
-        className={`hidden md:inline-flex items-center whitespace-nowrap rounded-full bg-ink text-white text-xs font-medium px-4 py-2 shadow-lg transition-all duration-300 ${
-          hover ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2 pointer-events-none"
-        }`}
+        aria-hidden
+        className="hidden md:inline-flex items-center whitespace-nowrap rounded-full bg-ink text-white text-[12px] font-medium px-4 py-2 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.35)] opacity-0 translate-x-2 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0"
       >
         Chat with us on WhatsApp
       </span>
-      <span className="relative grid place-items-center h-14 w-14">
+
+      {/* Circular button */}
+      <span className="relative grid place-items-center h-[60px] w-[60px]">
         <span
           aria-hidden
-          className="absolute inset-0 rounded-full bg-[#25D366] opacity-60 animate-me-pulse"
+          className="absolute inset-0 rounded-full bg-[#25D366] animate-me-pulse"
         />
-        <span className="relative grid place-items-center h-14 w-14 rounded-full bg-[#25D366] text-white shadow-[0_12px_28px_-8px_rgba(37,211,102,0.6)] transition-transform duration-300 group-hover:scale-105">
-          <WhatsAppIcon className="h-7 w-7 block" />
+        <span className="relative grid place-items-center h-[60px] w-[60px] rounded-full bg-[#25D366] shadow-[0_14px_34px_-10px_rgba(37,211,102,0.55),0_4px_10px_-2px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 ease-out group-hover:scale-[1.06] group-active:scale-95">
+          <WhatsAppIcon className="h-[30px] w-[30px] text-white" />
         </span>
       </span>
     </a>
   );
 }
+
 
 export function MobileContactBar() {
   return (

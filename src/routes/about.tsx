@@ -51,21 +51,29 @@ function AboutPage() {
       />
 
       <Section className="pt-24 md:pt-32">
-        <div className="grid gap-16 lg:grid-cols-12 items-start">
-          <div className="lg:col-span-7">
-            <div className="overflow-hidden rounded-[20px] border border-hairline">
-              <img
-                src={aboutImg}
-                alt="Modern Edge engineers reviewing project drawings"
-                width={1400}
-                height={1000}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-auto object-cover"
-              />
+        <div className="grid gap-16 lg:gap-24 lg:grid-cols-12 items-start">
+          <div className="lg:col-span-5">
+            <div className="rounded-[20px] border border-hairline bg-surface p-10 md:p-14">
+              <div className="eyebrow">Established in Nepal</div>
+              <div className="mt-6 font-serif text-[64px] md:text-[88px] leading-[0.95] tracking-[-0.02em] text-brand">
+                19<span className="text-ink">+</span>
+              </div>
+              <div className="mt-3 text-[13px] uppercase tracking-[0.24em] text-ink-muted">
+                Years combined experience
+              </div>
+              <div className="mt-10 grid grid-cols-2 gap-8 border-t border-hairline pt-8">
+                <div>
+                  <div className="font-serif text-3xl tracking-[-0.01em] text-ink">09</div>
+                  <div className="mt-2 text-[11px] uppercase tracking-[0.22em] text-ink-muted">Core disciplines</div>
+                </div>
+                <div>
+                  <div className="font-serif text-3xl tracking-[-0.01em] text-ink">02</div>
+                  <div className="mt-2 text-[11px] uppercase tracking-[0.22em] text-ink-muted">Offices in Nepal</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-7">
             <p className="text-lg md:text-xl leading-[1.55] tracking-[-0.005em] text-ink">
               We design, engineer and build structures that stand the test of
               time — with services spanning architectural design, civil and
@@ -81,6 +89,7 @@ function AboutPage() {
             </p>
           </div>
         </div>
+
 
         <div className="mt-28 grid gap-6 md:grid-cols-2">
           <div className="rounded-[20px] border border-hairline p-10 md:p-12">

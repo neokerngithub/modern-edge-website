@@ -1,6 +1,8 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
+import { ThemeToggle } from "./ThemeToggle";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -35,13 +37,13 @@ export function SiteHeader() {
     >
       <div className="container-x flex h-20 md:h-24 items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group" aria-label="Modern Edge — Home">
-          <span
-            className={`flex h-9 w-9 items-center justify-center rounded-md font-display text-lg transition-colors duration-500 ${
-              solid ? "bg-primary text-primary-foreground" : "bg-background/95 text-primary"
-            }`}
-          >
-            M
-          </span>
+          <img
+            src={logo}
+            alt="Modern Edge Architects & Engineers logo"
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-md object-contain"
+          />
           <span className="flex flex-col leading-none">
             <span
               className={`font-display text-[15px] tracking-tight transition-colors duration-500 ${
@@ -80,7 +82,8 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-5">
+          <ThemeToggle tone={solid ? "auto" : "invert"} />
           <span
             aria-hidden
             className={`h-6 w-px transition-colors duration-500 ${
@@ -106,9 +109,11 @@ export function SiteHeader() {
           </Link>
         </div>
 
+        <div className="lg:hidden flex items-center gap-2">
+        <ThemeToggle tone={solid ? "auto" : "invert"} />
         <button
           type="button"
-          className={`lg:hidden -mr-2 p-2 transition-colors ${
+          className={` -mr-2 p-2 transition-colors ${
             solid ? "text-ink" : "text-white"
           }`}
           onClick={() => setOpen((v) => !v)}
@@ -117,6 +122,7 @@ export function SiteHeader() {
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
+        </div>
       </div>
 
       {open && (

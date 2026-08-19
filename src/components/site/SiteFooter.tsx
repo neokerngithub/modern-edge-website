@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import logo from "@/assets/logo.png";
 import { Mail, Phone, MapPin, ArrowUpRight, Facebook, Linkedin, Instagram } from "lucide-react";
 
 const SERVICES = [
@@ -45,9 +46,14 @@ export function SiteFooter() {
         <div className="grid gap-14 lg:grid-cols-12 py-16">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-md bg-primary text-primary-foreground font-display text-lg">
-                M
-              </span>
+              <img
+                src={logo}
+                alt="Modern Edge Architects & Engineers logo"
+                width={44}
+                height={44}
+                loading="lazy"
+                className="h-11 w-11 rounded-md object-contain"
+              />
               <div className="leading-tight">
                 <div className="font-display text-white text-lg">Modern Edge</div>
                 <div className="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-1">

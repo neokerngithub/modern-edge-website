@@ -31,6 +31,8 @@
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
   --color-surface: var(--surface);
+  --color-inverse: var(--inverse);
+  --color-inverse-foreground: var(--inverse-foreground);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -51,6 +53,8 @@
   --ink: oklch(0.12 0 0);
   --ink-muted: oklch(0.42 0 0);
   --surface: oklch(0.985 0.003 250);
+  --inverse: oklch(0.12 0 0);
+  --inverse-foreground: oklch(1 0 0);
 
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.12 0 0);
@@ -83,6 +87,8 @@
   --ink: oklch(0.97 0.004 260);
   --ink-muted: oklch(0.72 0.012 260);
   --surface: oklch(0.20 0.014 260);
+  --inverse: oklch(0.11 0.01 260);
+  --inverse-foreground: oklch(1 0 0);
 
   --card: oklch(0.20 0.014 260);
   --card-foreground: oklch(0.97 0.004 260);

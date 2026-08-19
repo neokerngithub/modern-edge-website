@@ -29,7 +29,7 @@ export function SiteHeader() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         solid
-          ? "bg-white/90 backdrop-blur-xl border-b border-hairline"
+          ? "bg-background/90 backdrop-blur-xl border-b border-hairline"
           : "bg-transparent"
       }`}
     >
@@ -37,7 +37,7 @@ export function SiteHeader() {
         <Link to="/" className="flex items-center gap-3 group" aria-label="Modern Edge — Home">
           <span
             className={`flex h-9 w-9 items-center justify-center rounded-md font-display text-lg transition-colors duration-500 ${
-              solid ? "bg-primary text-primary-foreground" : "bg-white/95 text-primary"
+              solid ? "bg-primary text-primary-foreground" : "bg-background/95 text-primary"
             }`}
           >
             M
@@ -91,14 +91,14 @@ export function SiteHeader() {
             to="/contact"
             className={`group inline-flex items-center gap-3 rounded-full pl-5 pr-1.5 py-1.5 text-[12.5px] font-medium transition-colors duration-500 ${
               solid
-                ? "bg-ink text-white hover:bg-primary"
-                : "bg-white text-ink hover:bg-primary hover:text-primary-foreground"
+                ? "bg-inverse text-inverse-foreground hover:bg-primary"
+                : "bg-background text-ink hover:bg-primary hover:text-primary-foreground"
             }`}
           >
             Request Consultation
             <span
               className={`inline-flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-500 ${
-                solid ? "bg-white text-ink group-hover:bg-white group-hover:text-primary" : "bg-ink text-white group-hover:bg-white group-hover:text-primary"
+                solid ? "bg-background text-ink group-hover:bg-background group-hover:text-primary" : "bg-inverse text-inverse-foreground group-hover:bg-background group-hover:text-primary"
               }`}
             >
               →
@@ -120,7 +120,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-hairline bg-white">
+        <div className="lg:hidden border-t border-hairline bg-background">
           <nav className="container-x flex flex-col py-6 gap-1" aria-label="Mobile">
             {NAV.map((item) => (
               <Link

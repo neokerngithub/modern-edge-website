@@ -95,7 +95,7 @@ export function ContactBlock() {
       </div>
 
       {/* CTA banner */}
-      <div className="rounded-[24px] border border-hairline bg-ink text-white p-10 md:p-14">
+      <div className="rounded-[24px] border border-hairline bg-inverse text-inverse-foreground p-10 md:p-14">
         <div className="max-w-3xl">
           <div className="text-[10px] uppercase tracking-[0.28em] text-white/60">Start a project</div>
           <h3 className="mt-4 font-display font-light text-3xl md:text-5xl leading-[1.05] tracking-[-0.02em] text-white">
@@ -119,7 +119,7 @@ export function ContactBlock() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-ink hover:bg-white/90 transition-colors"
+            className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-inverse hover:bg-white/90 transition-colors"
           >
             <MessageCircle size={16} /> WhatsApp Us
           </a>

@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import logo from "@/assets/logo.png";
 import { Mail, Phone, MapPin, ArrowUpRight, Facebook, Linkedin, Instagram } from "lucide-react";
 
 const SERVICES = [
@@ -15,7 +16,7 @@ const SERVICES = [
 
 export function SiteFooter() {
   return (
-    <footer className="bg-ink text-white/80">
+    <footer className="bg-inverse text-inverse-foreground/80">
       <div className="container-x pt-24 pb-12">
         {/* Top row — brand + CTA */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 pb-16 border-b border-white/10">
@@ -32,10 +33,10 @@ export function SiteFooter() {
           </div>
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-[13px] font-medium text-ink hover:bg-primary hover:text-primary-foreground transition-colors duration-500 self-start lg:self-auto"
+            className="group inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-[13px] font-medium text-inverse hover:bg-primary hover:text-primary-foreground transition-colors duration-500 self-start lg:self-auto"
           >
             Start a project
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-ink text-white transition-transform duration-500 group-hover:translate-x-0.5">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-inverse text-inverse-foreground transition-transform duration-500 group-hover:translate-x-0.5">
               <ArrowUpRight size={15} aria-hidden />
             </span>
           </Link>
@@ -45,9 +46,14 @@ export function SiteFooter() {
         <div className="grid gap-14 lg:grid-cols-12 py-16">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-md bg-primary text-primary-foreground font-display text-lg">
-                M
-              </span>
+              <img
+                src={logo}
+                alt="Modern Edge Architects & Engineers logo"
+                width={44}
+                height={44}
+                loading="lazy"
+                className="h-11 w-11 rounded-md object-contain"
+              />
               <div className="leading-tight">
                 <div className="font-display text-white text-lg">Modern Edge</div>
                 <div className="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-1">

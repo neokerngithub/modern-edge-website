@@ -56,7 +56,7 @@ function HomePage() {
           <div className="lg:col-span-5">
             <div className="relative rounded-[20px] border border-hairline bg-surface p-10 md:p-14">
               <div className="eyebrow">Est. Nepal</div>
-              <div className="mt-6 font-serif text-[64px] md:text-[88px] leading-[0.95] tracking-[-0.02em] text-brand">
+              <div className="mt-6 font-serif text-[64px] md:text-[88px] leading-[0.95] tracking-[-0.02em] text-primary">
                 19<span className="text-ink">+</span>
               </div>
               <div className="mt-3 text-[13px] uppercase tracking-[0.24em] text-ink-muted">

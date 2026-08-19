@@ -11,7 +11,7 @@ const INDEX = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-[100svh] w-full overflow-hidden bg-ink text-white">
+    <section className="relative min-h-[100svh] w-full overflow-hidden bg-inverse text-inverse-foreground">
       <img
         src={hero}
         alt="Contemporary architectural facade at dusk"
@@ -22,7 +22,7 @@ export function Hero() {
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/50 to-ink/95"
+        className="absolute inset-0 bg-gradient-to-b from-inverse/60 via-inverse/50 to-inverse/95"
       />
       <div
         aria-hidden
@@ -64,10 +64,10 @@ export function Hero() {
           <div className="mt-12 flex flex-wrap items-center gap-3">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-[13px] font-medium text-ink hover:bg-primary hover:text-primary-foreground transition-colors duration-500"
+              className="group inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-[13px] font-medium text-inverse hover:bg-primary hover:text-primary-foreground transition-colors duration-500"
             >
               Request Consultation
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-ink text-white transition-transform duration-500 group-hover:translate-x-0.5 group-hover:bg-white group-hover:text-primary">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-inverse text-inverse-foreground transition-transform duration-500 group-hover:translate-x-0.5 group-hover:bg-white group-hover:text-primary">
                 <ArrowRight size={15} aria-hidden />
               </span>
             </Link>

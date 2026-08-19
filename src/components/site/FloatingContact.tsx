@@ -20,7 +20,7 @@ export function WhatsAppFloat() {
       {/* Hover label (desktop only) */}
       <span
         aria-hidden
-        className="hidden md:inline-flex items-center whitespace-nowrap rounded-full bg-ink text-white text-[12px] font-medium px-4 py-2 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.35)] opacity-0 translate-x-2 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0"
+        className="hidden md:inline-flex items-center whitespace-nowrap rounded-full bg-inverse text-inverse-foreground text-[12px] font-medium px-4 py-2 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.35)] opacity-0 translate-x-2 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0"
       >
         Chat with us on WhatsApp
       </span>
@@ -42,7 +42,7 @@ export function WhatsAppFloat() {
 
 export function MobileContactBar() {
   return (
-    <div className="md:hidden fixed inset-x-0 bottom-0 z-40 border-t border-hairline bg-white/95 backdrop-blur">
+    <div className="md:hidden fixed inset-x-0 bottom-0 z-40 border-t border-hairline bg-background/95 backdrop-blur">
       <div className="grid grid-cols-3">
         <a
           href="tel:+9779852059599"

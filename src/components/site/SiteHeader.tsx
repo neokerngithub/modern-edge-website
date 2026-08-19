@@ -95,13 +95,13 @@ export function SiteHeader() {
             className={`group inline-flex items-center gap-3 rounded-full pl-5 pr-1.5 py-1.5 text-[12.5px] font-medium transition-colors duration-500 ${
               solid
                 ? "bg-inverse text-inverse-foreground hover:bg-primary"
-                : "bg-background text-ink hover:bg-primary hover:text-primary-foreground"
+                : "bg-white text-inverse hover:bg-primary hover:text-primary-foreground"
             }`}
           >
             Request Consultation
             <span
               className={`inline-flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-500 ${
-                solid ? "bg-background text-ink group-hover:bg-background group-hover:text-primary" : "bg-inverse text-inverse-foreground group-hover:bg-background group-hover:text-primary"
+                solid ? "bg-white text-inverse group-hover:bg-white group-hover:text-primary" : "bg-inverse text-inverse-foreground group-hover:bg-background group-hover:text-primary"
               }`}
             >
               →

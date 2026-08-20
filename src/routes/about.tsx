@@ -51,8 +51,8 @@ function AboutPage() {
       />
 
       <Section className="pt-24 md:pt-32">
-        <div className="grid gap-16 lg:gap-24 lg:grid-cols-12 items-start">
-          <div className="lg:col-span-5">
+        <div className="grid gap-16 lg:gap-x-8 lg:grid-cols-12 items-start">
+          <div className="lg:col-span-5 min-w-0">
             <div className="rounded-[20px] border border-hairline bg-surface p-10 md:p-14">
               <div className="eyebrow">Established in Nepal</div>
               <div className="mt-6 font-serif text-[64px] md:text-[88px] leading-[0.95] tracking-[-0.02em] text-brand">
@@ -73,7 +73,7 @@ function AboutPage() {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 min-w-0 lg:pl-8">
             <p className="text-lg md:text-xl leading-[1.55] tracking-[-0.005em] text-ink">
               We design, engineer and build structures that stand the test of
               time — with services spanning architectural design, civil and

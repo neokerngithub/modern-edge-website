@@ -101,7 +101,7 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 min-w-0">
             <div className="text-xs uppercase tracking-[0.24em] text-white/40">
               Get in touch
             </div>

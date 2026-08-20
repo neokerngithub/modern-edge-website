@@ -39,11 +39,11 @@ export function Founders() {
               width={800}
               height={1000}
               loading="lazy"
-              className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[900ms] ease-out scale-[1.02] group-hover:scale-100"
+              className="h-full w-full object-cover transition-all duration-[900ms] ease-out scale-[1.02] group-hover:scale-100"
             />
             <div
               aria-hidden
-              className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent opacity-90"
+              className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"
             />
             <div className="absolute inset-x-0 bottom-0 p-8 md:p-10">
               <div className="flex items-center gap-3 text-white/80">

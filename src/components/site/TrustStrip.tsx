@@ -10,7 +10,7 @@ export function TrustStrip() {
   return (
     <section
       aria-label="Sectors we serve"
-      className="border-y border-hairline bg-white"
+      className="border-y border-hairline bg-background"
     >
       <div className="container-x py-6 md:py-7">
         <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-10">

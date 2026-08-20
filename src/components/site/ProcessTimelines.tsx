@@ -31,9 +31,9 @@ export function ProcessTimelines() {
       {PROCESSES.map((p, i) => (
         <div
           key={p.key}
-          className="grid gap-12 lg:grid-cols-12 lg:gap-20 items-start border-t border-hairline pt-14"
+          className="grid gap-12 lg:grid-cols-12 lg:gap-x-8 items-start border-t border-hairline pt-14"
         >
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 min-w-0">
             <div className="flex items-baseline gap-6">
               <span className="font-display font-light text-7xl md:text-8xl text-ink leading-none tracking-[-0.04em]">
                 0{i + 1}
@@ -50,7 +50,7 @@ export function ProcessTimelines() {
             </p>
           </div>
 
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 min-w-0 lg:pl-8">
             <ol className="relative divide-y divide-hairline">
               {p.steps.map((step, idx) => (
                 <li

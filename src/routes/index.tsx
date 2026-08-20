@@ -52,8 +52,8 @@ function HomePage() {
           </>
         }
       >
-        <div className="grid gap-16 lg:gap-24 lg:grid-cols-12 items-start">
-          <div className="lg:col-span-5">
+        <div className="grid gap-16 lg:gap-x-8 lg:gap-y-0 lg:grid-cols-12 items-start">
+          <div className="lg:col-span-5 min-w-0">
             <div className="relative rounded-[20px] border border-hairline bg-surface p-10 md:p-14">
               <div className="eyebrow">Est. Nepal</div>
               <div className="mt-6 font-serif text-[64px] md:text-[88px] leading-[0.95] tracking-[-0.02em] text-primary">
@@ -90,7 +90,7 @@ function HomePage() {
             </div>
           </div>
 
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 min-w-0 lg:pl-8">
             <p className="max-w-prose text-lg md:text-xl leading-[1.55] tracking-[-0.005em] text-ink">
               Modern Edge Architects &amp; Engineers Pvt. Ltd. is a
               multidisciplinary engineering consultancy delivering construction,

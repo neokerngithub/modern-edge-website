@@ -51,8 +51,8 @@ function AboutPage() {
       />
 
       <Section className="pt-24 md:pt-32">
-        <div className="grid gap-16 lg:gap-24 lg:grid-cols-12 items-start">
-          <div className="lg:col-span-5">
+        <div className="grid gap-16 lg:gap-x-8 lg:grid-cols-12 items-start">
+          <div className="lg:col-span-5 min-w-0">
             <div className="rounded-[20px] border border-hairline bg-surface p-10 md:p-14">
               <div className="eyebrow">Established in Nepal</div>
               <div className="mt-6 font-serif text-[64px] md:text-[88px] leading-[0.95] tracking-[-0.02em] text-brand">
@@ -73,7 +73,7 @@ function AboutPage() {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 min-w-0 lg:pl-8">
             <p className="text-lg md:text-xl leading-[1.55] tracking-[-0.005em] text-ink">
               We design, engineer and build structures that stand the test of
               time — with services spanning architectural design, civil and
@@ -103,7 +103,7 @@ function AboutPage() {
               modern living and inspire progress.
             </p>
           </div>
-          <div className="rounded-[20px] bg-ink text-white p-10 md:p-12 relative overflow-hidden">
+          <div className="rounded-[20px] bg-inverse text-inverse-foreground p-10 md:p-12 relative overflow-hidden">
             <div
               aria-hidden
               className="absolute inset-0 bg-[radial-gradient(circle_at_85%_100%,oklch(0.45_0.19_262/0.4),transparent_55%)]"
@@ -143,7 +143,7 @@ function AboutPage() {
         <Founders />
       </Section>
 
-      <Section className="bg-ink text-white" align="center">
+      <Section className="bg-inverse text-inverse-foreground" align="center">
         <div className="text-center max-w-2xl mx-auto">
           <div className="eyebrow text-white/70">Start a project</div>
           <h2 className="mt-6 font-display font-light text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] text-white">
@@ -158,7 +158,7 @@ function AboutPage() {
               className="inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-[13px] font-medium text-ink hover:bg-primary hover:text-primary-foreground transition-colors duration-500"
             >
               Request Consultation
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-ink text-white">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-inverse text-inverse-foreground">
                 →
               </span>
             </Link>

@@ -43,7 +43,7 @@ export function SiteFooter() {
         </div>
 
         {/* Content grid */}
-        <div className="grid gap-14 lg:grid-cols-12 py-16">
+        <div className="grid gap-14 lg:grid-cols-12 lg:gap-x-8 py-16">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3">
               <img
@@ -101,7 +101,7 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 min-w-0">
             <div className="text-xs uppercase tracking-[0.24em] text-white/40">
               Get in touch
             </div>
@@ -146,8 +146,8 @@ export function SiteFooter() {
                     </a>
                   </div>
                   <div>
-                    <a href="tel:+9779767784543" className="hover:text-white">
-                      Samir · +977 97677 84543
+                    <a href="tel:+9779819015015" className="hover:text-white">
+                      Samir · +977 98190 15015
                     </a>
                   </div>
                 </div>

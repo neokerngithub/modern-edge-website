@@ -65,7 +65,7 @@ export function ServicesGrid() {
           return (
             <article
               key={s.title}
-              className="group relative overflow-hidden rounded-[20px] bg-ink text-white"
+              className="group relative overflow-hidden rounded-[20px] bg-inverse text-inverse-foreground"
             >
               <div
                 aria-hidden
@@ -109,7 +109,7 @@ export function ServicesGrid() {
           return (
             <article
               key={s.title}
-              className={`group relative bg-white p-9 md:p-10 transition-colors duration-500 hover:bg-surface ${
+              className={`group relative bg-card p-9 md:p-10 transition-colors duration-500 hover:bg-surface ${
                 isLast ? "lg:col-span-3" : ""
               }`}
             >

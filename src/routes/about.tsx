@@ -103,7 +103,7 @@ function AboutPage() {
               modern living and inspire progress.
             </p>
           </div>
-          <div className="rounded-[20px] bg-ink text-white p-10 md:p-12 relative overflow-hidden">
+          <div className="rounded-[20px] bg-inverse text-inverse-foreground p-10 md:p-12 relative overflow-hidden">
             <div
               aria-hidden
               className="absolute inset-0 bg-[radial-gradient(circle_at_85%_100%,oklch(0.45_0.19_262/0.4),transparent_55%)]"
@@ -143,7 +143,7 @@ function AboutPage() {
         <Founders />
       </Section>
 
-      <Section className="bg-ink text-white" align="center">
+      <Section className="bg-inverse text-inverse-foreground" align="center">
         <div className="text-center max-w-2xl mx-auto">
           <div className="eyebrow text-white/70">Start a project</div>
           <h2 className="mt-6 font-display font-light text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] text-white">
@@ -158,7 +158,7 @@ function AboutPage() {
               className="inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-[13px] font-medium text-ink hover:bg-primary hover:text-primary-foreground transition-colors duration-500"
             >
               Request Consultation
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-ink text-white">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-inverse text-inverse-foreground">
                 →
               </span>
             </Link>

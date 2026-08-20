@@ -22,7 +22,7 @@ export function PageHeader({
   meta?: ReactNode;
 }) {
   return (
-    <section className="pt-36 md:pt-44 pb-16 md:pb-24 border-b border-hairline bg-white">
+    <section className="pt-36 md:pt-44 pb-16 md:pb-24 border-b border-hairline bg-background">
       <div className="container-x">
         <nav
           aria-label="Breadcrumb"

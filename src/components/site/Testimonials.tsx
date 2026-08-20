@@ -81,7 +81,7 @@ export function Testimonials() {
               href={REVIEWS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3 text-[13px] font-medium text-white hover:bg-primary transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-inverse px-5 py-3 text-[13px] font-medium text-white hover:bg-primary transition-colors duration-300"
             >
               View all reviews on Google <ExternalLink size={13} />
             </a>

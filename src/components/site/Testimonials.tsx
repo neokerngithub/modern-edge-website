@@ -47,7 +47,7 @@ function Stars({ value }: { value: number }) {
 
 export function Testimonials() {
   return (
-    <div className="grid gap-6 lg:grid-cols-12 items-start">
+    <div className="grid gap-6 lg:grid-cols-12 lg:gap-x-6 items-start">
       {/* Rating summary card */}
       <div className="lg:col-span-5 min-w-0">
         <div className="rounded-[24px] border border-hairline bg-card p-8 md:p-10 shadow-[0_1px_0_rgba(0,0,0,0.03),0_20px_50px_-30px_rgba(0,0,0,0.15)]">

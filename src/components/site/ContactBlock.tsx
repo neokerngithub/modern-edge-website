@@ -16,7 +16,7 @@ export function ContactBlock() {
   return (
     <div className="space-y-16">
       {/* Two-column: details + map */}
-      <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
+      <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
         {/* Left — details */}
         <div className="lg:col-span-5 min-w-0 space-y-10">
           <Group icon={<MapPin size={16} />} label="Head Office">

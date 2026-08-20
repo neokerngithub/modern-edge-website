@@ -43,7 +43,7 @@ export function SiteFooter() {
         </div>
 
         {/* Content grid */}
-        <div className="grid gap-14 lg:grid-cols-12 py-16">
+        <div className="grid gap-14 lg:grid-cols-12 lg:gap-x-8 py-16">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3">
               <img

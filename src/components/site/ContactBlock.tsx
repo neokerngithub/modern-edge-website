@@ -18,7 +18,7 @@ export function ContactBlock() {
       {/* Two-column: details + map */}
       <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
         {/* Left — details */}
-        <div className="lg:col-span-5 space-y-10">
+        <div className="lg:col-span-5 min-w-0 space-y-10">
           <Group icon={<MapPin size={16} />} label="Head Office">
             <div className="text-ink">Province 1, Duhabi-6</div>
             <div className="text-ink-muted">Sunsari, Nepal</div>
@@ -70,7 +70,7 @@ export function ContactBlock() {
         </div>
 
         {/* Right — map + CTA */}
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-7 min-w-0">
           <div className="overflow-hidden rounded-[20px] border border-hairline shadow-[0_20px_60px_-30px_rgba(0,0,0,0.25)]">
             <iframe
               title="Modern Edge Architects & Engineers — Head Office, Duhabi"

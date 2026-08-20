@@ -49,7 +49,7 @@ export function Testimonials() {
   return (
     <div className="grid gap-6 lg:grid-cols-12 items-start">
       {/* Rating summary card */}
-      <div className="lg:col-span-5">
+      <div className="lg:col-span-5 min-w-0">
         <div className="rounded-[24px] border border-hairline bg-card p-8 md:p-10 shadow-[0_1px_0_rgba(0,0,0,0.03),0_20px_50px_-30px_rgba(0,0,0,0.15)]">
           <div className="flex items-center gap-3">
             <GoogleG className="h-7 w-7" />
@@ -98,7 +98,7 @@ export function Testimonials() {
       </div>
 
       {/* Reviews column */}
-      <div className="lg:col-span-7">
+      <div className="lg:col-span-7 min-w-0">
         {REVIEWS.length === 0 ? (
           <div className="rounded-[24px] border border-dashed border-hairline bg-surface p-8 md:p-10">
             <div className="flex items-center gap-3">

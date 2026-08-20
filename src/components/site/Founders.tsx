@@ -39,7 +39,7 @@ export function Founders() {
               width={800}
               height={1000}
               loading="lazy"
-              className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[900ms] ease-out scale-[1.02] group-hover:scale-100"
+              className="h-full w-full object-cover transition-all duration-[900ms] ease-out scale-[1.02] group-hover:scale-100"
             />
             <div
               aria-hidden

@@ -14,7 +14,6 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/site/SiteHeader";
 import { SiteFooter } from "../components/site/SiteFooter";
 import { THEME_SCRIPT } from "../components/site/ThemeToggle";
-import { WhatsAppFloat, MobileContactBar } from "../components/site/FloatingContact";
 
 const TITLE =
   "Modern Edge — Multidisciplinary Engineering Consultancy in Nepal";
@@ -208,12 +207,10 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <SiteHeader />
-      <main className="min-h-screen pb-16 md:pb-0">
+      <main className="min-h-screen">
         <Outlet />
       </main>
       <SiteFooter />
-      <WhatsAppFloat />
-      <MobileContactBar />
     </QueryClientProvider>
   );
 }

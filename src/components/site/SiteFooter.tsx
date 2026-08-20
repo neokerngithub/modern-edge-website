@@ -147,7 +147,7 @@ export function SiteFooter() {
                   </div>
                   <div>
                     <a href="tel:+9779819015015" className="hover:text-white">
-                      Samir · +977 97677 84543
+                      Samir · +977 98190 15015
                     </a>
                   </div>
                 </div>

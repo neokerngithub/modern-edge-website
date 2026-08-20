@@ -50,7 +50,7 @@ export function Testimonials() {
     <div className="grid gap-6 lg:grid-cols-12 items-start">
       {/* Rating summary card */}
       <div className="lg:col-span-5">
-        <div className="rounded-[24px] border border-hairline bg-white p-8 md:p-10 shadow-[0_1px_0_rgba(0,0,0,0.03),0_20px_50px_-30px_rgba(0,0,0,0.15)]">
+        <div className="rounded-[24px] border border-hairline bg-card p-8 md:p-10 shadow-[0_1px_0_rgba(0,0,0,0.03),0_20px_50px_-30px_rgba(0,0,0,0.15)]">
           <div className="flex items-center gap-3">
             <GoogleG className="h-7 w-7" />
             <div className="text-[11px] uppercase tracking-[0.24em] text-ink-muted">
@@ -131,7 +131,7 @@ export function Testimonials() {
             {REVIEWS.map((r, i) => (
               <article
                 key={i}
-                className="group rounded-[20px] border border-hairline bg-white p-7 shadow-[0_1px_0_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_-30px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 transition-all duration-300"
+                className="group rounded-[20px] border border-hairline bg-card p-7 shadow-[0_1px_0_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_-30px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 transition-all duration-300"
               >
                 <div className="flex items-center justify-between">
                   <Stars value={r.rating} />

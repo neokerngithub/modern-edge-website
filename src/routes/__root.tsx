@@ -21,10 +21,10 @@ const DESCRIPTION =
   "Modern Edge Architects & Engineers Pvt. Ltd. — architecture, civil engineering, construction and bank-grade property valuation for homeowners, businesses, banks, industries and government across Nepal.";
 
 const CORE_DISCIPLINES = [
-  "Architecture",
-  "Civil Engineering",
   "Construction Services",
   "Property Valuation",
+  "Architecture",
+  "Civil Engineering",
   "Municipal Drawings",
   "DPR Preparation",
   "Interior Design",

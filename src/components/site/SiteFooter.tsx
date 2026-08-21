@@ -3,8 +3,8 @@ import { BrandLogo } from "./BrandLogo";
 import { Mail, Phone, MapPin, ArrowUpRight, Facebook, Linkedin, Instagram } from "lucide-react";
 
 const SERVICES = [
-  "Property Valuation",
   "Construction Services",
+  "Property Valuation",
   "Architecture",
   "Civil Engineering",
   "Municipal Drawings",

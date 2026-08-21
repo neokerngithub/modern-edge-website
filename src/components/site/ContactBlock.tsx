@@ -33,8 +33,8 @@ export function ContactBlock() {
             <a href="tel:+9779852059599" className="block text-ink hover:text-primary transition-colors">
               +977 98520 59599
             </a>
-            <a href="tel:+9779819015015" className="block text-ink hover:text-primary transition-colors">
-              +977 98190 15015
+            <a href="tel:+9779767784543" className="block text-ink hover:text-primary transition-colors">
+              +977 97677 84543
             </a>
           </Group>
 

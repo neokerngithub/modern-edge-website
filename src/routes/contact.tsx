@@ -43,7 +43,7 @@ function ContactPage() {
         meta={
           <div className="text-[11px] uppercase tracking-[0.24em] text-ink-muted space-y-2">
             <div>+977 98520 59599</div>
-            <div>+977 98190 15015</div>
+            <div>+977 97677 84543</div>
             <div className="text-primary">Sun – Fri · 10:00 AM – 5:30 PM</div>
           </div>
         }

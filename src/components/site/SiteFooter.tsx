@@ -46,14 +46,7 @@ export function SiteFooter() {
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-x-8 py-16">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3">
-              <img
-                src={logo}
-                alt="Modern Edge Architects & Engineers logo"
-                width={44}
-                height={44}
-                loading="lazy"
-                className="h-11 w-11 rounded-md object-contain"
-              />
+              <BrandLogo forceWhite className="h-11 w-auto" size={44} loading="lazy" />
               <div className="leading-tight">
                 <div className="font-display text-white text-lg">Modern Edge</div>
                 <div className="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-1">

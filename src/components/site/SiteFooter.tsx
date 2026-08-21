@@ -1,10 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/logo.png";
+import { BrandLogo } from "./BrandLogo";
 import { Mail, Phone, MapPin, ArrowUpRight, Facebook, Linkedin, Instagram } from "lucide-react";
 
 const SERVICES = [
-  "Property Valuation",
   "Construction Services",
+  "Property Valuation",
   "Architecture",
   "Civil Engineering",
   "Municipal Drawings",
@@ -46,18 +46,14 @@ export function SiteFooter() {
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-x-8 py-16">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3">
-              <img
-                src={logo}
-                alt="Modern Edge Architects & Engineers logo"
-                width={44}
-                height={44}
-                loading="lazy"
-                className="h-11 w-11 rounded-md object-contain"
-              />
+              <BrandLogo forceWhite className="h-11 w-auto" size={44} loading="lazy" />
               <div className="leading-tight">
                 <div className="font-display text-white text-lg">Modern Edge</div>
                 <div className="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-1">
                   Architects &amp; Engineers Pvt. Ltd.
+                </div>
+                <div className="text-[9.5px] uppercase tracking-[0.22em] text-white/35 mt-1.5">
+                  Professional Architects, Engineers, Valuers &amp; Builders
                 </div>
               </div>
             </div>
@@ -146,8 +142,8 @@ export function SiteFooter() {
                     </a>
                   </div>
                   <div>
-                    <a href="tel:+9779819015015" className="hover:text-white">
-                      Samir · +977 98190 15015
+                    <a href="tel:+9779767784543" className="hover:text-white">
+                      Samir · +977 97677 84543
                     </a>
                   </div>
                 </div>

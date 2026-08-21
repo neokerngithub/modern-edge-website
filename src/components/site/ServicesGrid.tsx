@@ -25,16 +25,16 @@ type Service = {
  */
 const SIGNATURE: [Service, Service] = [
   {
-    icon: BadgeCheck,
-    title: "Property Valuation",
-    description:
-      "Accurate, bank-grade property assessments grounded in technical analysis and prevailing market standards — trusted by leading banks and financial institutions for residential, commercial, industrial and institutional properties.",
-  },
-  {
     icon: Building2,
     title: "Construction Services",
     description:
       "End-to-end construction with disciplined project management, transparent costing and quality control — from site mobilization and structural works through finishing, styling and handover under one accountable team.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Property Valuation",
+    description:
+      "Accurate, bank-grade property assessments grounded in technical analysis and prevailing market standards — trusted by leading banks and financial institutions for residential, commercial, industrial and institutional properties.",
   },
 ];
 

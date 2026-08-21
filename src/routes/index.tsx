@@ -144,7 +144,7 @@ function HomePage() {
             </span>
           </>
         }
-        intro="Property Valuation and Construction Services anchor the practice — supported by architecture, civil engineering, municipal drawings, DPR preparation, interiors, landscape and real estate consultancy. Every service is delivered in-house."
+        intro="Construction Services and Property Valuation anchor the practice — supported by architecture, civil engineering, municipal drawings, DPR preparation, interiors, landscape and real estate consultancy. Every service is delivered in-house."
       >
         <ServicesGrid />
       </Section>

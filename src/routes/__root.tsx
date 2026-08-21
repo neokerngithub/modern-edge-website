@@ -21,10 +21,10 @@ const DESCRIPTION =
   "Modern Edge Architects & Engineers Pvt. Ltd. — architecture, civil engineering, construction and bank-grade property valuation for homeowners, businesses, banks, industries and government across Nepal.";
 
 const CORE_DISCIPLINES = [
-  "Architecture",
-  "Civil Engineering",
   "Construction Services",
   "Property Valuation",
+  "Architecture",
+  "Civil Engineering",
   "Municipal Drawings",
   "DPR Preparation",
   "Interior Design",
@@ -39,7 +39,8 @@ const ORG_JSONLD = {
   alternateName: "Modern Edge",
   description: DESCRIPTION,
   url: "/",
-  telephone: "+977-9852059599",
+  slogan: "Professional Architects, Engineers, Valuers & Builders",
+  telephone: ["+977-9852059599", "+977-9767784543"],
   email: "info@modernedge.com.np",
   areaServed: { "@type": "Country", name: "Nepal" },
   knowsAbout: CORE_DISCIPLINES,

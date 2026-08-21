@@ -52,6 +52,9 @@ export function SiteFooter() {
                 <div className="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-1">
                   Architects &amp; Engineers Pvt. Ltd.
                 </div>
+                <div className="text-[9.5px] uppercase tracking-[0.22em] text-white/35 mt-1.5">
+                  Professional Architects, Engineers, Valuers &amp; Builders
+                </div>
               </div>
             </div>
             <p className="mt-6 max-w-sm text-sm leading-[1.7] text-white/60">

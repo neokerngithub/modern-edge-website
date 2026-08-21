@@ -37,13 +37,7 @@ export function SiteHeader() {
     >
       <div className="container-x flex h-20 md:h-24 items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group" aria-label="Modern Edge — Home">
-          <img
-            src={logo}
-            alt="Modern Edge Architects & Engineers logo"
-            width={40}
-            height={40}
-            className="h-10 w-10 rounded-md object-contain"
-          />
+          <BrandLogo forceWhite={!solid} className="h-10 w-auto" size={40} />
           <span className="flex flex-col leading-none">
             <span
               className={`font-display text-[15px] tracking-tight transition-colors duration-500 ${

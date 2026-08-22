@@ -40,7 +40,7 @@ function AboutPage() {
             </span>
           </>
         }
-        intro="Founded by seasoned professionals, Modern Edge is a multidisciplinary engineering consultancy delivering architecture, civil engineering, construction and bank-grade property valuation from studios in Duhabi and Biratnagar."
+        intro="Established in 2024 by two experienced civil engineers, Modern Edge is a multidisciplinary engineering consultancy delivering architecture, civil engineering, construction and property valuation from offices in Duhabi and Biratnagar."
         meta={
           <div className="text-[11px] uppercase tracking-[0.24em] text-ink-muted space-y-2">
             <div>Duhabi · Sunsari</div>
@@ -54,12 +54,12 @@ function AboutPage() {
         <div className="grid gap-16 lg:gap-x-8 lg:grid-cols-12 items-start">
           <div className="lg:col-span-5 min-w-0">
             <div className="rounded-[20px] border border-hairline bg-surface p-10 md:p-14">
-              <div className="eyebrow">Established in Nepal</div>
+              <div className="eyebrow">Est. 2024 · Nepal</div>
               <div className="mt-6 font-serif text-[64px] md:text-[88px] leading-[0.95] tracking-[-0.02em] text-brand">
                 19<span className="text-ink">+</span>
               </div>
               <div className="mt-3 text-[13px] uppercase tracking-[0.24em] text-ink-muted">
-                Years combined experience
+                Years of combined professional experience
               </div>
               <div className="mt-10 grid grid-cols-2 gap-8 border-t border-hairline pt-8">
                 <div>
@@ -84,8 +84,8 @@ function AboutPage() {
             <p className="mt-6 text-[15px] leading-[1.75] text-ink-muted">
               Driven by precision, technical expertise and a client-focused
               approach, we serve residential, commercial, industrial,
-              institutional and government clients across Nepal — with a strong
-              record of long-term relationships and accurate documentation.
+              institutional and government clients across Nepal — with careful,
+              accurate documentation at every stage.
             </p>
           </div>
         </div>

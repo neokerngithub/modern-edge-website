@@ -10,10 +10,10 @@ const PROCESSES = [
   {
     key: "valuation",
     title: "Valuation",
-    kicker: "Bank & institutional reporting",
+    kicker: "Institutional-standard reporting",
     steps: ["Documents Collection","Site Inspection","Verification","Preliminary Report","Final Report"],
     description:
-      "Beginning with the assignment from the bank, we collect and verify ownership documents, conduct a thorough site inspection, and deliver a preliminary report followed by an accurate, transparent final valuation.",
+      "Beginning with the valuation assignment, we collect and verify ownership documents, conduct a thorough site inspection, and deliver a preliminary report followed by an accurate, transparent final valuation.",
   },
   {
     key: "interior",
@@ -21,7 +21,7 @@ const PROCESSES = [
     kicker: "Design to delivery, one roof",
     steps: ["3D Approval","Drawings","BOQ","Site Survey","Team Mobilization","Execution","Finishing","Styling","Handover"],
     description:
-      "After 3D approval, drawings and the BOQ are prepared in-house. A site survey verifies measurements before our own team executes civil, electrical, carpentry and finishing works — closed by styling, quality checks and handover.",
+      "After 3D approval, drawings and the BOQ are prepared in-house. A site survey verifies measurements before our project team coordinates civil, electrical, carpentry and finishing works — closed by styling, quality checks and handover.",
   },
 ];
 

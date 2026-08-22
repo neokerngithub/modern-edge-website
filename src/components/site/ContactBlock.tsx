@@ -20,21 +20,21 @@ export function ContactBlock() {
         {/* Left — details */}
         <div className="lg:col-span-5 min-w-0 space-y-10">
           <Group icon={<MapPin size={16} />} label="Head Office">
-            <div className="text-ink">Province 1, Duhabi-6</div>
-            <div className="text-ink-muted">Sunsari, Nepal</div>
+            <div className="text-ink">Duhabi-06, Sunsari</div>
+            <div className="text-ink-muted">Koshi Province, Nepal</div>
           </Group>
 
           <Group icon={<MapPin size={16} />} label="Branch Office">
-            <div className="text-ink">Province 1, Biratnagar-10</div>
-            <div className="text-ink-muted">Morang, Nepal</div>
+            <div className="text-ink">Biratnagar-10, Morang</div>
+            <div className="text-ink-muted">Koshi Province, Nepal</div>
           </Group>
 
           <Group icon={<Phone size={16} />} label="Phone">
             <a href="tel:+9779852059599" className="block text-ink hover:text-primary transition-colors">
-              +977 98520 59599
+              Kiran · +977 98520 59599
             </a>
             <a href="tel:+9779767784543" className="block text-ink hover:text-primary transition-colors">
-              +977 97677 84543
+              Samir · +977 97677 84543
             </a>
           </Group>
 
@@ -50,10 +50,10 @@ export function ContactBlock() {
           </Group>
 
           <Group icon={<Mail size={16} />} label="Email">
-            <a href="mailto:info@modernedge.com.np" className="block text-ink hover:text-primary transition-colors">
+            <a href="mailto:info@modernedge.com.np" className="block break-words text-ink hover:text-primary transition-colors">
               info@modernedge.com.np
             </a>
-            <a href="mailto:meae.np@gmail.com" className="block text-ink-muted hover:text-primary transition-colors">
+            <a href="mailto:meae.np@gmail.com" className="block break-words text-ink-muted hover:text-primary transition-colors">
               meae.np@gmail.com
             </a>
           </Group>
@@ -104,7 +104,8 @@ export function ContactBlock() {
           </h3>
           <p className="mt-6 text-[15px] leading-[1.75] text-white/70 max-w-2xl">
             Whether you're planning a residential home, commercial development, construction project, or
-            require a professional property valuation, our experienced team is ready to assist.
+            require a professional property valuation, our team is ready to assist. Call, message us on
+            WhatsApp or email — we respond within one business day.
           </p>
         </div>
 

@@ -16,9 +16,9 @@ import { SiteFooter } from "../components/site/SiteFooter";
 import { THEME_SCRIPT } from "../components/site/ThemeToggle";
 
 const TITLE =
-  "Modern Edge — Multidisciplinary Engineering Consultancy in Nepal";
+  "Modern Edge Architects & Engineers | Architecture, Engineering & Property Valuation Nepal";
 const DESCRIPTION =
-  "Modern Edge Architects & Engineers Pvt. Ltd. — architecture, civil engineering, construction and bank-grade property valuation for homeowners, businesses, banks, industries and government across Nepal.";
+  "Modern Edge Architects & Engineers provides architecture, civil engineering, construction, property valuation, DPR preparation and related consultancy services in Nepal.";
 
 const CORE_DISCIPLINES = [
   "Construction Services",
@@ -39,7 +39,7 @@ const ORG_JSONLD = {
   alternateName: "Modern Edge",
   description: DESCRIPTION,
   url: "/",
-  slogan: "Professional Architects, Engineers, Valuers & Builders",
+  slogan: "Architecture · Engineering · Valuation · Construction",
   telephone: ["+977-9852059599", "+977-9767784543"],
   email: "info@modernedge.com.np",
   areaServed: { "@type": "Country", name: "Nepal" },

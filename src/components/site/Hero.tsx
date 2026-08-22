@@ -5,8 +5,8 @@ import hero from "@/assets/hero-architecture.jpg";
 const INDEX = [
   { k: "09", v: "Core disciplines" },
   { k: "02", v: "Offices in Nepal" },
-  { k: "19+", v: "Years combined" },
-  { k: "Bank-grade", v: "Valuation reporting" },
+  { k: "19+", v: "Years of combined professional experience" },
+  { k: "2024", v: "Modern Edge established" },
 ];
 
 export function Hero() {
@@ -31,7 +31,7 @@ export function Hero() {
 
       {/* subtle top-right location index */}
       <div className="pointer-events-none absolute top-24 right-6 md:right-10 hidden md:flex items-center gap-3 text-white/55 text-[10px] uppercase tracking-[0.32em] z-10">
-        <span>Est. Nepal</span>
+        <span>Est. 2024</span>
         <span aria-hidden className="h-px w-6 bg-white/30" />
         <span>Duhabi · Biratnagar</span>
       </div>
@@ -56,13 +56,13 @@ export function Hero() {
           </h1>
 
           <p className="mt-8 text-[10.5px] md:text-[11.5px] uppercase tracking-[0.3em] text-white/65">
-            Professional Architects, Engineers, Valuers &amp; Builders
+            Architecture · Engineering · Valuation · Construction
           </p>
 
           <p className="mt-7 max-w-2xl text-[15px] md:text-[17px] leading-[1.7] text-white/80">
             Modern Edge Architects &amp; Engineers Pvt. Ltd. delivers architecture, civil
-            engineering, construction and bank-grade property valuation — for homeowners,
-            businesses, banks, industries and government agencies across Nepal.
+            engineering, construction and property valuation — for homeowners, businesses,
+            industries and government agencies across Nepal.
           </p>
 
           <div className="mt-12 flex flex-wrap items-center gap-3">

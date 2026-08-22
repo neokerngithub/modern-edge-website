@@ -12,9 +12,9 @@ import { TrustStrip } from "@/components/site/TrustStrip";
 
 
 const HOME_TITLE =
-  "Modern Edge — Multidisciplinary Engineering Consultancy in Nepal";
+  "Modern Edge Architects & Engineers | Architecture, Engineering & Property Valuation Nepal";
 const HOME_DESC =
-  "Modern Edge Architects & Engineers Pvt. Ltd. — architecture, civil engineering, construction and bank-grade property valuation for homeowners, businesses, banks, industries and government across Nepal.";
+  "Modern Edge Architects & Engineers provides architecture, civil engineering, construction, property valuation, DPR preparation and related consultancy services in Nepal.";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -55,12 +55,12 @@ function HomePage() {
         <div className="grid gap-16 lg:gap-x-8 lg:gap-y-0 lg:grid-cols-12 items-start">
           <div className="lg:col-span-5 min-w-0">
             <div className="relative rounded-[20px] border border-hairline bg-surface p-10 md:p-14">
-              <div className="eyebrow">Est. Nepal</div>
+              <div className="eyebrow">Est. 2024</div>
               <div className="mt-6 font-serif text-[64px] md:text-[88px] leading-[0.95] tracking-[-0.02em] text-primary">
                 19<span className="text-ink">+</span>
               </div>
               <div className="mt-3 text-[13px] uppercase tracking-[0.24em] text-ink-muted">
-                Years combined experience
+                Years of combined professional experience
               </div>
 
               <div className="mt-10 grid grid-cols-2 gap-8 border-t border-hairline pt-8">
@@ -98,9 +98,9 @@ function HomePage() {
               &amp; landscape design under one accountable team.
             </p>
             <p className="mt-6 max-w-prose text-[15px] leading-[1.75] text-ink-muted">
-              Founded by experienced civil engineers with nearly two decades of
-              combined professional experience, the practice serves homeowners,
-              businesses, banks, industries and government agencies across
+              Established in 2024 by civil engineers whose combined professional
+              experience spans nearly two decades, the practice serves homeowners,
+              businesses, industries, institutions and government agencies across
               Nepal.
             </p>
 
@@ -178,7 +178,7 @@ function HomePage() {
         index="05 — Leadership"
         eyebrow="Meet our founders"
         title="The directors behind Modern Edge."
-        intro="Founded by experienced civil engineers with nearly two decades of combined professional experience, Modern Edge Architects & Engineers Pvt. Ltd. is built on technical excellence, integrity and a commitment to delivering high-quality engineering solutions."
+        intro="Modern Edge was established in 2024 by two civil engineers whose combined professional experience spans nearly two decades — built on technical rigour, integrity and high-quality engineering delivery."
       >
         <Founders />
       </Section>
@@ -189,8 +189,8 @@ function HomePage() {
         className="bg-surface"
         index="06 — What our clients say"
         eyebrow="Google reviews"
-        title="Trusted by institutions and homeowners across Nepal."
-        intro="Every review on our profile comes from a verified client on our Google Business Profile."
+        title="What our clients say on Google."
+        intro="Ratings and reviews published on our official Google Business Profile."
       >
         <Testimonials />
       </Section>

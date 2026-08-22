@@ -138,7 +138,7 @@ function HomePage() {
         eyebrow="What we do"
         title={
           <>
-            Nine core disciplines.
+            Nine core services.
             <span className="block text-ink-muted italic font-normal">
               Two signature practices.
             </span>

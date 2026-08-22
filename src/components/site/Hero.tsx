@@ -56,7 +56,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-8 text-[10.5px] md:text-[11.5px] uppercase tracking-[0.3em] text-white/65">
-            Architecture · Engineering · Valuation · Construction
+            Architects · Engineers · Valuers · Builders
           </p>
 
           <p className="mt-7 max-w-2xl text-[15px] md:text-[17px] leading-[1.7] text-white/80">

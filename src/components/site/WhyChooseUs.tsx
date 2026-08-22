@@ -8,8 +8,8 @@ import {
 } from "lucide-react";
 
 const REASONS = [
-  { icon: Landmark, title: "Trusted by institutions",
-    body: "Long-standing valuation and consultancy relationships with major banks and financial institutions across Nepal." },
+  { icon: Landmark, title: "Experienced directors",
+    body: "Our directors bring extensive professional experience in property valuation, engineering and consultancy, including previous work involving financial institutions." },
   { icon: Layers, title: "Multidisciplinary under one roof",
     body: "Architecture, civil, valuation, interior and landscape delivered by a single accountable team." },
   { icon: ShieldCheck, title: "Structural integrity first",

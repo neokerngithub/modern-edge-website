@@ -65,15 +65,13 @@ export function Testimonials() {
             <div className="pb-2">
               <Stars value={5} />
               <div className="mt-1 text-[12px] text-ink-muted">
-                Verified client rating
+                Google rating
               </div>
             </div>
           </div>
 
           <p className="mt-8 text-[14px] leading-[1.7] text-ink-muted">
-            Every review on our profile comes from a real client — homeowners,
-            businesses, banks and institutions we have served across Nepal. Read
-            what they say in their own words.
+            See what our clients say on Google — in their own words.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -111,7 +109,7 @@ export function Testimonials() {
               Read our reviews on Google.
             </h3>
             <p className="mt-4 text-[14.5px] leading-[1.7] text-ink-muted">
-              We display only verified reviews from our official Google Business
+              We display only reviews published on our official Google Business
               Profile — never fabricated testimonials. Open our profile to see
               every client review, reply and photo.
             </p>

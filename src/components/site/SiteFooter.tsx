@@ -53,14 +53,14 @@ export function SiteFooter() {
                   Architects &amp; Engineers Pvt. Ltd.
                 </div>
                 <div className="text-[9.5px] uppercase tracking-[0.22em] text-white/35 mt-1.5">
-                  Professional Architects, Engineers, Valuers &amp; Builders
+                  Architecture · Engineering · Valuation · Construction
                 </div>
               </div>
             </div>
             <p className="mt-6 max-w-sm text-sm leading-[1.7] text-white/60">
               A multidisciplinary engineering consultancy delivering architecture,
-              civil engineering, construction and bank-grade property valuation
-              across Nepal.
+              civil engineering, construction and property valuation across Nepal,
+              established in 2024.
             </p>
           </div>
 
@@ -105,15 +105,15 @@ export function SiteFooter() {
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 text-primary shrink-0" aria-hidden />
                 <div>
-                  <div className="text-white">Main Office · Duhabi-06</div>
-                  <div className="text-white/60">Sunsari, Koshi Province, Nepal</div>
+                  <div className="text-white">Head Office · Duhabi-06, Sunsari</div>
+                  <div className="text-white/60">Koshi Province, Nepal</div>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 text-primary shrink-0" aria-hidden />
                 <div>
-                  <div className="text-white">Branch Office · Biratnagar-10</div>
-                  <div className="text-white/60">Morang, Koshi Province, Nepal</div>
+                  <div className="text-white">Branch Office · Biratnagar-10, Morang</div>
+                  <div className="text-white/60">Koshi Province, Nepal</div>
                 </div>
               </li>
               <li className="flex items-start gap-3">

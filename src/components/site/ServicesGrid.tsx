@@ -20,7 +20,7 @@ type Service = {
 
 /**
  * Twin signature practices — equal visual weight.
- * Property Valuation is trusted by banks & institutions;
+ * Property Valuation covers residential to institutional assets;
  * Construction Services delivers end-to-end execution.
  */
 const SIGNATURE: [Service, Service] = [
@@ -34,7 +34,7 @@ const SIGNATURE: [Service, Service] = [
     icon: BadgeCheck,
     title: "Property Valuation",
     description:
-      "Accurate, bank-grade property assessments grounded in technical analysis and prevailing market standards — trusted by leading banks and financial institutions for residential, commercial, industrial and institutional properties.",
+      "Accurate property assessments grounded in technical analysis and prevailing market standards — covering residential, commercial, industrial and institutional properties, land, buildings and land & building valuation, including valuations prepared to bank and financial-institution reporting standards.",
   },
 ];
 

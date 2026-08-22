@@ -100,7 +100,7 @@ export function ServicesGrid() {
         })}
       </div>
 
-      {/* Remaining core disciplines */}
+      {/* Remaining core services */}
       <div className="grid gap-px bg-hairline border border-hairline rounded-[20px] overflow-hidden md:grid-cols-2 lg:grid-cols-3">
         {CORE_SERVICES.map((s, i) => {
           const Icon = s.icon;

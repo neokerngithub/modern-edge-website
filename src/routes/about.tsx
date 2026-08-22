@@ -40,8 +40,7 @@ function AboutPage() {
             </span>
           </>
         }
-        intro="Established in 2024 by two experienced civil engineers, Modern Edge is a multidisciplinary engineering consultancy delivering architecture, civil engineering, construction and property valuation from offices in Duhabi and Biratnagar."
-        meta={
+        intro="Established in 2024, Modern Edge was founded by two professionals whose combined professional experience spans more than 19 years. The company brings together this experience with a commitment to technical rigour, integrity and high-quality professional delivery."
           <div className="text-[11px] uppercase tracking-[0.24em] text-ink-muted space-y-2">
             <div>Duhabi · Sunsari</div>
             <div>Biratnagar · Morang</div>

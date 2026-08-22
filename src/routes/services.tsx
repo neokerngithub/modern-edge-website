@@ -5,11 +5,11 @@ import { ProcessTimelines } from "@/components/site/ProcessTimelines";
 import { PageHeader } from "@/components/site/PageHeader";
 
 const SERVICES_TITLE =
-  const SERVICES_TITLE =
   "Services — Construction, Architecture, Engineering & Property Valuation | Nepal";
+
 const SERVICES_DESC =
-  const SERVICES_DESC =
   "Nine core services under one roof: construction, property valuation, architecture, civil engineering, municipal drawings, DPR, interiors, landscape and real estate consultancy — across Nepal.";
+
 export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({

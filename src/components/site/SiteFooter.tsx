@@ -53,7 +53,7 @@ export function SiteFooter() {
                   Architects &amp; Engineers Pvt. Ltd.
                 </div>
                 <div className="text-[9.5px] uppercase tracking-[0.22em] text-white/35 mt-1.5">
-                  Architecture · Engineering · Valuation · Construction
+                  Architects · Engineers · Valuers · Builders
                 </div>
               </div>
             </div>

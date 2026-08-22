@@ -40,7 +40,7 @@ function ServicesPage() {
             </span>
           </>
         }
-        intro="From concept design and municipal approval through structural works, finishing and handover — every service is delivered in-house by one accountable team. Construction Services and Property Valuation anchor the practice."
+        intro="From concept design and municipal approval through structural works, finishing and handover — Our multidisciplinary team brings these services together under one professional practice. Construction Services and Property Valuation anchor the practice."
         meta={
           <div className="text-[11px] uppercase tracking-[0.24em] text-ink-muted space-y-2">
             <div>Residential · Commercial</div>

@@ -144,7 +144,7 @@ function HomePage() {
             </span>
           </>
         }
-        intro="Construction Services and Property Valuation anchor the practice — supported by architecture, civil engineering, municipal drawings, DPR preparation, interiors, landscape and real estate consultancy. Nine core"
+        intro="Construction Services and Property Valuation anchor the practice — supported by architecture, civil engineering, municipal drawings, DPR preparation, interiors, landscape and real estate consultancy. Our multidisciplinary team brings these services together under one professional practice."
       >
         <ServicesGrid />
       </Section>

@@ -4,12 +4,12 @@ import samir from "@/assets/founder-samir.jpg";
 const FOUNDERS = [
   {
     name: "Kiran Neupane",
-    role: "Co-Founder & Director · Civil Engineer",
+    role: "Co-Founder & Director . Valuator",
     img: kiran,
     experience: "10+ years",
     bio: "Mr. Kiran Neupane brings over a decade of professional experience in property valuation, design and construction supervision. In his individual professional capacity he has carried out valuation and consultancy work involving banks and financial institutions in Nepal, and has contributed to projects including City Cinema, Centurion Mall, St. Mary's School and residential developments across Morang and Sunsari.",
     highlights: ["City Cinema","Centurion Mall","St. Mary's School","Residential — Morang & Sunsari"],
-    discipline: "Civil Engineering · Valuation",
+    discipline: "Valuation . Site Supervision",
     initial: "01",
   },
   {

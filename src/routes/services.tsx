@@ -7,8 +7,8 @@ import { PageHeader } from "@/components/site/PageHeader";
 const SERVICES_TITLE =
   "Services — Architecture, Engineering, Construction & Valuation | Nepal";
 const SERVICES_DESC =
-  "Nine core services under one roof: property valuation, construction, architecture, civil engineering, municipal drawings, DPR, interiors, landscape and real estate consultancy — across Nepal.";
-
+  const SERVICES_DESC =
+  "Nine core services under one roof: construction, property valuation, architecture, civil engineering, municipal drawings, DPR, interiors, landscape and real estate consultancy — across Nepal.";
 export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({

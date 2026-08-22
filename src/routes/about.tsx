@@ -64,7 +64,7 @@ function AboutPage() {
               <div className="mt-10 grid grid-cols-2 gap-8 border-t border-hairline pt-8">
                 <div>
                   <div className="font-serif text-3xl tracking-[-0.01em] text-ink">09</div>
-                  <div className="mt-2 text-[11px] uppercase tracking-[0.22em] text-ink-muted">Core disciplines</div>
+                  <div className="mt-2 text-[11px] uppercase tracking-[0.22em] text-ink-muted">Core services</div>
                 </div>
                 <div>
                   <div className="font-serif text-3xl tracking-[-0.01em] text-ink">02</div>

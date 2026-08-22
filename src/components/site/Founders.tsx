@@ -7,7 +7,7 @@ const FOUNDERS = [
     role: "Co-Founder & Director · Civil Engineer",
     img: kiran,
     experience: "10+ years",
-    bio: "Mr. Kiran Neupane brings over a decade of experience in property valuation, design and construction supervision. He has collaborated with major banks and financial institutions across Nepal and contributed to notable projects including City Cinema, Centurion Mall, St. Mary's School and several residential developments across Morang and Sunsari.",
+    bio: "Mr. Kiran Neupane brings over a decade of professional experience in property valuation, design and construction supervision. In his individual professional capacity he has carried out valuation and consultancy work involving banks and financial institutions in Nepal, and has contributed to projects including City Cinema, Centurion Mall, St. Mary's School and residential developments across Morang and Sunsari.",
     highlights: ["City Cinema","Centurion Mall","St. Mary's School","Residential — Morang & Sunsari"],
     discipline: "Civil Engineering · Valuation",
     initial: "01",
@@ -17,8 +17,8 @@ const FOUNDERS = [
     role: "Co-Founder & Director · Civil Engineer",
     img: samir,
     experience: "9+ years",
-    bio: "Mr. Md. Samir Hussain brings over nine years of professional experience across construction, property valuation and project management. His work spans industrial, commercial and residential projects delivered with a focus on quality, discipline and structural excellence.",
-    highlights: ["Construction","Property Valuation","Project Management","Swastik Oil Industries","OCB Processing Industries","Itahari Stadium"],
+    bio: "Mr. Md. Samir Hussain brings over nine years of professional experience across construction, property valuation and project management. In his individual professional capacity he has contributed to projects including Swastik Oil Industries, OCB Processing Industries and Itahari Stadium, alongside commercial and residential works.",
+    highlights: ["Swastik Oil Industries","OCB Processing Industries","Itahari Stadium","Commercial & Residential Projects"],
     discipline: "Construction · Valuation · Project Management",
     initial: "02",
   },
@@ -68,7 +68,7 @@ export function Founders() {
             <p className="text-[15px] leading-[1.75] text-ink-muted">{f.bio}</p>
             <div className="mt-8">
               <div className="text-[10px] uppercase tracking-[0.26em] text-ink-muted mb-4">
-                Notable projects
+                Selected professional experience
               </div>
               <ul className="flex flex-wrap gap-2">
                 {f.highlights.map((h) => (
@@ -80,6 +80,11 @@ export function Founders() {
                   </li>
                 ))}
               </ul>
+              <p className="mt-4 text-[12px] leading-[1.6] text-ink-muted/80">
+                Projects listed reflect the director's individual professional
+                involvement prior to or outside the establishment of Modern Edge
+                Architects &amp; Engineers Pvt. Ltd.
+              </p>
             </div>
           </div>
         </article>

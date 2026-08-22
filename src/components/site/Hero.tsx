@@ -3,7 +3,7 @@ import { ArrowRight, Phone } from "lucide-react";
 import hero from "@/assets/hero-architecture.jpg";
 
 const INDEX = [
-  { k: "09", v: "Core disciplines" },
+  { k: "09", v: "Core services" },
   { k: "02", v: "Offices in Nepal" },
   { k: "19+", v: "Years of combined professional experience" },
   { k: "2024", v: "Modern Edge established" },

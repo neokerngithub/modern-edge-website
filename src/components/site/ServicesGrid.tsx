@@ -34,7 +34,7 @@ const SIGNATURE: [Service, Service] = [
     icon: BadgeCheck,
     title: "Property Valuation",
     description:
-      "Accurate property assessments grounded in technical analysis and prevailing market standards — covering residential, commercial, industrial and institutional properties, land, buildings and land & building valuation, including valuations prepared to bank and professional Valuation Reporting.",
+      "Accurate property assessments grounded in technical analysis and prevailing market standards — covering residential, commercial, industrial and institutional properties, land, buildings and land & building valuation, including valuations prepared in accordance with bank and professional valuation reporting standards.",
   },
 ];
 

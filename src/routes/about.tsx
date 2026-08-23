@@ -41,6 +41,7 @@ function AboutPage() {
           </>
         }
         intro="Established in 2024, Modern Edge was founded by two professionals whose combined professional experience spans more than 19 years. The company brings together this experience with a commitment to technical rigour, integrity and high-quality professional delivery."
+        meta={
           <div className="text-[11px] uppercase tracking-[0.24em] text-ink-muted space-y-2">
             <div>Duhabi · Sunsari</div>
             <div>Biratnagar · Morang</div>

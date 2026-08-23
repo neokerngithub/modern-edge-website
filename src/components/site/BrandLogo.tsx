@@ -1,5 +1,5 @@
-import blueLogo from "@/assets/logo-mark-blue.png.asset.json";
-import whiteLogo from "@/assets/logo-mark-white.png.asset.json";
+import blueLogo from "@/assets/logo-mark-blue.png";
+import whiteLogo from "@/assets/logo-mark-white.png";
 
 type Props = {
   /** Always render the white mark (for use over dark imagery). */
@@ -24,7 +24,7 @@ export function BrandLogo({
   if (forceWhite) {
     return (
       <img
-        src={whiteLogo.url}
+        src={whiteLogo}
         alt={alt}
         width={size}
         height={size}
@@ -37,7 +37,7 @@ export function BrandLogo({
   return (
     <>
       <img
-        src={blueLogo.url}
+        src={blueLogo}
         alt={alt}
         width={size}
         height={size}
@@ -45,7 +45,7 @@ export function BrandLogo({
         className={`object-contain dark:hidden ${className}`}
       />
       <img
-        src={whiteLogo.url}
+        src={whiteLogo}
         alt=""
         aria-hidden
         width={size}

@@ -120,16 +120,16 @@ export function SiteFooter() {
                 <Mail size={16} className="mt-0.5 text-primary shrink-0" aria-hidden />
                 <div className="space-y-1">
                   <a
-                    href="mailto:info@modernedge.com.np"
+                    href="mailto:meae.np@gmail.com"
                     className="block text-white/85 hover:text-white transition-colors"
                   >
-                    info@modernedge.com.np
+                    meae.np@gmail.com
                   </a>
                   <a
-                    href="mailto:meae.np@gmail.com"
+                    href="mailto:info@modernedge.com.np"
                     className="block text-white/60 hover:text-white transition-colors"
                   >
-                    meae.np@gmail.com
+                    info@modernedge.com.np
                   </a>
                 </div>
               </li>

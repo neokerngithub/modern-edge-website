@@ -14,7 +14,7 @@ const FOUNDERS = [
       "St. Mary's School",
       "Residential — Morang & Sunsari",
     ],
-    discipline: "Valuation · Site Supervision",
+    discipline: "Valuation · Construction Supervision",
     initial: "01",
   },
   {

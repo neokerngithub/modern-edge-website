@@ -29,6 +29,7 @@ const FOUNDERS = [
       "Global Plastic Industries",
       "Vivek Automobiles",
       "General PET Industries",
+      "Laxmi Aluminum Industries",
     ],
     discipline: "Construction · Valuation · Project Management",
     initial: "02",

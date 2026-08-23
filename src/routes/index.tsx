@@ -98,10 +98,7 @@ function HomePage() {
               &amp; landscape design under one accountable team.
             </p>
             <p className="mt-6 max-w-prose text-[15px] leading-[1.75] text-ink-muted">
-              Established in 2024 by civil engineers whose combined professional
-              experience spans nearly two decades, the practice serves homeowners,
-              businesses, industries, institutions and government agencies across
-              Nepal.
+              Modern Edge was established in 2024 by two experienced technical professionals with nearly two decades of combined experience, driven by technical rigour, integrity, and a commitment to high-quality engineering delivery.
             </p>
 
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-10 border-t border-hairline pt-8">

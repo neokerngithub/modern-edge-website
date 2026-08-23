@@ -30,10 +30,10 @@ export function ContactBlock() {
           </Group>
 
           <Group icon={<Phone size={16} />} label="Phone">
-            <a href="tel:+9779852059599" className="block text-ink hover:text-primary transition-colors">
+            <a href="tel:+9779852059599" className="block py-0.5 text-ink hover:text-primary transition-colors">
               Kiran · +977 98520 59599
             </a>
-            <a href="tel:+9779767784543" className="block text-ink hover:text-primary transition-colors">
+            <a href="tel:+9779767784543" className="block py-0.5 text-ink hover:text-primary transition-colors">
               Samir · +977 97677 84543
             </a>
           </Group>
@@ -50,10 +50,10 @@ export function ContactBlock() {
           </Group>
 
           <Group icon={<Mail size={16} />} label="Email">
-            <a href="mailto:meae.np@gmail.com" className="block break-words text-ink hover:text-primary transition-colors">
+            <a href="mailto:meae.np@gmail.com" className="block py-0.5 break-words text-ink hover:text-primary transition-colors">
               meae.np@gmail.com
             </a>
-            <a href="mailto:info@modernedge.com.np" className="block break-words text-ink-muted hover:text-primary transition-colors">
+            <a href="mailto:info@modernedge.com.np" className="block py-0.5 break-words text-ink-muted hover:text-primary transition-colors">
               info@modernedge.com.np
             </a>
           </Group>

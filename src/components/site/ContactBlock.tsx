@@ -50,10 +50,10 @@ export function ContactBlock() {
           </Group>
 
           <Group icon={<Mail size={16} />} label="Email">
-            <a href="mailto:meae.np@gmail.com" className="block break-words text-ink hover:text-primary transition-colors">
+            <a href="mailto:meae.np@gmail.com" className="block py-0.5 break-words text-ink hover:text-primary transition-colors">
               meae.np@gmail.com
             </a>
-            <a href="mailto:info@modernedge.com.np" className="block break-words text-ink-muted hover:text-primary transition-colors">
+            <a href="mailto:info@modernedge.com.np" className="block py-0.5 break-words text-ink-muted hover:text-primary transition-colors">
               info@modernedge.com.np
             </a>
           </Group>

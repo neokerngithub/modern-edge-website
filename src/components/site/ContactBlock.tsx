@@ -60,7 +60,7 @@ export function ContactBlock() {
 
           <Group icon={<Clock size={16} />} label="Business Hours">
             <div className="text-ink">Sunday – Friday · 10:00 AM – 5:30 PM</div>
-            <div className="text-ink-muted">Saturday · By Consultation</div>
+            <div className="text-ink-muted">Saturday · On Consultation</div>
           </Group>
 
           <div className="pt-2">

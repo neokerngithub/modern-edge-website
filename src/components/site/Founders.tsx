@@ -102,10 +102,7 @@ export function Founders() {
               </ul>
 
               <p className="mt-4 text-[12px] leading-[1.6] text-ink-muted/80">
-                Projects listed reflect the director&apos;s individual
-                professional experience gained prior to the establishment of
-                Modern Edge Architects &amp; Engineers Pvt. Ltd. and are not
-                represented as projects executed by Modern Edge.
+                Projects listed reflect the director's individual professional experience gained prior to the establishment of Modern Edge Architects & Engineers Pvt. Ltd. and are not represented as projects executed by Modern Edge.
               </p>
             </div>
           </div>

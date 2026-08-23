@@ -53,7 +53,7 @@ export function SiteFooter() {
                   Architects &amp; Engineers
                 </div>
                 <div className="text-[9.5px] uppercase tracking-[0.22em] text-white/35 mt-1.5">
-                  Architects · Engineers · Valuers · Builders
+                  Architecture · Engineering · Valuation · Construction
                 </div>
               </div>
             </div>

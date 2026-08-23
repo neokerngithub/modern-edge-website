@@ -30,10 +30,10 @@ export function ContactBlock() {
           </Group>
 
           <Group icon={<Phone size={16} />} label="Phone">
-            <a href="tel:+9779852059599" className="block text-ink hover:text-primary transition-colors">
+            <a href="tel:+9779852059599" className="block py-0.5 text-ink hover:text-primary transition-colors">
               Kiran · +977 98520 59599
             </a>
-            <a href="tel:+9779767784543" className="block text-ink hover:text-primary transition-colors">
+            <a href="tel:+9779767784543" className="block py-0.5 text-ink hover:text-primary transition-colors">
               Samir · +977 97677 84543
             </a>
           </Group>

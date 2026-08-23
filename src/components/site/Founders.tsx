@@ -4,7 +4,7 @@ import samir from "@/assets/founder-samir.jpg";
 const FOUNDERS = [
   {
     name: "Kiran Neupane",
-    role: "Co-Founder & Director · Property Valuation Professional",
+    role: "Co-Founder & Director · Property Valuator",
     img: kiran,
     experience: "10+ years",
     bio: "Mr. Kiran Neupane brings over a decade of professional experience in property valuation, design and construction supervision. Prior to the establishment of Modern Edge, he gained individual professional experience in valuation and consultancy work involving banks and financial institutions in Nepal, and contributed to projects including City Cinema, Centurion Mall, St. Mary's School and residential developments across Morang and Sunsari.",

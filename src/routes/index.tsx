@@ -175,7 +175,7 @@ function HomePage() {
         index="05 — Leadership"
         eyebrow="Meet our founders"
         title="The directors behind Modern Edge."
-        intro="Modern Edge was established in 2024 by two civil engineers whose combined professional experience spans nearly two decades — built on technical rigour, integrity and high-quality engineering delivery."
+        intro="The directors bring nearly two decades of combined professional experience across property valuation, construction, engineering and project management."
       >
         <Founders />
       </Section>

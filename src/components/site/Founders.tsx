@@ -26,8 +26,9 @@ const FOUNDERS = [
     highlights: [
       "Swastik Oil Industries",
       "OCB Processing Industries",
-      "Itahari Stadium",
-      "Commercial & Residential Projects",
+      "Global Plastic Industries",
+      "Vivek Automobiles",
+      "General PET Industries",
     ],
     discipline: "Construction · Valuation · Project Management",
     initial: "02",

@@ -15,11 +15,11 @@ export const Route = createFileRoute("/process")({
       { name: "description", content: PROCESS_DESC },
       { property: "og:title", content: PROCESS_TITLE },
       { property: "og:description", content: PROCESS_DESC },
-      { property: "og:url", content: "/process" },
+      { property: "og:url", content: "https://modern-edge-website.lovable.app/process" },
       { name: "twitter:title", content: PROCESS_TITLE },
       { name: "twitter:description", content: PROCESS_DESC },
     ],
-    links: [{ rel: "canonical", href: "/process" }],
+    links: [{ rel: "canonical", href: "https://modern-edge-website.lovable.app/process" }],
   }),
 });
 

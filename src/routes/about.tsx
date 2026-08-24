@@ -17,11 +17,11 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: ABOUT_DESC },
       { property: "og:title", content: ABOUT_TITLE },
       { property: "og:description", content: ABOUT_DESC },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: "https://modern-edge-website.lovable.app/about" },
       { name: "twitter:title", content: ABOUT_TITLE },
       { name: "twitter:description", content: ABOUT_DESC },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://modern-edge-website.lovable.app/about" }],
   }),
 });
 
@@ -155,7 +155,7 @@ function AboutPage() {
           <div className="mt-10">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-[13px] font-medium text-ink hover:bg-primary hover:text-primary-foreground transition-colors duration-500"
+              className="inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-[13px] font-medium text-inverse hover:bg-primary hover:text-primary-foreground transition-colors duration-500"
             >
               Request Consultation
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-inverse text-inverse-foreground">

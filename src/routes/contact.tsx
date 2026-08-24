@@ -16,11 +16,11 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: CONTACT_DESC },
       { property: "og:title", content: CONTACT_TITLE },
       { property: "og:description", content: CONTACT_DESC },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: "https://modern-edge-website.lovable.app/contact" },
       { name: "twitter:title", content: CONTACT_TITLE },
       { name: "twitter:description", content: CONTACT_DESC },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://modern-edge-website.lovable.app/contact" }],
   }),
 });
 

@@ -22,7 +22,7 @@ export function PageHeader({
   meta?: ReactNode;
 }) {
   return (
-    <section className="pt-36 md:pt-44 pb-16 md:pb-24 border-b border-hairline bg-background">
+    <section className="pt-28 md:pt-36 pb-12 md:pb-16 border-b border-hairline bg-background">
       <div className="container-x">
         <nav
           aria-label="Breadcrumb"
@@ -35,7 +35,7 @@ export function PageHeader({
           <span className="text-ink/70">{breadcrumb}</span>
         </nav>
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-12 items-end">
+        <div className="mt-10 grid gap-10 lg:grid-cols-12 items-end">
           <div className="lg:col-span-9">
             <div className="flex items-center gap-4">
               <span className="font-display text-xs text-primary tabular-nums tracking-[0.14em]">

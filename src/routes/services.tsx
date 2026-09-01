@@ -51,7 +51,7 @@ function ServicesPage() {
         }
       />
 
-      <Section className="pt-20 md:pt-28">
+      <Section className="pt-14 md:pt-20">
         <ServicesGrid />
       </Section>
 

@@ -44,11 +44,11 @@ export function PageHeader({
               <span aria-hidden className="h-px w-10 bg-primary/60" />
               <span className="eyebrow">{eyebrow}</span>
             </div>
-            <h1 className="mt-8 font-display font-light text-[10.5vw] sm:text-6xl md:text-7xl lg:text-[88px] leading-[0.98] tracking-[-0.03em] text-ink max-w-[16ch]">
+            <h1 className="mt-6 font-display font-light text-[10.5vw] sm:text-6xl md:text-7xl lg:text-[88px] leading-[0.98] tracking-[-0.03em] text-ink max-w-[16ch]">
               {title}
             </h1>
             {intro && (
-              <p className="mt-8 max-w-2xl text-lg md:text-xl leading-[1.55] text-ink-muted">
+              <p className="mt-6 max-w-2xl text-lg md:text-xl leading-[1.55] text-ink-muted">
                 {intro}
               </p>
             )}

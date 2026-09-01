@@ -52,7 +52,7 @@ function HomePage() {
           </>
         }
       >
-        <div className="grid gap-16 lg:gap-x-8 lg:gap-y-0 lg:grid-cols-12 items-start">
+        <div className="grid gap-12 lg:gap-x-8 lg:gap-y-0 lg:grid-cols-12 items-start">
           <div className="lg:col-span-5 min-w-0">
             <div className="relative rounded-[20px] border border-hairline bg-surface p-10 md:p-14">
               <div className="eyebrow">Est. 2024</div>
@@ -101,7 +101,7 @@ function HomePage() {
               Modern Edge was established in 2024 by two experienced technical professionals with nearly two decades of combined experience, driven by technical rigour, integrity, and a commitment to high-quality engineering delivery.
             </p>
 
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-10 border-t border-hairline pt-8">
+            <div className="mt-9 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-hairline pt-7">
               <div>
                 <div className="eyebrow">Vision</div>
                 <p className="mt-3 text-[13.5px] leading-relaxed text-ink-muted">
@@ -119,7 +119,7 @@ function HomePage() {
               </div>
             </div>
 
-            <Link to="/about" className="link-underline mt-12">
+            <Link to="/about" className="link-underline mt-9">
               Read the full story <ArrowRight size={14} aria-hidden />
             </Link>
           </div>

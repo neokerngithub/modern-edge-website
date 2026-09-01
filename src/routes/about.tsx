@@ -50,8 +50,8 @@ function AboutPage() {
         }
       />
 
-      <Section className="pt-24 md:pt-32">
-        <div className="grid gap-16 lg:gap-x-8 lg:grid-cols-12 items-start">
+      <Section className="pt-16 md:pt-20">
+        <div className="grid gap-12 lg:gap-x-8 lg:grid-cols-12 items-start">
           <div className="lg:col-span-5 min-w-0">
             <div className="rounded-[20px] border border-hairline bg-surface p-10 md:p-14">
               <div className="eyebrow">Est. 2024 · Nepal</div>
@@ -91,7 +91,7 @@ function AboutPage() {
         </div>
 
 
-        <div className="mt-28 grid gap-6 md:grid-cols-2">
+        <div className="mt-16 md:mt-20 grid gap-6 md:grid-cols-2">
           <div className="rounded-[20px] border border-hairline p-10 md:p-12">
             <div className="eyebrow">Vision</div>
             <h3 className="mt-6 font-display font-light text-3xl md:text-4xl leading-[1.05] tracking-[-0.02em] text-ink">

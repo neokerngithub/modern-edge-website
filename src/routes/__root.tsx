@@ -38,7 +38,7 @@ const ORG_JSONLD = {
   name: "Modern Edge Architects & Engineers Pvt. Ltd.",
   alternateName: "Modern Edge",
   description: DESCRIPTION,
-  url: "/",
+  url: "https://modern-edge-website.lovable.app/",
   slogan: "Architecture · Engineering · Valuation · Construction",
   telephone: ["+977-9852059599", "+977-9767784543"],
   email: "info@modernedge.com.np",

@@ -161,8 +161,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
       { name: "theme-color", content: "#004AAD" },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/90592416-d6df-47c7-8453-8e6f00d15841/id-preview-0b9065ac--acafc277-f740-40c9-a7a0-418cad362e26.lovable.app-1783356311314.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/90592416-d6df-47c7-8453-8e6f00d15841/id-preview-0b9065ac--acafc277-f740-40c9-a7a0-418cad362e26.lovable.app-1783356311314.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

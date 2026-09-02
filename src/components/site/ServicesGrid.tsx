@@ -5,7 +5,7 @@ import {
   Sofa,
   TreePine,
   FileSignature,
-  Home,
+  
   ClipboardCheck,
   BadgeCheck,
   ArrowUpRight,

@@ -5,7 +5,7 @@ import {
   Sofa,
   TreePine,
   FileSignature,
-  Home,
+  
   ClipboardCheck,
   BadgeCheck,
   ArrowUpRight,
@@ -47,12 +47,10 @@ export const CORE_SERVICES: Service[] = [
     description: "Regulation-compliant drawings prepared for municipal approval, sanctioning and permit workflows across local authorities." },
   { icon: ClipboardCheck, title: "DPR Preparation",
     description: "Detailed Project Reports covering technical, financial and design aspects — supporting funding decisions and disciplined execution." },
-  { icon: Sofa, title: "Interior Design",
-    description: "Considered, functional interiors that reflect modern living and personal identity — executed with precision under one roof." },
-  { icon: TreePine, title: "Landscape Design",
-    description: "Outdoor environments that enhance natural beauty and complement architecture with lasting elegance and low-maintenance planting." },
-  { icon: Home, title: "Real Estate Consultancy",
-    description: "Independent guidance on valuation, feasibility and development strategy — protecting long-term investment value." },
+  { icon: Sofa, title: "Interior, Exterior & Landscape Design",
+    description: "Considered, functional interiors that reflect modern living and personal identity, paired with outdoor environments that enhance natural beauty and complement architecture with lasting elegance — executed with precision under one roof." },
+  { icon: TreePine, title: "EIA / IEE",
+    description: "Environmental Impact Assessment and Initial Environmental Examination studies prepared with careful, accurate documentation — supporting compliant, responsible project approval and delivery." },
 ];
 
 export function ServicesGrid() {

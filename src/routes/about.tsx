@@ -63,7 +63,7 @@ function AboutPage() {
               </div>
               <div className="mt-10 grid grid-cols-2 gap-8 border-t border-hairline pt-8">
                 <div>
-                  <div className="font-serif text-3xl tracking-[-0.01em] text-ink">09</div>
+                  <div className="font-serif text-3xl tracking-[-0.01em] text-ink">08</div>
                   <div className="mt-2 text-[11px] uppercase tracking-[0.22em] text-ink-muted">Core services</div>
                 </div>
                 <div>
@@ -78,8 +78,8 @@ function AboutPage() {
               We design, engineer and build structures that stand the test of
               time — with services spanning architectural design, civil and
               earthquake engineering, construction, municipal drawings, DPR
-              preparation, property valuation, interior and landscape design and
-              real estate consultancy.
+              preparation, property valuation, interior, exterior & landscape
+              design and EIA / IEE.
             </p>
             <p className="mt-6 text-[15px] leading-[1.75] text-ink-muted">
               Driven by precision, technical expertise and a client-focused

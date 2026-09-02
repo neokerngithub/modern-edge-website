@@ -66,7 +66,7 @@ function HomePage() {
               <div className="mt-10 grid grid-cols-2 gap-8 border-t border-hairline pt-8">
                 <div>
                   <div className="font-serif text-3xl tracking-[-0.01em] text-ink">
-                    09
+                    08
                   </div>
                   <div className="mt-2 text-[11px] uppercase tracking-[0.22em] text-ink-muted">
                     Core disciplines
@@ -135,13 +135,13 @@ function HomePage() {
         eyebrow="What we do"
         title={
           <>
-            Nine core services.
+            Eight core services.
             <span className="block text-ink-muted italic font-normal">
               Two signature practices.
             </span>
           </>
         }
-        intro="Construction Services and Property Valuation anchor the practice — supported by architecture, civil engineering, municipal drawings, DPR preparation, interiors, landscape and real estate consultancy. Our multidisciplinary team brings these services together under one professional practice."
+        intro="Construction Services and Property Valuation anchor the practice — supported by architecture, civil engineering, municipal drawings, DPR preparation, interior, exterior & landscape design and EIA / IEE. Our multidisciplinary team brings these services together under one professional practice."
       >
         <ServicesGrid />
       </Section>

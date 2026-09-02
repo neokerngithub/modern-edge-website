@@ -17,9 +17,9 @@ const SERVICES = [
 export function SiteFooter() {
   return (
     <footer className="bg-inverse text-inverse-foreground/80">
-      <div className="container-x pt-24 pb-12">
+      <div className="container-x pt-16 pb-10">
         {/* Top row — brand + CTA */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 pb-16 border-b border-white/10">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 pb-10 border-b border-white/10">
           <div className="max-w-2xl">
             <div className="text-[10px] uppercase tracking-[0.32em] text-white/45">
               Modern Edge · Architects &amp; Engineers Pvt. Ltd.
@@ -43,7 +43,7 @@ export function SiteFooter() {
         </div>
 
         {/* Content grid */}
-        <div className="grid gap-14 lg:grid-cols-12 lg:gap-x-8 py-16">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8 py-12">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3">
               <BrandLogo forceWhite className="h-11 w-auto" size={44} loading="lazy" />
@@ -57,18 +57,18 @@ export function SiteFooter() {
                 </div>
               </div>
             </div>
-            <p className="mt-6 max-w-sm text-sm leading-[1.7] text-white/60">
+            <p className="mt-5 max-w-sm text-sm leading-[1.7] text-white/60">
               A multidisciplinary engineering consultancy delivering architecture,
               civil engineering, construction and property valuation across Nepal,
               established in 2024.
             </p>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <div className="text-xs uppercase tracking-[0.24em] text-white/40">
               Navigate
             </div>
-            <ul className="mt-6 space-y-3 text-sm">
+            <ul className="mt-5 space-y-3 text-sm">
               {[
                 { to: "/", label: "Home" },
                 { to: "/about", label: "About" },
@@ -86,8 +86,10 @@ export function SiteFooter() {
                 </li>
               ))}
             </ul>
+          </div>
 
-            <div className="mt-10 text-xs uppercase tracking-[0.24em] text-white/40">
+          <div className="lg:col-span-2">
+            <div className="text-xs uppercase tracking-[0.24em] text-white/40">
               Services
             </div>
             <ul className="mt-5 space-y-2.5 text-sm text-white/60">
@@ -97,11 +99,11 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          <div className="lg:col-span-5 min-w-0">
+          <div className="lg:col-span-4 min-w-0">
             <div className="text-xs uppercase tracking-[0.24em] text-white/40">
               Get in touch
             </div>
-            <ul className="mt-6 space-y-5 text-sm">
+            <ul className="mt-5 space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 text-primary shrink-0" aria-hidden />
                 <div>
@@ -152,12 +154,12 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-t border-white/10 pt-8 text-xs text-white/40">
+        <div className="grid gap-5 border-t border-white/10 pt-7 text-xs text-white/40 md:grid-cols-3 md:items-center">
           <div>
             © {new Date().getFullYear()} Modern Edge Architects &amp; Engineers
             Pvt. Ltd. All rights reserved.
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 md:justify-self-center">
             {[
               { href: "https://www.facebook.com/meae.np/", label: "Facebook", Icon: Facebook },
               { href: "https://www.linkedin.com/company/meaenp", label: "LinkedIn", Icon: Linkedin },
@@ -175,7 +177,7 @@ export function SiteFooter() {
               </a>
             ))}
           </div>
-          <div className="uppercase tracking-[0.22em]">
+          <div className="uppercase tracking-[0.22em] md:justify-self-end">
             Duhabi · Biratnagar · Nepal
           </div>
         </div>

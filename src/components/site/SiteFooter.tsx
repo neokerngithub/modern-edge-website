@@ -9,9 +9,8 @@ const SERVICES = [
   "Civil Engineering",
   "Municipal Drawings",
   "DPR Preparation",
-  "Interior Design",
-  "Landscape Design",
-  "Real Estate Consultancy",
+  "Interior, Exterior & Landscape Design",
+  "EIA / IEE",
 ];
 
 export function SiteFooter() {

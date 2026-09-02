@@ -8,7 +8,7 @@ const SERVICES_TITLE =
   "Services — Construction, Architecture, Engineering & Property Valuation | Nepal";
 
 const SERVICES_DESC =
-  "Nine core services under one roof: construction, property valuation, architecture, civil engineering, municipal drawings, DPR, interiors, landscape and real estate consultancy — across Nepal.";
+  "Eight core services under one roof: construction, property valuation, architecture, civil engineering, municipal drawings, DPR, interior, exterior & landscape design and EIA / IEE — across Nepal.";
 
 export const Route = createFileRoute("/services")({
   component: ServicesPage,
@@ -35,7 +35,7 @@ function ServicesPage() {
         eyebrow="What we do"
         title={
           <>
-            Nine core services.
+            Eight core services.
             <span className="block text-ink-muted italic font-normal">
               Two signature practices.
             </span>

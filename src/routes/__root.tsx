@@ -27,9 +27,8 @@ const CORE_DISCIPLINES = [
   "Civil Engineering",
   "Municipal Drawings",
   "DPR Preparation",
-  "Interior Design",
-  "Landscape Design",
-  "Real Estate Consultancy",
+  "Interior, Exterior & Landscape Design",
+  "EIA / IEE",
 ];
 
 const ORG_JSONLD = {

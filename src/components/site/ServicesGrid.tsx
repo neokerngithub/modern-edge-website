@@ -48,9 +48,9 @@ export const CORE_SERVICES: Service[] = [
   { icon: ClipboardCheck, title: "DPR Preparation",
     description: "Detailed Project Reports covering technical, financial and design aspects — supporting funding decisions and disciplined execution." },
   { icon: Sofa, title: "Interior, Exterior & Landscape Design",
-    description: "Considered, functional interiors that reflect modern living and personal identity, paired with outdoor environments that enhance natural beauty and complement architecture with lasting elegance — executed with precision under one roof." },
+    description: "Integrated interior, exterior, and landscape design, precisely crafted to reflect your lifestyle and elevate your architecture." },
   { icon: TreePine, title: "EIA / IEE",
-    description: "Environmental Impact Assessment and Initial Environmental Examination studies prepared with careful, accurate documentation — supporting compliant, responsible project approval and delivery." },
+    description: "Rigorous environmental assessment and compliance. Accurate documentation for seamless approvals. Delivering sustainable outcomes from start to finish." },
 ];
 
 export function ServicesGrid() {

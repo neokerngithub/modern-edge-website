@@ -29,6 +29,7 @@ export function BrandLogo({
         width={size}
         height={size}
         loading={loading}
+        decoding="async"
         className={`object-contain ${className}`}
       />
     );
@@ -42,6 +43,7 @@ export function BrandLogo({
         width={size}
         height={size}
         loading={loading}
+        decoding="async"
         className={`object-contain dark:hidden ${className}`}
       />
       <img
@@ -51,6 +53,7 @@ export function BrandLogo({
         width={size}
         height={size}
         loading={loading}
+        decoding="async"
         className={`object-contain hidden dark:block ${className}`}
       />
     </>

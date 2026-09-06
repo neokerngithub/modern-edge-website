@@ -51,6 +51,7 @@ export function Founders() {
               width={800}
               height={1000}
               loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover transition-all duration-[900ms] ease-out scale-[1.02] group-hover:scale-100"
             />
 

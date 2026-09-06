@@ -154,9 +154,9 @@ export function SiteFooter() {
         </div>
 
         <div className="grid gap-5 border-t border-white/10 pt-7 text-xs text-white/40 md:grid-cols-3 md:items-center">
-          <div>
-            © {new Date().getFullYear()} Modern Edge Architects &amp; Engineers
-            Pvt. Ltd. All rights reserved.
+          <div className="space-y-1">
+            <div>© 2026 Modern Edge Architects &amp; Engineers Pvt. Ltd.</div>
+            <div>All rights reserved.</div>
           </div>
           <div className="flex items-center gap-3 md:justify-self-center">
             {[

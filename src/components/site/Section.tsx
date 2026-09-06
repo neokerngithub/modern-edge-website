@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Reveal } from "./Reveal";
 
 export function Section({
   id,
@@ -24,6 +25,7 @@ export function Section({
     <section id={id} className={`py-14 md:py-20 ${className}`}>
       <div className="container-x">
         {(eyebrow || title || intro) && (
+          <Reveal>
           <header
             className={`mb-10 md:mb-14 ${
               centered ? "mx-auto max-w-3xl text-center" : "max-w-4xl"
@@ -57,8 +59,9 @@ export function Section({
               </p>
             )}
           </header>
+          </Reveal>
         )}
-        {children}
+        <Reveal delay={80}>{children}</Reveal>
       </div>
     </section>
   );

@@ -37,7 +37,10 @@ export function LazySection({
   }, [visible, rootMargin]);
 
   return (
-    <div ref={ref} className={className}>
+    <div
+      ref={ref}
+      className={`reveal ${visible ? "reveal-shown" : ""} ${className}`}
+    >
       {visible ? children : null}
     </div>
   );

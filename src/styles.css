@@ -226,8 +226,13 @@
   font-weight: 500;
   letter-spacing: 0.02em;
   border-radius: 999px;
-  transition: background 300ms ease, transform 300ms ease;
-  &:hover { background: color-mix(in oklch, var(--primary) 88%, black); }
+  transition: background 300ms ease, transform 300ms ease, box-shadow 300ms ease;
+  &:hover {
+    background: color-mix(in oklch, var(--primary) 88%, black);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px -12px color-mix(in oklab, var(--primary) 55%, transparent);
+  }
+  &:active { transform: translateY(0); }
 }
 
 @utility btn-ghost {
@@ -240,8 +245,9 @@
   font-size: 0.82rem;
   font-weight: 500;
   border-radius: 999px;
-  transition: border-color 300ms ease, color 300ms ease, background 300ms ease;
-  &:hover { border-color: var(--ink); background: var(--surface); }
+  transition: border-color 300ms ease, color 300ms ease, background 300ms ease, transform 300ms ease;
+  &:hover { border-color: var(--ink); background: var(--surface); transform: translateY(-1px); }
+  &:active { transform: translateY(0); }
 }
 
 @utility card-lift {
@@ -282,4 +288,36 @@
 }
 @utility animate-line {
   animation: shimmer-line 1200ms cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+/* ---------- Motion & polish ---------- */
+
+/* Scroll reveal: fade-in + subtle upward slide */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 700ms cubic-bezier(0.2, 0.7, 0.2, 1),
+              transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: opacity, transform;
+}
+.reveal.reveal-shown {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Images fade in smoothly once decoded — no visual pop */
+@keyframes img-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@layer base {
+  img {
+    animation: img-in 500ms ease-out both;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    img { animation: none; }
+  }
 }

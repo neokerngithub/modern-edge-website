@@ -63,7 +63,7 @@ export function ServicesGrid() {
           return (
             <article
               key={s.title}
-              className="group relative overflow-hidden rounded-[20px] bg-inverse text-inverse-foreground"
+              className="group relative overflow-hidden rounded-[20px] bg-inverse text-inverse-foreground transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-elevated"
             >
               <div
                 aria-hidden
@@ -106,7 +106,7 @@ export function ServicesGrid() {
           return (
             <article
               key={s.title}
-              className="group relative bg-card p-9 md:p-10 transition-colors duration-500 hover:bg-surface"
+              className="group relative bg-card p-9 md:p-10 transition-all duration-300 ease-in-out hover:bg-surface hover:-translate-y-1 hover:shadow-elevated"
             >
               <div className="flex items-start justify-between">
                 <div className="flex h-11 w-11 items-center justify-center rounded-md border border-hairline text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors duration-500">

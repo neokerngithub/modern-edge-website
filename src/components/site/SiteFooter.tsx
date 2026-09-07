@@ -32,7 +32,7 @@ export function SiteFooter() {
           </div>
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-[13px] font-medium text-inverse hover:bg-primary hover:text-primary-foreground transition-colors duration-500 self-start lg:self-auto"
+            className="interactive-press group inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-[13px] font-medium text-inverse hover:bg-primary hover:text-primary-foreground self-start lg:self-auto"
           >
             Start a project
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-inverse text-inverse-foreground transition-transform duration-500 group-hover:translate-x-0.5">
@@ -78,7 +78,7 @@ export function SiteFooter() {
                 <li key={l.to}>
                   <Link
                     to={l.to}
-                    className="text-white/70 hover:text-white transition-colors"
+                    className="nav-link text-white/70 hover:text-white"
                   >
                     {l.label}
                   </Link>
@@ -122,13 +122,13 @@ export function SiteFooter() {
                 <div className="space-y-1">
                   <a
                     href="mailto:meae.np@gmail.com"
-                    className="block text-white/85 hover:text-white transition-colors"
+                    className="nav-link block text-white/85 hover:text-white"
                   >
                     meae.np@gmail.com
                   </a>
                   <a
                     href="mailto:info@modernedge.com.np"
-                    className="block text-white/60 hover:text-white transition-colors"
+                    className="nav-link block text-white/60 hover:text-white"
                   >
                     info@modernedge.com.np
                   </a>
@@ -138,12 +138,12 @@ export function SiteFooter() {
                 <Phone size={16} className="mt-0.5 text-primary shrink-0" aria-hidden />
                 <div className="space-y-1 text-white/75">
                   <div>
-                    <a href="tel:+9779852059599" className="hover:text-white">
+                    <a href="tel:+9779852059599" className="nav-link hover:text-white">
                       Kiran · +977 98520 59599
                     </a>
                   </div>
                   <div>
-                    <a href="tel:+9779767784543" className="hover:text-white">
+                    <a href="tel:+9779767784543" className="nav-link hover:text-white">
                       Samir · +977 97677 84543
                     </a>
                   </div>
@@ -170,7 +170,7 @@ export function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/70 hover:text-white hover:border-primary hover:bg-primary transition-colors"
+                className="interactive-press inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/70 hover:text-white hover:border-primary hover:bg-primary"
               >
                 <Icon size={15} />
               </a>

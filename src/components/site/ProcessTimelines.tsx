@@ -1,3 +1,5 @@
+import { StaggerReveal } from "./Reveal";
+
 const PROCESSES = [
   {
     key: "construction",
@@ -27,7 +29,7 @@ const PROCESSES = [
 
 export function ProcessTimelines() {
   return (
-    <div className="space-y-24 md:space-y-32">
+    <StaggerReveal className="space-y-24 md:space-y-32">
       {PROCESSES.map((p, i) => (
         <div
           key={p.key}
@@ -73,6 +75,6 @@ export function ProcessTimelines() {
           </div>
         </div>
       ))}
-    </div>
+    </StaggerReveal>
   );
 }

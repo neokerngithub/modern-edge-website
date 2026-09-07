@@ -6,6 +6,7 @@ import {
   Gauge,
   Sparkles,
 } from "lucide-react";
+import { StaggerReveal } from "./Reveal";
 
 const REASONS = [
   { icon: Landmark, title: "Experienced directors",
@@ -24,13 +25,13 @@ const REASONS = [
 
 export function WhyChooseUs() {
   return (
-    <div className="grid gap-px bg-hairline border border-hairline rounded-[20px] overflow-hidden md:grid-cols-2 lg:grid-cols-3">
+    <StaggerReveal className="grid gap-px bg-hairline border border-hairline rounded-[20px] overflow-hidden md:grid-cols-2 lg:grid-cols-3">
       {REASONS.map((r, i) => {
         const Icon = r.icon;
         return (
           <div
             key={r.title}
-            className="group relative bg-card p-9 md:p-11 transition-all duration-300 ease-in-out hover:bg-surface hover:-translate-y-1 hover:shadow-elevated"
+            className="group interactive-card relative bg-card p-9 md:p-11 hover:bg-surface"
           >
             <div className="flex items-start justify-between">
               <div className="flex h-11 w-11 items-center justify-center rounded-md border border-hairline text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors duration-500">
@@ -47,6 +48,6 @@ export function WhyChooseUs() {
           </div>
         );
       })}
-    </div>
+    </StaggerReveal>
   );
 }

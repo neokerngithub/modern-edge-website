@@ -11,6 +11,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { StaggerReveal } from "./Reveal";
 
 type Service = {
   icon: LucideIcon;
@@ -57,13 +58,13 @@ export function ServicesGrid() {
   return (
     <div className="space-y-6">
       {/* Twin signature practices — equal visual weight */}
-      <div className="grid gap-6 md:grid-cols-2">
+      <StaggerReveal className="grid gap-6 md:grid-cols-2">
         {SIGNATURE.map((s, i) => {
           const Icon = s.icon;
           return (
             <article
               key={s.title}
-              className="group relative overflow-hidden rounded-[20px] bg-inverse text-inverse-foreground transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-elevated"
+               className="group interactive-card relative overflow-hidden rounded-[20px] bg-inverse text-inverse-foreground"
             >
               <div
                 aria-hidden
@@ -96,17 +97,17 @@ export function ServicesGrid() {
             </article>
           );
         })}
-      </div>
+      </StaggerReveal>
 
       {/* Remaining core services */}
-      <div className="grid gap-px bg-hairline border border-hairline rounded-[20px] overflow-hidden md:grid-cols-2 lg:grid-cols-3">
+      <StaggerReveal className="grid gap-px bg-hairline border border-hairline rounded-[20px] overflow-hidden md:grid-cols-2 lg:grid-cols-3">
         {CORE_SERVICES.map((s, i) => {
           const Icon = s.icon;
           const idx = String(i + 3).padStart(2, "0");
           return (
             <article
               key={s.title}
-              className="group relative bg-card p-9 md:p-10 transition-all duration-300 ease-in-out hover:bg-surface hover:-translate-y-1 hover:shadow-elevated"
+               className="group interactive-card relative bg-card p-9 md:p-10 hover:bg-surface"
             >
               <div className="flex items-start justify-between">
                 <div className="flex h-11 w-11 items-center justify-center rounded-md border border-hairline text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors duration-500">
@@ -131,7 +132,7 @@ export function ServicesGrid() {
             </article>
           );
         })}
-      </div>
+      </StaggerReveal>
     </div>
   );
 }

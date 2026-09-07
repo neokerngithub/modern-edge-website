@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { ChevronRight } from "lucide-react";
+import { Reveal } from "./Reveal";
 
 /**
  * Consistent header for inner pages (About, Services, Process, Contact).
@@ -24,18 +25,20 @@ export function PageHeader({
   return (
     <section className="pt-28 md:pt-36 pb-12 md:pb-16 border-b border-hairline bg-background">
       <div className="container-x">
-        <nav
-          aria-label="Breadcrumb"
-          className="flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-ink-muted"
-        >
-          <Link to="/" className="hover:text-primary transition-colors">
-            Home
-          </Link>
-          <ChevronRight size={12} aria-hidden className="text-ink-muted/60" />
-          <span className="text-ink/70">{breadcrumb}</span>
-        </nav>
+        <Reveal>
+          <nav
+            aria-label="Breadcrumb"
+            className="flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-ink-muted"
+          >
+            <Link to="/" className="nav-link hover:text-primary">
+              Home
+            </Link>
+            <ChevronRight size={12} aria-hidden className="text-ink-muted/60" />
+            <span className="text-ink/70">{breadcrumb}</span>
+          </nav>
+        </Reveal>
 
-        <div className="mt-10 grid gap-10 lg:grid-cols-12 items-end">
+        <Reveal delay={80} className="mt-10 grid gap-10 lg:grid-cols-12 items-end">
           <div className="lg:col-span-9">
             <div className="flex items-center gap-4">
               <span className="font-display text-xs text-primary tabular-nums tracking-[0.14em]">
@@ -58,7 +61,7 @@ export function PageHeader({
               {meta}
             </div>
           )}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

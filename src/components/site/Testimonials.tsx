@@ -79,7 +79,7 @@ export function Testimonials() {
               href={REVIEWS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-inverse px-5 py-3 text-[13px] font-medium text-white hover:bg-primary transition-colors duration-300"
+              className="interactive-press inline-flex items-center justify-center gap-2 rounded-full bg-inverse px-5 py-3 text-[13px] font-medium text-white hover:bg-primary"
             >
               View all reviews on Google <ExternalLink size={13} />
             </a>
@@ -87,7 +87,7 @@ export function Testimonials() {
               href={WRITE_REVIEW_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-hairline px-5 py-3 text-[13px] font-medium text-ink hover:border-ink transition-colors duration-300"
+              className="interactive-press inline-flex items-center justify-center gap-2 rounded-full border border-hairline px-5 py-3 text-[13px] font-medium text-ink hover:border-ink"
             >
               <PenLine size={13} /> Write a review
             </a>
@@ -118,7 +118,7 @@ export function Testimonials() {
                 href={REVIEWS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-[13px] font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+                className="interactive-press inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-[13px] font-medium text-primary-foreground hover:bg-primary/90"
               >
                 Open Google Business Profile <ExternalLink size={13} />
               </a>
@@ -129,7 +129,7 @@ export function Testimonials() {
             {REVIEWS.map((r, i) => (
               <article
                 key={i}
-                className="group rounded-[20px] border border-hairline bg-card p-7 shadow-[0_1px_0_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_-30px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 transition-all duration-300"
+                className="group interactive-card rounded-[20px] border border-hairline bg-card p-7 shadow-[0_1px_0_rgba(0,0,0,0.03)]"
               >
                 <div className="flex items-center justify-between">
                   <Stars value={r.rating} />

@@ -87,7 +87,7 @@ export function ContactBlock() {
             href={DIRECTIONS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group mt-6 inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+             className="interactive-press group mt-6 inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90"
           >
             <Navigation size={16} /> Get Directions
           </a>
@@ -112,7 +112,7 @@ export function ContactBlock() {
         <div className="mt-10 flex flex-wrap gap-3">
           <a
             href="tel:+9779852059599"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="interactive-press inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90"
           >
             <Phone size={16} /> Call Now
           </a>
@@ -120,7 +120,7 @@ export function ContactBlock() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-inverse hover:bg-white/90 transition-colors"
+            className="interactive-press inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-inverse hover:bg-white/90"
           >
             <MessageCircle size={16} /> WhatsApp Us
           </a>
@@ -128,7 +128,7 @@ export function ContactBlock() {
             href={DIRECTIONS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-medium text-white hover:bg-white/10 transition-colors"
+            className="interactive-press inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-medium text-white hover:bg-white/10"
           >
             <Navigation size={16} /> Get Directions
           </a>
@@ -179,7 +179,7 @@ export function SocialRow({ tone = "light" }: { tone?: "light" | "dark" }) {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={label}
-          className={`inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors ${base}`}
+          className={`interactive-press inline-flex h-10 w-10 items-center justify-center rounded-full border ${base}`}
         >
           <Icon size={16} />
         </a>

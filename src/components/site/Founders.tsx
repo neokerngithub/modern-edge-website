@@ -1,5 +1,6 @@
 import kiran from "@/assets/founder-kiran.jpg";
 import samir from "@/assets/founder-samir.jpg";
+import { StaggerReveal } from "./Reveal";
 
 const FOUNDERS = [
   {
@@ -38,11 +39,11 @@ const FOUNDERS = [
 
 export function Founders() {
   return (
-    <div className="grid gap-16 lg:grid-cols-2 lg:gap-14">
+    <StaggerReveal className="grid gap-16 lg:grid-cols-2 lg:gap-14">
       {FOUNDERS.map((f) => (
         <article
           key={f.name}
-          className="group relative"
+          className="group interactive-card relative"
         >
           <div className="relative overflow-hidden rounded-[20px] bg-surface aspect-[4/5]">
             <img
@@ -111,6 +112,6 @@ export function Founders() {
           </div>
         </article>
       ))}
-    </div>
+    </StaggerReveal>
   );
 }

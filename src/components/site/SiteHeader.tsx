@@ -61,7 +61,7 @@ export function SiteHeader() {
             <Link
               key={item.to}
               to={item.to}
-              className={`relative text-[13px] tracking-wide transition-colors ${
+              className={`nav-link relative text-[13px] tracking-wide ${
                 solid ? "text-ink/75 hover:text-primary" : "text-white/80 hover:text-white"
               }`}
               activeProps={{
@@ -86,7 +86,7 @@ export function SiteHeader() {
           />
           <Link
             to="/contact"
-            className={`group inline-flex items-center gap-3 rounded-full pl-5 pr-1.5 py-1.5 text-[12.5px] font-medium transition-colors duration-500 ${
+            className={`interactive-press group inline-flex items-center gap-3 rounded-full pl-5 pr-1.5 py-1.5 text-[12.5px] font-medium ${
               solid
                 ? "bg-inverse text-inverse-foreground hover:bg-primary"
                 : "bg-white text-inverse hover:bg-primary hover:text-primary-foreground"
@@ -107,7 +107,7 @@ export function SiteHeader() {
         <ThemeToggle tone={solid ? "auto" : "invert"} />
         <button
           type="button"
-          className={` -mr-2 p-2 transition-colors ${
+          className={`interactive-press -mr-2 p-2 transition-colors ${
             solid ? "text-ink" : "text-white"
           }`}
           onClick={() => setOpen((v) => !v)}
@@ -127,7 +127,7 @@ export function SiteHeader() {
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="py-3 text-base text-ink"
+                className="nav-link py-3 text-base text-ink"
                 activeProps={{ className: "py-3 text-base text-primary" }}
                 activeOptions={{ exact: item.to === "/" }}
               >
@@ -137,7 +137,7 @@ export function SiteHeader() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground"
+              className="interactive-press mt-4 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground"
             >
               Request Consultation
             </Link>

@@ -91,9 +91,16 @@ export function SiteFooter() {
             <div className="text-xs uppercase tracking-[0.24em] text-white/40">
               Services
             </div>
-            <ul className="mt-5 space-y-2.5 text-sm text-white/60">
+            <ul className="mt-5 space-y-2.5 text-sm">
               {SERVICES.map((s) => (
-                <li key={s}>{s}</li>
+                <li key={s}>
+                  <Link
+                    to="/services"
+                    className="nav-link text-white/60 hover:text-white"
+                  >
+                    {s}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>

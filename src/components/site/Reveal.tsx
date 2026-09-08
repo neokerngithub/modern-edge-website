@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { onIdle } from "@/lib/idle";
 
 /**
  * Scroll-reveal wrapper: fades in and slides up subtly when it enters

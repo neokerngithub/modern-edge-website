@@ -24,17 +24,23 @@ export function LazySection({
     if (visible) return;
     const el = ref.current;
     if (!el) return;
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) {
-          setVisible(true);
-          io.disconnect();
-        }
-      },
-      { rootMargin }
-    );
-    io.observe(el);
-    return () => io.disconnect();
+    let io: IntersectionObserver | undefined;
+    const cancel = onIdle(() => {
+      io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            setVisible(true);
+            io?.disconnect();
+          }
+        },
+        { rootMargin }
+      );
+      io.observe(el);
+    });
+    return () => {
+      cancel();
+      io?.disconnect();
+    };
   }, [visible, rootMargin]);
 
   return (

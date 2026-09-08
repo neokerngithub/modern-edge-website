@@ -5,6 +5,7 @@ import { Hero } from "@/components/site/Hero";
 import { Section } from "@/components/site/Section";
 import { LazySection } from "@/components/site/LazySection";
 import { TrustStrip } from "@/components/site/TrustStrip";
+import heroImage from "@/assets/hero-architecture.jpg";
 
 const ServicesGrid = lazy(() =>
   import("@/components/site/ServicesGrid").then((m) => ({ default: m.ServicesGrid }))
@@ -43,7 +44,10 @@ export const Route = createFileRoute("/")({
       { name: "twitter:title", content: HOME_TITLE },
       { name: "twitter:description", content: HOME_DESC },
     ],
-    links: [{ rel: "canonical", href: "https://modern-edge-website.lovable.app/" }],
+    links: [
+      { rel: "canonical", href: "https://modern-edge-website.lovable.app/" },
+      { rel: "preload", as: "image", href: heroImage, fetchpriority: "high" },
+    ],
   }),
 });
 

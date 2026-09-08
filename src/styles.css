@@ -343,18 +343,19 @@
 }
 .nav-link {
   position: relative;
+  text-decoration: none;
   transition: color 300ms var(--ease-spring);
 }
 .nav-link::after {
   content: "";
   position: absolute;
   inset-inline: 0;
-  bottom: -0.3rem;
+  bottom: -0.2rem;
   height: 1px;
   background: currentColor;
   transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 350ms var(--ease-spring);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media (hover: hover) and (pointer: fine) {
   .interactive-card:hover,

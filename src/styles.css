@@ -384,3 +384,56 @@
     img { animation: none; }
   }
 }
+
+/* ---------- Performance: containment, layer promotion, frame stability ---------- */
+
+section {
+  contain: layout paint;
+}
+
+.reveal,
+.stagger-reveal > *,
+.interactive-card,
+.interactive-press,
+.founder-photo,
+.nav-link::after {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.reveal:not(.reveal-shown),
+.stagger-reveal:not(.stagger-reveal-shown) > * {
+  will-change: transform, opacity;
+}
+/* Drop the compositing hint once the entrance finishes to free GPU memory. */
+.reveal.reveal-shown,
+.stagger-reveal-shown > * {
+  will-change: auto;
+}
+
+/* Founder cards: containers stay fixed; only the photo animates. */
+.founder-card,
+.stagger-reveal-shown > .founder-card:hover {
+  transform: translate3d(0, 0, 0);
+  box-shadow: none;
+}
+.stagger-reveal > .founder-card {
+  transform: translate3d(0, 20px, 0);
+}
+.stagger-reveal-shown > .founder-card {
+  transform: translate3d(0, 0, 0);
+}
+.founder-photo {
+  transform: translate3d(0, 0, 0) scale(1);
+  transition: transform 700ms var(--ease-spring);
+  will-change: transform;
+}
+@media (hover: hover) and (pointer: fine) {
+  .group:hover .founder-photo {
+    transform: translate3d(0, 0, 0) scale(1.05);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .founder-photo { transition: none; transform: none; }
+}

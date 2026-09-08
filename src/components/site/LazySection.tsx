@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { onIdle } from "@/lib/idle";
 
 /**
  * Scroll-based lazy mount: children render only once the placeholder

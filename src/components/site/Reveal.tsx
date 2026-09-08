@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { onIdle } from "@/lib/idle";
 
 /**
  * Scroll-reveal wrapper: fades in and slides up subtly when it enters
@@ -29,17 +30,24 @@ export function Reveal({
       setShown(true);
       return;
     }
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) {
-          setShown(true);
-          io.disconnect();
-        }
-      },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.05 }
-    );
-    io.observe(el);
-    return () => io.disconnect();
+    let io: IntersectionObserver | undefined;
+    // Defer observer wiring until the main thread is idle post-mount.
+    const cancel = onIdle(() => {
+      io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            setShown(true);
+            io?.disconnect();
+          }
+        },
+        { rootMargin: "0px 0px -8% 0px", threshold: 0.05 }
+      );
+      io.observe(el);
+    });
+    return () => {
+      cancel();
+      io?.disconnect();
+    };
   }, [shown]);
 
   return (
@@ -79,17 +87,23 @@ export function StaggerReveal({
       setShown(true);
       return;
     }
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          setShown(true);
-          io.disconnect();
-        }
-      },
-      { rootMargin: "0px 0px -6% 0px", threshold: 0.04 }
-    );
-    io.observe(el);
-    return () => io.disconnect();
+    let io: IntersectionObserver | undefined;
+    const cancel = onIdle(() => {
+      io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) {
+            setShown(true);
+            io?.disconnect();
+          }
+        },
+        { rootMargin: "0px 0px -6% 0px", threshold: 0.04 }
+      );
+      io.observe(el);
+    });
+    return () => {
+      cancel();
+      io?.disconnect();
+    };
   }, []);
 
   return (

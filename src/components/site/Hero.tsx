@@ -18,7 +18,9 @@ export function Hero() {
         width={1920}
         height={1280}
         fetchPriority="high"
+        loading="eager"
         decoding="async"
+        style={{ aspectRatio: "1920 / 1280" }}
         className="absolute inset-0 h-full w-full object-cover opacity-[0.55] scale-[1.02]"
       />
       <div

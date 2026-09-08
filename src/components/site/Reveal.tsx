@@ -86,17 +86,23 @@ export function StaggerReveal({
       setShown(true);
       return;
     }
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          setShown(true);
-          io.disconnect();
-        }
-      },
-      { rootMargin: "0px 0px -6% 0px", threshold: 0.04 }
-    );
-    io.observe(el);
-    return () => io.disconnect();
+    let io: IntersectionObserver | undefined;
+    const cancel = onIdle(() => {
+      io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) {
+            setShown(true);
+            io?.disconnect();
+          }
+        },
+        { rootMargin: "0px 0px -6% 0px", threshold: 0.04 }
+      );
+      io.observe(el);
+    });
+    return () => {
+      cancel();
+      io?.disconnect();
+    };
   }, []);
 
   return (

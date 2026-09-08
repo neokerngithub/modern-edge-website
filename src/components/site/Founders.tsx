@@ -43,9 +43,9 @@ export function Founders() {
       {FOUNDERS.map((f) => (
         <article
           key={f.name}
-          className="group founder-card relative"
+          className="group interactive-card relative"
         >
-          <div className="relative overflow-hidden rounded-[20px] bg-surface aspect-[4/5] [contain:paint]">
+          <div className="relative overflow-hidden rounded-[20px] bg-surface aspect-[4/5]">
             <img
               src={f.img}
               alt={`Portrait of ${f.name}, ${f.role}`}
@@ -53,7 +53,7 @@ export function Founders() {
               height={1000}
               loading="lazy"
               decoding="async"
-              className="founder-photo h-full w-full object-cover"
+              className="h-full w-full object-cover transition-all duration-[900ms] ease-out scale-[1.02] group-hover:scale-100"
             />
 
             <div

@@ -43,7 +43,7 @@ export function Founders() {
       {FOUNDERS.map((f) => (
         <article
           key={f.name}
-          className="group interactive-card relative"
+          className="group relative"
         >
           <div className="relative overflow-hidden rounded-[20px] bg-surface aspect-[4/5]">
             <img

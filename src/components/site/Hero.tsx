@@ -2,13 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, Phone } from "lucide-react";
 import hero from "@/assets/hero-architecture.jpg";
 
-const INDEX = [
-  { k: "08", v: "Core services" },
-  { k: "02", v: "Offices in Nepal" },
-  { k: "19+", v: "Years of combined professional experience" },
-  { k: "2024", v: "Modern Edge established" },
-];
-
 export function Hero() {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-inverse text-inverse-foreground">

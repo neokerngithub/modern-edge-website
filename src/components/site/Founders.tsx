@@ -98,7 +98,7 @@ export function Founders() {
                 {f.highlights.map((h) => (
                   <li
                     key={h}
-                    className="text-xs rounded-full border border-hairline px-3.5 py-1.5 text-ink/80 hover:border-ink transition-colors"
+                    className="text-xs rounded-full border border-hairline px-3.5 py-1.5 text-ink/80"
                   >
                     {h}
                   </li>

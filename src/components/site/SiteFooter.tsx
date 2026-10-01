@@ -35,7 +35,7 @@ export function SiteFooter() {
             className="interactive-press group inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-[13px] font-medium text-inverse hover:bg-primary hover:text-primary-foreground self-start lg:self-auto"
           >
             Start a project
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-inverse text-inverse-foreground transition-transform duration-500 group-hover:translate-x-0.5">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-inverse text-inverse-foreground transition-transform duration-500">
               <ArrowUpRight size={15} aria-hidden />
             </span>
           </Link>

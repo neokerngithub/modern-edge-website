@@ -285,32 +285,21 @@
 
 /* ---------- Motion & polish ---------- */
 
-/* Scroll reveal: fade-in + subtle upward slide */
+/* Section-level scroll reveal: restrained fade + very subtle upward drift */
 .reveal {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 700ms var(--ease-spring),
-              transform 700ms var(--ease-spring);
+  transform: translate3d(0, 12px, 0);
+  transition: opacity 900ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              transform 900ms cubic-bezier(0.22, 0.61, 0.36, 1);
   will-change: opacity, transform;
 }
 .reveal.reveal-shown {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
-/* Sequential viewport entrances for repeated cards and timeline rows. */
-.stagger-reveal > * {
-  opacity: 0;
-  transform: translate3d(0, 20px, 0);
-  transition: opacity 650ms var(--ease-spring), transform 650ms var(--ease-spring);
-  will-change: opacity, transform;
-}
-.stagger-reveal-shown > * { opacity: 1; transform: translate3d(0, 0, 0); }
-.stagger-reveal-shown > *:nth-child(2) { transition-delay: 100ms; }
-.stagger-reveal-shown > *:nth-child(3) { transition-delay: 200ms; }
-.stagger-reveal-shown > *:nth-child(4) { transition-delay: 300ms; }
-.stagger-reveal-shown > *:nth-child(5) { transition-delay: 400ms; }
-.stagger-reveal-shown > *:nth-child(6) { transition-delay: 500ms; }
+/* Cards reveal together with their section — no card-by-card popping. */
+.stagger-reveal > * { opacity: 1; transform: none; }
 
 /* GPU-safe interaction primitives; no dimensions or flow properties change. */
 .interactive-card {

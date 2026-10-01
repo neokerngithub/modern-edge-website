@@ -7,7 +7,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
  */
 export function LazySection({
   children,
-  rootMargin = "400px 0px",
+  rootMargin = "900px 0px",
   className = "",
 }: {
   children: ReactNode;
@@ -36,10 +36,13 @@ export function LazySection({
     return () => io.disconnect();
   }, [visible, rootMargin]);
 
+  // Reserve space until mounted so nothing below jumps; the parent
+  // Section handles the single cohesive reveal animation.
   return (
     <div
       ref={ref}
-      className={`reveal ${visible ? "reveal-shown" : ""} ${className}`}
+      className={className}
+      style={visible ? undefined : { minHeight: 560 }}
     >
       {visible ? children : null}
     </div>

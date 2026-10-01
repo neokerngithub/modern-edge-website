@@ -1,29 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { lazy, Suspense } from "react";
 import { ArrowRight } from "lucide-react";
 import { Hero } from "@/components/site/Hero";
 import { Section } from "@/components/site/Section";
-import { LazySection } from "@/components/site/LazySection";
 import { TrustStrip } from "@/components/site/TrustStrip";
 
-const ServicesGrid = lazy(() =>
-  import("@/components/site/ServicesGrid").then((m) => ({ default: m.ServicesGrid }))
-);
-const WhyChooseUs = lazy(() =>
-  import("@/components/site/WhyChooseUs").then((m) => ({ default: m.WhyChooseUs }))
-);
-const ProcessTimelines = lazy(() =>
-  import("@/components/site/ProcessTimelines").then((m) => ({ default: m.ProcessTimelines }))
-);
-const Founders = lazy(() =>
-  import("@/components/site/Founders").then((m) => ({ default: m.Founders }))
-);
-const Testimonials = lazy(() =>
-  import("@/components/site/Testimonials").then((m) => ({ default: m.Testimonials }))
-);
-const ContactBlock = lazy(() =>
-  import("@/components/site/ContactBlock").then((m) => ({ default: m.ContactBlock }))
-);
+import { ServicesGrid } from "@/components/site/ServicesGrid";
+import { WhyChooseUs } from "@/components/site/WhyChooseUs";
+import { ProcessTimelines } from "@/components/site/ProcessTimelines";
+import { Founders } from "@/components/site/Founders";
+import { Testimonials } from "@/components/site/Testimonials";
+import { ContactBlock } from "@/components/site/ContactBlock";
 
 
 const HOME_TITLE =
@@ -158,11 +144,7 @@ function HomePage() {
         }
         intro="Construction Services and Property Valuation anchor the practice — supported by architecture, civil engineering, municipal drawings, DPR preparation, interior, exterior & landscape design and EIA / IEE. Our multidisciplinary team brings these services together under one professional practice."
       >
-        <LazySection>
-          <Suspense fallback={null}>
-            <ServicesGrid />
-          </Suspense>
-        </LazySection>
+        <ServicesGrid />
       </Section>
 
       {/* Why choose us */}
@@ -173,11 +155,7 @@ function HomePage() {
         title="Precision, trust and disciplined delivery."
         intro="What sets our practice apart in Nepal's architecture and engineering landscape — built on technical expertise, accurate documentation and long-term client relationships."
       >
-        <LazySection>
-          <Suspense fallback={null}>
-            <WhyChooseUs />
-          </Suspense>
-        </LazySection>
+        <WhyChooseUs />
       </Section>
 
       {/* Process */}
@@ -189,11 +167,7 @@ function HomePage() {
         title="Three workflows. One standard of excellence."
         intro="Every engagement — construction, valuation, or interior & exterior — follows a structured, transparent workflow from consultation to handover."
       >
-        <LazySection>
-          <Suspense fallback={null}>
-            <ProcessTimelines />
-          </Suspense>
-        </LazySection>
+        <ProcessTimelines />
       </Section>
 
       {/* Founders */}
@@ -204,11 +178,7 @@ function HomePage() {
         title="The directors behind Modern Edge."
         intro="The directors bring nearly two decades of combined professional experience across property valuation, construction, engineering and project management."
       >
-        <LazySection>
-          <Suspense fallback={null}>
-            <Founders />
-          </Suspense>
-        </LazySection>
+        <Founders />
       </Section>
 
       {/* Google Reviews */}
@@ -220,11 +190,7 @@ function HomePage() {
         title="What our clients say on Google."
         intro="Ratings and reviews published on our official Google Business Profile."
       >
-        <LazySection>
-          <Suspense fallback={null}>
-            <Testimonials />
-          </Suspense>
-        </LazySection>
+        <Testimonials />
       </Section>
 
       {/* Contact */}
@@ -235,11 +201,7 @@ function HomePage() {
         title="Start a conversation."
         intro="Consultations, valuations and project inquiries — we respond within one business day."
       >
-        <LazySection>
-          <Suspense fallback={null}>
-            <ContactBlock />
-          </Suspense>
-        </LazySection>
+        <ContactBlock />
       </Section>
     </>
   );

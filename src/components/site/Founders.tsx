@@ -51,7 +51,7 @@ export function Founders() {
               alt={`Portrait of ${f.name}, ${f.role}`}
               width={800}
               height={1000}
-              loading="lazy"
+              loading="eager"
               decoding="async"
               className="h-full w-full object-cover transition-all duration-[900ms] ease-out scale-[1.02] group-hover:scale-100"
             />

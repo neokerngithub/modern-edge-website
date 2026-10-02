@@ -15,7 +15,19 @@ export function ThemeToggle({ tone = "auto" }: { tone?: "auto" | "invert" }) {
   const toggle = () => {
     const next = !dark;
     setDark(next);
-    document.documentElement.classList.toggle("dark", next);
+    const root = document.documentElement;
+    const apply = () => {
+      // Switch every colour in the same frame: suspend per-element transitions
+      // so borders/backgrounds don't interpolate at different speeds.
+      root.classList.add("theme-switching");
+      root.classList.toggle("dark", next);
+      void root.offsetHeight;
+      requestAnimationFrame(() => root.classList.remove("theme-switching"));
+    };
+    const doc = document as Document & { startViewTransition?: (cb: () => void) => unknown };
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (doc.startViewTransition && !reduce) doc.startViewTransition(apply);
+    else apply();
     try {
       localStorage.setItem("me-theme", next ? "dark" : "light");
     } catch {

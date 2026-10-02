@@ -219,17 +219,7 @@ Lazy loading
 
 Production-ready
 
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://modern-edge-website.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/acafc277-f740-40c9-a7a0-418cad362e26).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+**Live site**: https://modern-edge-website.lovable.app
 
 ## Development
 

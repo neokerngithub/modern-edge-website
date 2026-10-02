@@ -344,8 +344,13 @@
   to { opacity: 1; }
 }
 @layer base {
-  img {
+  img:not(.brand-logo) {
     animation: img-in 500ms ease-out both;
+  }
+  img.brand-logo {
+    animation: none;
+    opacity: 1;
+    transition: none;
   }
   @media (prefers-reduced-motion: reduce) {
     img { animation: none; }

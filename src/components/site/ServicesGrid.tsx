@@ -110,7 +110,7 @@ export function ServicesGrid() {
                className="group interactive-card relative bg-card p-9 md:p-10"
             >
               <div className="flex items-start justify-between">
-                <div className="flex h-11 w-11 items-center justify-center rounded-md border border-hairline text-primary transition-colors duration-300 group-hover:text-[#004AAF]">
+                <div className="flex h-11 w-11 items-center justify-center rounded-md border border-hairline text-primary">
                   <Icon size={20} strokeWidth={1.5} aria-hidden />
                 </div>
                 <span className="font-display text-xs text-ink-muted tabular-nums tracking-[0.14em]">
@@ -123,6 +123,12 @@ export function ServicesGrid() {
               <p className="mt-3 text-[14px] leading-[1.7] text-ink-muted">
                 {s.description}
               </p>
+              <ArrowUpRight
+                size={18}
+                strokeWidth={1.5}
+                aria-hidden
+                className="mt-8 text-ink/60"
+              />
             </article>
           );
         })}

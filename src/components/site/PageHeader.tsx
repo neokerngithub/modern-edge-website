@@ -23,7 +23,7 @@ export function PageHeader({
   meta?: ReactNode;
 }) {
   return (
-    <section className="pt-28 md:pt-36 pb-12 md:pb-16 border-b border-hairline bg-background">
+    <section className="pt-24 md:pt-32 pb-10 md:pb-12 border-b border-hairline bg-background">
       <div className="container-x">
         <Reveal>
           <nav

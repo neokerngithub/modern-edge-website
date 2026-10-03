@@ -8,7 +8,6 @@ import {
   
   ClipboardCheck,
   BadgeCheck,
-  ArrowUpRight,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { StaggerReveal } from "./Reveal";
@@ -123,12 +122,6 @@ export function ServicesGrid() {
               <p className="mt-3 text-[14px] leading-[1.7] text-ink-muted">
                 {s.description}
               </p>
-              <ArrowUpRight
-                size={18}
-                strokeWidth={1.5}
-                aria-hidden
-                className="mt-8 text-ink/60"
-              />
             </article>
           );
         })}

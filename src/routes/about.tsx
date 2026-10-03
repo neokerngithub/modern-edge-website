@@ -92,7 +92,7 @@ function AboutPage() {
 
 
         <div className="mt-16 md:mt-20 grid gap-6 md:grid-cols-2">
-          <div className="rounded-[20px] border border-hairline p-10 md:p-12">
+          <div className="rounded-[20px] border border-hairline p-7 sm:p-10 md:p-12 min-w-0 break-words">
             <div className="eyebrow">Vision</div>
             <h3 className="mt-6 font-display font-light text-3xl md:text-4xl leading-[1.05] tracking-[-0.02em] text-ink">
               Nepal's leading multidisciplinary engineering firm.
@@ -103,7 +103,7 @@ function AboutPage() {
               modern living and inspire progress.
             </p>
           </div>
-          <div className="rounded-[20px] bg-inverse text-inverse-foreground p-10 md:p-12 relative overflow-hidden">
+          <div className="rounded-[20px] bg-inverse text-inverse-foreground p-7 sm:p-10 md:p-12 min-w-0 break-words relative overflow-hidden">
             <div
               aria-hidden
               className="absolute inset-0 bg-[radial-gradient(circle_at_85%_100%,oklch(0.45_0.19_262/0.4),transparent_55%)]"

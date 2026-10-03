@@ -23,7 +23,7 @@ const PROCESSES = [
     kicker: "Design to delivery, one roof",
     steps: ["3D Approval","Drawings","BOQ","Site Survey","Team Mobilization","Execution","Finishing","Styling","Handover"],
     description:
-      "After 3D approval, drawings and the BOQ are prepared in-house. A site survey verifies measurements before our project team coordinates civil, electrical, carpentry and finishing works — closed by styling, quality checks and handover.",
+      "After 3D approval, drawings and the BOQ are prepared. A site survey verifies measurements before our project team coordinates civil, electrical, carpentry and finishing works — closed by styling, quality checks and handover.",
   },
 ];
 

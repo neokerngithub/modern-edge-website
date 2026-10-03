@@ -34,7 +34,7 @@ export function WhyChooseUs() {
             className="group interactive-card relative bg-card p-9 md:p-11"
           >
             <div className="flex items-start justify-between">
-              <div className="flex h-11 w-11 items-center justify-center rounded-md border border-hairline text-primary">
+              <div className="flex h-11 w-11 items-center justify-center rounded-md border border-hairline text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors duration-500">
                 <Icon size={20} strokeWidth={1.5} />
               </div>
               <span className="font-display text-xs text-ink-muted tabular-nums tracking-[0.14em]">

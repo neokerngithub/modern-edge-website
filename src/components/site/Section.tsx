@@ -22,12 +22,12 @@ export function Section({
 }) {
   const centered = align === "center";
   return (
-    <section id={id} className={`py-14 md:py-20 ${className}`}>
+    <section id={id} className={`py-12 md:py-16 ${className}`}>
       <div className="container-x">
         {(eyebrow || title || intro) && (
           <Reveal>
           <header
-            className={`mb-10 md:mb-14 ${
+            className={`mb-8 md:mb-11 ${
               centered ? "mx-auto max-w-3xl text-center" : "max-w-4xl"
             }`}
           >

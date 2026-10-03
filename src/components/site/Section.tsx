@@ -27,7 +27,7 @@ export function Section({
         {(eyebrow || title || intro) && (
           <Reveal>
           <header
-            className={`mb-10 md:mb-14 ${
+            className={`mb-8 md:mb-11 ${
               centered ? "mx-auto max-w-3xl text-center" : "max-w-4xl"
             }`}
           >

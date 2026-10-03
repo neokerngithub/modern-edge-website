@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-const BASE_URL = "https://modern-edge-website.lovable.app";
+const BASE_URL = "https://modernedge.com.np";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {

@@ -25,11 +25,11 @@ export const Route = createFileRoute("/")({
       { name: "description", content: HOME_DESC },
       { property: "og:title", content: HOME_TITLE },
       { property: "og:description", content: HOME_DESC },
-      { property: "og:url", content: "https://modern-edge-website.lovable.app/" },
+      { property: "og:url", content: "https://modernedge.com.np/" },
       { name: "twitter:title", content: HOME_TITLE },
       { name: "twitter:description", content: HOME_DESC },
     ],
-    links: [{ rel: "canonical", href: "https://modern-edge-website.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://modernedge.com.np/" }],
   }),
 });
 
@@ -70,7 +70,7 @@ function HomePage() {
                     08
                   </div>
                   <div className="mt-2 text-[11px] uppercase tracking-[0.22em] text-ink-muted">
-                    Core disciplines
+                    Core services
                   </div>
                 </div>
                 <div>

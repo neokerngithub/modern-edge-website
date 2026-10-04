@@ -16,8 +16,6 @@ import { SiteHeader } from "../components/site/SiteHeader";
 import { SiteFooter } from "../components/site/SiteFooter";
 import { THEME_SCRIPT } from "../components/site/ThemeToggle";
 
-const TITLE =
-  "Modern Edge Architects & Engineers | Architecture, Engineering & Property Valuation Nepal";
 const DESCRIPTION =
   "Modern Edge Architects & Engineers provides architecture, civil engineering, construction, property valuation, DPR preparation and related consultancy services in Nepal.";
 
@@ -150,16 +148,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
       { name: "author", content: "Modern Edge Architects & Engineers Pvt. Ltd." },
       { property: "og:site_name", content: "Modern Edge" },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: TITLE },
-      { name: "twitter:description", content: DESCRIPTION },
       { name: "theme-color", content: "#004AAD" },
     ],
     links: [

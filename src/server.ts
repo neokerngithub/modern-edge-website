@@ -44,12 +44,48 @@ function isH3SwallowedErrorBody(body: string): boolean {
   }
 }
 
+const ROBOTS_DIRECTIVE = "noindex, nofollow, noarchive";
+const PRODUCTION_ROBOTS = "User-agent: *\nAllow: /\n\nSitemap: https://modernedge.com.np/sitemap.xml\n";
+const PREVIEW_ROBOTS = "User-agent: *\nDisallow: /\n";
+
+function isLovableHost(request: Request): boolean {
+  const host = (request.headers.get("x-forwarded-host") ?? new URL(request.url).hostname)
+    .split(":")[0]
+    .toLowerCase();
+  return host.endsWith(".lovable.app");
+}
+
+async function applyPreviewNoindex(response: Response): Promise<Response> {
+  const headers = new Headers(response.headers);
+  headers.set("X-Robots-Tag", ROBOTS_DIRECTIVE);
+  const type = headers.get("content-type") ?? "";
+  if (!type.includes("text/html")) {
+    return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+  }
+  const html = await response.text();
+  const tags = `<meta name="robots" content="${ROBOTS_DIRECTIVE}"/><meta name="googlebot" content="${ROBOTS_DIRECTIVE}"/>`;
+  const out = html.includes("</head>") ? html.replace("</head>", `${tags}</head>`) : html;
+  headers.delete("content-length");
+  return new Response(out, { status: response.status, statusText: response.statusText, headers });
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const preview = isLovableHost(request);
+      if (new URL(request.url).pathname === "/robots.txt") {
+        return new Response(preview ? PREVIEW_ROBOTS : PRODUCTION_ROBOTS, {
+          headers: {
+            "content-type": "text/plain; charset=utf-8",
+            ...(preview ? { "X-Robots-Tag": ROBOTS_DIRECTIVE } : {}),
+          },
+        });
+      }
       const handler = await getServerEntry();
-      const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
+      const response = await normalizeCatastrophicSsrResponse(
+        await handler.fetch(request, env, ctx),
+      );
+      return preview ? await applyPreviewNoindex(response) : response;
     } catch (error) {
       console.error(error);
       return new Response(renderErrorPage(), {

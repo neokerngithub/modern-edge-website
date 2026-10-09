@@ -44,9 +44,10 @@ function isH3SwallowedErrorBody(body: string): boolean {
   }
 }
 
-const ROBOTS_DIRECTIVE = "noindex, nofollow, noarchive";
+const ROBOTS_DIRECTIVE = "noindex, nofollow, noarchive, nosnippet";
 const PRODUCTION_ROBOTS = "User-agent: *\nAllow: /\n\nSitemap: https://modernedge.com.np/sitemap.xml\n";
-const PREVIEW_ROBOTS = "User-agent: *\nDisallow: /\n";
+// Crawling stays allowed on the preview so Google can fetch pages, see noindex, and drop them.
+const PREVIEW_ROBOTS = "User-agent: *\nAllow: /\n";
 
 function isLovableHost(request: Request): boolean {
   const host = (request.headers.get("x-forwarded-host") ?? new URL(request.url).hostname)

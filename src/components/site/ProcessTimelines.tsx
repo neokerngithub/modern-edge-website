@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { StaggerReveal } from "./Reveal";
 
 const PROCESSES = [
@@ -28,6 +29,8 @@ const PROCESSES = [
 ];
 
 export function ProcessTimelines() {
+  const [activeStep, setActiveStep] = useState<{ workflow: string; index: number } | null>(null);
+
   return (
     <StaggerReveal className="space-y-12 md:space-y-14">
       {PROCESSES.map((p, i) => (
@@ -53,11 +56,20 @@ export function ProcessTimelines() {
           </div>
 
           <div className="mt-7 min-w-0">
-            <ol className={`grid grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-3 ${p.steps.length === 5 ? "lg:grid-cols-5" : p.steps.length === 7 ? "lg:grid-cols-7" : "lg:grid-cols-9"}`}>
+            <ol
+              className={`grid grid-cols-2 gap-x-6 gap-y-2 ${p.steps.length === 5 ? "md:grid-cols-3" : p.steps.length === 7 ? "md:grid-cols-4" : "md:grid-cols-5"}`}
+              onMouseLeave={() => setActiveStep(null)}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) setActiveStep(null);
+              }}
+            >
               {p.steps.map((step, idx) => (
                 <li
                   key={step}
-                  className="group min-w-0"
+                  className="group min-w-0 py-3 outline-none"
+                  tabIndex={0}
+                  onMouseEnter={() => setActiveStep({ workflow: p.key, index: idx })}
+                  onFocus={() => setActiveStep({ workflow: p.key, index: idx })}
                 >
                   <div className="flex h-5 items-center gap-3">
                     <span className="shrink-0 font-display text-xs text-ink-muted tabular-nums">
@@ -66,13 +78,13 @@ export function ProcessTimelines() {
                     {idx < p.steps.length - 1 && (
                       <span
                         aria-hidden="true"
-                        className={`relative -mr-4 h-px flex-1 bg-hairline ${idx % 2 === 1 ? "hidden" : "block"} ${idx % 3 === 2 ? "sm:hidden" : "sm:block"} lg:block`}
+                        className={`relative -mr-6 h-px flex-1 overflow-hidden bg-hairline ${idx % 2 === 1 ? "hidden" : "block"} ${idx % Math.ceil(p.steps.length / 2) === Math.ceil(p.steps.length / 2) - 1 ? "md:hidden" : "md:block"}`}
                       >
-                        <span className="absolute inset-0 origin-left scale-x-0 bg-primary transition-transform duration-500 ease-[var(--ease-spring)] group-hover:scale-x-100 motion-reduce:transition-none" />
+                        <span className={`absolute inset-0 origin-left bg-primary transition-transform duration-500 ease-out motion-reduce:transition-none ${activeStep?.workflow === p.key && idx <= activeStep.index ? "scale-x-100" : "scale-x-0"}`} />
                       </span>
                     )}
                   </div>
-                  <span className="mt-2 block font-display text-base leading-snug text-ink transition-colors duration-500 group-hover:text-primary motion-reduce:transition-none">
+                  <span className="mt-3 block min-h-12 pr-2 font-display text-base leading-normal text-ink transition-colors duration-500 group-hover:text-primary group-focus:text-primary motion-reduce:transition-none">
                     {step}
                   </span>
                 </li>

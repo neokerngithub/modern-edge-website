@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep process-chain layout and connector interactions inside the shared ProcessTimelines component so Home and Process stay consistent without affecting other sections.

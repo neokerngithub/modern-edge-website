@@ -120,28 +120,37 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-hairline bg-background">
-          <nav className="container-x flex flex-col py-6 gap-1" aria-label="Mobile">
-            {NAV.map((item) => (
+        <div className="lg:hidden">
+          {/* Semi-transparent blurred backdrop — clicking anywhere on it closes the menu */}
+          <div
+            aria-hidden
+            className="fixed inset-x-0 top-20 md:top-24 bottom-0 z-40 bg-inverse/25 backdrop-blur-md"
+            onClick={() => setOpen(false)}
+          />
+          {/* Floating dropdown card anchored below the header */}
+          <div className="absolute inset-x-3 md:inset-x-6 top-full z-50 rounded-2xl border border-hairline bg-background shadow-elevated overflow-hidden">
+            <nav className="flex flex-col py-4 px-2 gap-1" aria-label="Mobile">
+              {NAV.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setOpen(false)}
+                  className="nav-link rounded-xl px-4 py-3 text-base text-ink"
+                  activeProps={{ className: "rounded-xl px-4 py-3 text-base text-primary" }}
+                  activeOptions={{ exact: item.to === "/" }}
+                >
+                  {item.label}
+                </Link>
+              ))}
               <Link
-                key={item.to}
-                to={item.to}
+                to="/contact"
                 onClick={() => setOpen(false)}
-                className="nav-link py-3 text-base text-ink"
-                activeProps={{ className: "py-3 text-base text-primary" }}
-                activeOptions={{ exact: item.to === "/" }}
+                className="interactive-press mt-3 mx-2 mb-1 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground"
               >
-                {item.label}
+                Request Consultation
               </Link>
-            ))}
-            <Link
-              to="/contact"
-              onClick={() => setOpen(false)}
-              className="interactive-press mt-4 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground"
-            >
-              Request Consultation
-            </Link>
-          </nav>
+            </nav>
+          </div>
         </div>
       )}
     </header>

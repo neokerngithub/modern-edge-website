@@ -70,7 +70,7 @@ export function SiteHeader() {
           : "bg-transparent"
       }`}
     >
-      <div className="container-x flex h-20 md:h-24 items-center justify-between">
+      <div className="container-x relative z-50 flex h-20 md:h-24 items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group" aria-label="Modern Edge — Home">
           <BrandLogo forceWhite={!solid} className="h-10 w-auto" size={40} />
           <span className="flex flex-col leading-none">
@@ -156,10 +156,10 @@ export function SiteHeader() {
 
       {menuMounted && (
         <div className="lg:hidden">
-          {/* Plain dimming layer — no blur anywhere. Clicking it closes the menu. */}
+          {/* Full-viewport dimming overlay — zero blur. Tapping anywhere on it closes the menu. */}
           <div
             aria-hidden
-            className={`fixed inset-x-0 top-20 md:top-24 bottom-0 z-40 bg-inverse/15 transition-opacity duration-200 ease-out ${
+            className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-200 ease-out ${
               menuShown ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
             onClick={() => setOpen(false)}
@@ -177,8 +177,11 @@ export function SiteHeader() {
                   key={item.to}
                   to={item.to}
                   onClick={() => setOpen(false)}
-                  className="nav-link rounded-xl px-4 py-3 text-base text-ink"
-                  activeProps={{ className: "rounded-xl px-4 py-3 text-base text-primary" }}
+                  className="rounded-xl px-4 py-3 text-base text-ink transition-colors duration-200 hover:bg-muted hover:text-primary"
+                  activeProps={{
+                    className:
+                      "rounded-xl px-4 py-3 text-base text-primary bg-muted/60 transition-colors duration-200 hover:bg-muted hover:text-primary",
+                  }}
                   activeOptions={{ exact: item.to === "/" }}
                 >
                   {item.label}

@@ -1,5 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Menu, X } from "lucide-react";
 import { BrandLogo } from "./BrandLogo";
 import { ThemeToggle } from "./ThemeToggle";
@@ -156,14 +157,18 @@ export function SiteHeader() {
 
       {menuMounted && (
         <div className="lg:hidden">
-          {/* Full-viewport dimming overlay — zero blur. Tapping anywhere on it closes the menu. */}
-          <div
-            aria-hidden
-            className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-200 ease-out ${
-              menuShown ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
-            onClick={() => setOpen(false)}
-          />
+          {/* Full-viewport dimming overlay — portaled to <body> so the header's own
+              backdrop-filter can't clip it. Zero blur; tapping anywhere closes the menu. */}
+          {createPortal(
+            <div
+              aria-hidden
+              className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-200 ease-out ${
+                menuShown ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
+              onClick={() => setOpen(false)}
+            />,
+            document.body
+          )}
           {/* Compact dropdown card, right-aligned directly under the menu button */}
           <div
             ref={menuRef}

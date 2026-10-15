@@ -71,7 +71,7 @@ export function SiteHeader() {
           : "bg-transparent"
       }`}
     >
-      <div className="container-x relative z-50 flex h-20 md:h-24 items-center justify-between">
+      <div className="container-x flex h-20 md:h-24 items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group" aria-label="Modern Edge — Home">
           <BrandLogo forceWhite={!solid} className="h-10 w-auto" size={40} />
           <span className="flex flex-col leading-none">

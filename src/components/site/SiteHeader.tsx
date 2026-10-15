@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { BrandLogo } from "./BrandLogo";
 import { ThemeToggle } from "./ThemeToggle";
@@ -15,6 +15,10 @@ const NAV = [
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [menuMounted, setMenuMounted] = useState(false);
+  const [menuShown, setMenuShown] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const toggleRef = useRef<HTMLDivElement>(null);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const isHome = pathname === "/";
   // On non-home routes the top of the page is light, so treat header as "solid"
@@ -26,6 +30,37 @@ export function SiteHeader() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Keep the card mounted through the 200ms close transition, and mount it a
+  // frame before it becomes visible so the open transition always plays.
+  useEffect(() => {
+    if (open) {
+      setMenuMounted(true);
+      const raf = window.requestAnimationFrame(() =>
+        window.requestAnimationFrame(() => setMenuShown(true))
+      );
+      return () => window.cancelAnimationFrame(raf);
+    }
+    setMenuShown(false);
+    const timer = window.setTimeout(() => setMenuMounted(false), 200);
+    return () => window.clearTimeout(timer);
+  }, [open]);
+
+  // Clicking anywhere outside the dropdown card closes it.
+  useEffect(() => {
+    if (!open) return;
+    const onPointerDown = (event: PointerEvent) => {
+      const target = event.target as Node;
+      if (
+        menuRef.current?.contains(target) ||
+        toggleRef.current?.contains(target)
+      )
+        return;
+      setOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [open]);
 
   return (
     <header
@@ -103,7 +138,7 @@ export function SiteHeader() {
           </Link>
         </div>
 
-        <div className="lg:hidden flex items-center gap-2">
+        <div ref={toggleRef} className="lg:hidden flex items-center gap-2">
         <ThemeToggle tone={solid ? "auto" : "invert"} />
         <button
           type="button"
@@ -119,16 +154,23 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {open && (
+      {menuMounted && (
         <div className="lg:hidden">
-          {/* Semi-transparent blurred backdrop — clicking anywhere on it closes the menu */}
+          {/* Plain dimming layer — no blur anywhere. Clicking it closes the menu. */}
           <div
             aria-hidden
-            className="fixed inset-x-0 top-20 md:top-24 bottom-0 z-40 bg-inverse/25 backdrop-blur-md"
+            className={`fixed inset-x-0 top-20 md:top-24 bottom-0 z-40 bg-inverse/15 transition-opacity duration-200 ease-out ${
+              menuShown ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
             onClick={() => setOpen(false)}
           />
-          {/* Floating dropdown card anchored below the header */}
-          <div className="absolute inset-x-3 md:inset-x-6 top-full z-50 rounded-2xl border border-hairline bg-background shadow-elevated overflow-hidden">
+          {/* Compact dropdown card, right-aligned directly under the menu button */}
+          <div
+            ref={menuRef}
+            className={`absolute right-3 md:right-8 xl:right-12 top-full z-50 mt-2 w-72 max-w-[calc(100vw-1.5rem)] origin-top-right overflow-hidden rounded-2xl border border-hairline bg-background shadow-elevated transition-all duration-200 ease-out ${
+              menuShown ? "scale-100 opacity-100" : "scale-95 opacity-0"
+            }`}
+          >
             <nav className="flex flex-col py-4 px-2 gap-1" aria-label="Mobile">
               {NAV.map((item) => (
                 <Link

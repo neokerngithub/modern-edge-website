@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import hero from "@/assets/hero-architecture.jpg";
 
 const INDEX = [
@@ -72,8 +72,8 @@ export function Hero() {
               className="interactive-press group inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-[13px] font-medium text-inverse hover:bg-primary hover:text-primary-foreground"
             >
               Request Consultation
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-inverse text-inverse-foreground transition-transform duration-500 group-hover:bg-white group-hover:text-primary">
-                <ArrowRight size={15} aria-hidden />
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-inverse text-inverse-foreground transition-colors duration-500 group-hover:bg-white group-hover:text-primary">
+                →
               </span>
             </Link>
             <Link
@@ -111,15 +111,6 @@ export function Hero() {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* scroll cue */}
-      <div
-        aria-hidden
-        className="hidden md:flex absolute bottom-6 right-8 items-center gap-2 text-white/50 text-[10px] uppercase tracking-[0.3em] z-10"
-      >
-        Scroll
-        <span className="block h-6 w-px bg-white/40" />
       </div>
     </section>
   );

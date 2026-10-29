@@ -39,13 +39,17 @@ const FOUNDERS = [
 
 export function Founders() {
   return (
-    <StaggerReveal className="grid gap-16 lg:grid-cols-2 lg:gap-14">
-      {FOUNDERS.map((f) => (
+    <StaggerReveal className="flex flex-col gap-14 md:gap-20">
+      {FOUNDERS.map((f, idx) => (
         <article
           key={f.name}
-          className="group relative"
+          className="group relative grid gap-8 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:items-center md:gap-12 lg:gap-16"
         >
-          <div className="relative overflow-hidden rounded-[20px] bg-surface aspect-[4/5]">
+          <div
+            className={`relative overflow-hidden rounded-[20px] bg-surface aspect-[4/5] w-full max-w-sm md:max-w-none ${
+              idx % 2 === 1 ? "md:order-2" : ""
+            }`}
+          >
             <img
               src={f.img}
               alt={`Portrait of ${f.name}, ${f.role}`}
@@ -84,7 +88,7 @@ export function Founders() {
             </div>
           </div>
 
-          <div className="mt-8 lg:mt-10">
+          <div className={idx % 2 === 1 ? "md:order-1" : ""}>
             <p className="text-[15px] leading-[1.75] text-ink-muted">
               {f.bio}
             </p>

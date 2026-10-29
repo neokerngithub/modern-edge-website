@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ServicesPropertyValuationRouteImport } from './routes/services_.property-valuation'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,12 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesPropertyValuationRoute =
+  ServicesPropertyValuationRouteImport.update({
+    id: '/services_/property-valuation',
+    path: '/services/property-valuation',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByFullPath {
   '/process': typeof ProcessRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/services/property-valuation': typeof ServicesPropertyValuationRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +70,7 @@ export interface FileRoutesByTo {
   '/process': typeof ProcessRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/services/property-valuation': typeof ServicesPropertyValuationRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,13 +80,27 @@ export interface FileRoutesById {
   '/process': typeof ProcessRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/services_/property-valuation': typeof ServicesPropertyValuationRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/contact' | '/process' | '/services' | '/sitemap.xml'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/process'
+    | '/services'
+    | '/sitemap.xml'
+    | '/services/property-valuation'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/process' | '/services' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/process'
+    | '/services'
+    | '/sitemap.xml'
+    | '/services/property-valuation'
   id:
     | '__root__'
     | '/'
@@ -86,6 +109,7 @@ export interface FileRouteTypes {
     | '/process'
     | '/services'
     | '/sitemap.xml'
+    | '/services_/property-valuation'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -95,6 +119,7 @@ export interface RootRouteChildren {
   ProcessRoute: typeof ProcessRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  ServicesPropertyValuationRoute: typeof ServicesPropertyValuationRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -141,6 +166,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services_/property-valuation': {
+      id: '/services_/property-valuation'
+      path: '/services/property-valuation'
+      fullPath: '/services/property-valuation'
+      preLoaderRoute: typeof ServicesPropertyValuationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -151,6 +183,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProcessRoute: ProcessRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  ServicesPropertyValuationRoute: ServicesPropertyValuationRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

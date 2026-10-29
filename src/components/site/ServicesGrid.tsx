@@ -10,6 +10,7 @@ import {
   BadgeCheck,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { StaggerReveal } from "./Reveal";
 
 type Service = {
@@ -93,6 +94,13 @@ export function ServicesGrid() {
                   {s.description}
                 </p>
               </div>
+              {i === 1 && (
+                <Link
+                  to="/services/property-valuation"
+                  aria-label="Property Valuation — view details"
+                  className="absolute inset-0 z-10 rounded-[20px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+                />
+              )}
             </article>
           );
         })}

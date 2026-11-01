@@ -155,20 +155,20 @@ function PropertyValuationPage() {
                 <span aria-hidden className="h-px w-8 bg-hairline" />
                 {g.label}
               </div>
-              <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {g.items.map((b) => (
                   <li
                     key={b.name}
-                    className="flex flex-col items-center justify-center gap-5 rounded-[16px] border border-hairline bg-white p-8 md:p-10 text-center shadow-card"
+                    className="flex items-center gap-4 rounded-[14px] border border-hairline bg-white px-5 py-4 shadow-card"
                   >
                     <img
                       src={b.logo}
                       alt={`${b.name} logo`}
                       loading="lazy"
                       decoding="async"
-                      className="h-24 w-full object-contain md:h-28 grayscale-0 opacity-100 md:grayscale md:opacity-60 md:hover:grayscale-0 md:hover:opacity-100 transition-all duration-300"
+                      className="h-12 w-24 shrink-0 object-contain grayscale-0 opacity-100 md:grayscale md:opacity-60 md:hover:grayscale-0 md:hover:opacity-100 transition-all duration-300"
                     />
-                    <span className="text-xs leading-snug text-neutral-600">{b.name}</span>
+                    <span className="text-xs font-medium leading-snug text-neutral-700">{b.name}</span>
                   </li>
                 ))}
               </ul>

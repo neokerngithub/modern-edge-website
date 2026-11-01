@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { BrandLogo } from "./BrandLogo";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -13,11 +13,45 @@ const NAV = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
+const STATIC_SERVICES = [
+  "Architecture & Design",
+  "Structural & Civil Engineering",
+  "Construction Services",
+  "Interior & Exterior Design",
+  "Landscape Services",
+];
+
+function ServicesList({ onNavigate }: { onNavigate: () => void }) {
+  return (
+    <ul className="flex flex-col">
+      <li>
+        <Link
+          to="/services/property-valuation"
+          onClick={onNavigate}
+          className="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-[14px] text-ink transition-colors duration-200 hover:bg-muted hover:text-primary"
+        >
+          Property Valuation
+          <span className="shrink-0 rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.12em] text-primary">
+            8 BFIs Empaneled
+          </span>
+        </Link>
+      </li>
+      {STATIC_SERVICES.map((s) => (
+        <li key={s} className="px-3 py-2.5 text-[14px] text-ink-muted cursor-default">
+          {s}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [menuMounted, setMenuMounted] = useState(false);
   const [menuShown, setMenuShown] = useState(false);
+  const [svcOpen, setSvcOpen] = useState(false);
+  const [mSvcOpen, setMSvcOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLDivElement>(null);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -93,23 +127,53 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9" aria-label="Primary">
-          {NAV.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className={`nav-link relative text-[13px] tracking-wide ${
-                solid ? "text-ink/75 hover:text-primary" : "text-white/80 hover:text-white"
-              }`}
-              activeProps={{
-                className: `relative text-[13px] tracking-wide ${
-                  solid ? "text-primary" : "text-white"
-                }`,
-              }}
-              activeOptions={{ exact: item.to === "/" }}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {NAV.map((item) =>
+            item.to === "/services" ? (
+              <div
+                key={item.to}
+                className="relative"
+                onMouseEnter={() => setSvcOpen(true)}
+                onMouseLeave={() => setSvcOpen(false)}
+              >
+                <button
+                  type="button"
+                  aria-expanded={svcOpen}
+                  onClick={() => setSvcOpen((v) => !v)}
+                  className={`inline-flex items-center gap-1 text-[13px] tracking-wide transition-colors duration-200 ${
+                    pathname.startsWith("/services")
+                      ? solid ? "text-primary" : "text-white"
+                      : solid ? "text-ink/75 hover:text-primary" : "text-white/80 hover:text-white"
+                  }`}
+                >
+                  Services
+                  <ChevronDown size={13} className={`transition-transform duration-150 ${svcOpen ? "rotate-180" : ""}`} aria-hidden />
+                </button>
+                <div
+                  className={`absolute left-1/2 top-full -translate-x-1/2 pt-3 transition-all duration-150 ease-out origin-top ${
+                    svcOpen ? "opacity-100 scale-100" : "pointer-events-none opacity-0 scale-95"
+                  }`}
+                >
+                  <div className="w-72 rounded-2xl border border-hairline bg-background p-2 shadow-elevated">
+                    <ServicesList onNavigate={() => setSvcOpen(false)} />
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={item.to}
+                to={item.to}
+                className={`relative text-[13px] tracking-wide transition-colors duration-200 ${
+                  solid ? "text-ink/75 hover:text-primary" : "text-white/80 hover:text-white"
+                }`}
+                activeProps={{
+                  className: `relative text-[13px] tracking-wide ${solid ? "text-primary" : "text-white"}`,
+                }}
+                activeOptions={{ exact: item.to === "/" }}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
 
         <div className="hidden lg:flex items-center gap-5">
@@ -177,21 +241,40 @@ export function SiteHeader() {
             }`}
           >
             <nav className="flex flex-col py-4 px-2 gap-1" aria-label="Mobile">
-              {NAV.map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  onClick={() => setOpen(false)}
-                  className="rounded-xl px-4 py-3 text-base text-ink transition-colors duration-200 hover:bg-muted hover:text-primary"
-                  activeProps={{
-                    className:
-                      "rounded-xl px-4 py-3 text-base text-primary bg-muted/60 transition-colors duration-200 hover:bg-muted hover:text-primary",
-                  }}
-                  activeOptions={{ exact: item.to === "/" }}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {NAV.map((item) =>
+                item.to === "/services" ? (
+                  <div key={item.to}>
+                    <button
+                      type="button"
+                      aria-expanded={mSvcOpen}
+                      onClick={() => setMSvcOpen((v) => !v)}
+                      className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-base text-ink transition-colors duration-200 hover:bg-muted hover:text-primary"
+                    >
+                      Services
+                      <ChevronDown size={16} className={`transition-transform duration-150 ${mSvcOpen ? "rotate-180" : ""}`} aria-hidden />
+                    </button>
+                    {mSvcOpen && (
+                      <div className="ml-2 mb-1 border-l border-hairline pl-2">
+                        <ServicesList onNavigate={() => setOpen(false)} />
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setOpen(false)}
+                    className="rounded-xl px-4 py-3 text-base text-ink transition-colors duration-200 hover:bg-muted hover:text-primary"
+                    activeProps={{
+                      className:
+                        "rounded-xl px-4 py-3 text-base text-primary bg-muted/60 transition-colors duration-200 hover:bg-muted hover:text-primary",
+                    }}
+                    activeOptions={{ exact: item.to === "/" }}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              )}
               <Link
                 to="/contact"
                 onClick={() => setOpen(false)}

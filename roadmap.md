@@ -1,6 +1,6 @@
 # Roadmap
-- [ ] Property Valuation page /services/property-valuation + BFI logos + clickable card
-- [ ] Header Services dropdown (desktop + mobile)
-- [ ] Hero: button arrow consistency, remove SCROLL
-- [ ] Founders: smaller photos, zig-zag
-- [ ] Footer visitor counter (needs persistent storage)
+- [x] Property Valuation page /services/property-valuation + BFI logos + clickable card
+- [x] Header Services dropdown (desktop + mobile)
+- [x] Hero: button arrow consistency, remove SCROLL
+- [x] Founders: smaller photos, zig-zag
+- [ ] Footer visitor counter — blocked: needs Lovable Cloud approval

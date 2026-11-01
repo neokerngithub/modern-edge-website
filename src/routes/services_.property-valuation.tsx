@@ -2,14 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { BadgeCheck, Landmark, Building, HandCoins } from "lucide-react";
 import { Section } from "@/components/site/Section";
 import { PageHeader } from "@/components/site/PageHeader";
-import adbl from "@/assets/bfi/Agricultural_Development.png.asset.json";
-import rbb from "@/assets/bfi/Rastriya_Banijya.png.asset.json";
-import central from "@/assets/bfi/Central_Finance.png.asset.json";
-import chhimek from "@/assets/bfi/Chhimek_Laghubitta.png.asset.json";
-import himalayan from "@/assets/bfi/Himalayan_Laghubitta.png.asset.json";
-import infinity from "@/assets/bfi/Infinity_Laghubitta.png.asset.json";
-import swabalamban from "@/assets/bfi/Swalamban_Laghubitta.png.asset.json";
-import nerude from "@/assets/bfi/Nerude_Mirmire_Laghubitta.png.asset.json";
 
 const TITLE = "Property Valuation — Empaneled with 8 Banks & Financial Institutions | Modern Edge";
 const DESC =
@@ -34,34 +26,34 @@ export const Route = createFileRoute("/services_/property-valuation")({
   }),
 });
 
-type Bfi = { name: string; logo: { url: string } };
+type Bfi = { name: string; logo: string };
 
 const GROUPS: { label: string; tag: string; icon: typeof Landmark; items: Bfi[] }[] = [
   {
     label: "Commercial Banks",
-    tag: "Class A",
+    tag: "Class 'A'",
     icon: Landmark,
     items: [
-      { name: "Agricultural Development Bank Limited", logo: adbl },
-      { name: "Rastriya Banijya Bank Limited", logo: rbb },
+      { name: "Agricultural Development Bank Limited", logo: "/logos/Agricultural_Development.png" },
+      { name: "Rastriya Banijya Bank Limited", logo: "/logos/Rastriya_Banijya.png" },
     ],
   },
   {
     label: "Finance Companies",
-    tag: "Class C",
+    tag: "Class 'C'",
     icon: Building,
-    items: [{ name: "Central Finance Limited", logo: central }],
+    items: [{ name: "Central Finance Limited", logo: "/logos/Central_Finance.png" }],
   },
   {
     label: "Microfinance Institutions (Laghubittas)",
-    tag: "Class D",
+    tag: "Class 'D'",
     icon: HandCoins,
     items: [
-      { name: "Chhimek Laghubitta", logo: chhimek },
-      { name: "Himalayan Laghubitta", logo: himalayan },
-      { name: "Infinity Laghubitta", logo: infinity },
-      { name: "Swabalamban Laghubitta", logo: swabalamban },
-      { name: "Nerude Mirmire Laghubitta", logo: nerude },
+      { name: "Chhimek Laghubitta", logo: "/logos/Chhimek_Laghubitta.png" },
+      { name: "Himalayan Laghubitta", logo: "/logos/Himalayan_Laghubitta.png" },
+      { name: "Infinity Laghubitta", logo: "/logos/Infinity_Laghubitta.png" },
+      { name: "Swabalamban Laghubitta", logo: "/logos/Swalamban_Laghubitta.png" },
+      { name: "Nerude Mirmire Laghubitta", logo: "/logos/Nerude_Mirmire_Laghubitta.png" },
     ],
   },
 ];
@@ -155,28 +147,28 @@ function PropertyValuationPage() {
         eyebrow="Empanelment"
         title="Trusted & Empaneled By Leading Financial Institutions"
       >
-        <div className="space-y-10">
+        <div className="space-y-12">
           {GROUPS.map((g) => (
             <div key={g.label}>
-              <div className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.24em] text-ink-muted">
+              <div className="mb-5 flex items-center gap-3 text-[11px] uppercase tracking-[0.24em] text-ink-muted">
                 <span className="text-primary">{g.tag}</span>
                 <span aria-hidden className="h-px w-8 bg-hairline" />
                 {g.label}
               </div>
-              <ul className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+              <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {g.items.map((b) => (
                   <li
                     key={b.name}
-                    className="flex flex-col items-center justify-center gap-3 rounded-[16px] border border-hairline bg-white p-5 text-center"
+                    className="flex flex-col items-center justify-center gap-5 rounded-[16px] border border-hairline bg-white p-8 md:p-10 text-center shadow-card"
                   >
                     <img
-                      src={b.logo.url}
+                      src={b.logo}
                       alt={`${b.name} logo`}
                       loading="lazy"
                       decoding="async"
-                      className="h-16 w-full object-contain grayscale-0 opacity-100 md:grayscale md:opacity-60 md:hover:grayscale-0 md:hover:opacity-100 transition-all duration-300"
+                      className="h-24 w-full object-contain md:h-28 grayscale-0 opacity-100 md:grayscale md:opacity-60 md:hover:grayscale-0 md:hover:opacity-100 transition-all duration-300"
                     />
-                    <span className="text-[11px] leading-snug text-neutral-600">{b.name}</span>
+                    <span className="text-xs leading-snug text-neutral-600">{b.name}</span>
                   </li>
                 ))}
               </ul>

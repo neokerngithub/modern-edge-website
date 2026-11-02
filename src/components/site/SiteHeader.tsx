@@ -14,11 +14,13 @@ const NAV = [
 ] as const;
 
 const STATIC_SERVICES = [
-  "Architecture & Design",
-  "Structural & Civil Engineering",
   "Construction Services",
-  "Interior & Exterior Design",
-  "Landscape Services",
+  "Architecture",
+  "Structural & Civil Engineering",
+  "Municipal Drawings",
+  "DPR Preparation",
+  "Interior, Exterior & Landscape Design",
+  "EIA / IEE",
 ];
 
 function ServicesList({ onNavigate }: { onNavigate: () => void }) {

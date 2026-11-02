@@ -43,11 +43,15 @@ export function Founders() {
       {FOUNDERS.map((f, idx) => (
         <article
           key={f.name}
-          className="group grid gap-8 md:grid-cols-2 md:items-center md:gap-12 lg:gap-16"
+          className={`group grid gap-8 md:items-center md:gap-12 lg:gap-16 ${
+            idx % 2 === 1
+              ? "md:grid-cols-[1fr_320px] lg:grid-cols-[1fr_360px]"
+              : "md:grid-cols-[320px_1fr] lg:grid-cols-[360px_1fr]"
+          }`}
         >
           <div
-            className={`relative overflow-hidden rounded-[20px] bg-surface aspect-[4/5] w-full max-w-sm md:max-w-none ${
-              idx % 2 === 1 ? "md:order-2" : ""
+            className={`relative overflow-hidden rounded-[20px] bg-surface aspect-[4/5] w-full max-w-sm md:max-w-full ${
+              idx % 2 === 1 ? "md:order-2 md:justify-self-end" : ""
             }`}
           >
             <img

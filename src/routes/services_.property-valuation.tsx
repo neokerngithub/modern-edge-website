@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/site/PageHeader";
 
 const TITLE = "Property Valuation — Empaneled with 8 Banks & Financial Institutions | Modern Edge";
 const DESC =
-  "200+ property valuations completed since 2024. Modern Edge is empaneled with commercial banks, finance companies and laghubittas across Nepal for land, building and asset valuation.";
+  "200+ property valuations completed since 2024. Modern Edge is empaneled with commercial banks, finance companies and microfinances across Nepal for land, building and asset valuation.";
 const URL = "https://modernedge.com.np/services/property-valuation";
 
 export const Route = createFileRoute("/services_/property-valuation")({
@@ -34,15 +34,15 @@ const GROUPS: { label: string; tag: string; icon: typeof Landmark; items: Bfi[] 
     tag: "Class 'A'",
     icon: Landmark,
     items: [
-      { name: "Agricultural Development Bank Limited", logo: "/logos/Agricultural_Development.png" },
-      { name: "Rastriya Banijya Bank Limited", logo: "/logos/Rastriya_Banijya.png" },
+      { name: "Agricultural Development Bank", logo: "/logos/Agricultural_Development.png" },
+      { name: "Rastriya Banijya Bank", logo: "/logos/Rastriya_Banijya.png" },
     ],
   },
   {
     label: "Finance Companies",
     tag: "Class 'C'",
     icon: Building,
-    items: [{ name: "Central Finance Limited", logo: "/logos/Central_Finance.png" }],
+    items: [{ name: "Central Finance", logo: "/logos/Central_Finance.png" }],
   },
   {
     label: "Microfinance Institutions (Laghubittas)",

@@ -43,7 +43,7 @@ export function Founders() {
       {FOUNDERS.map((f, idx) => (
         <article
           key={f.name}
-          className="grid gap-8 md:grid-cols-2 md:items-center md:gap-12 lg:gap-16"
+          className="group grid gap-8 md:grid-cols-2 md:items-center md:gap-12 lg:gap-16"
         >
           <div
             className={`relative overflow-hidden rounded-[20px] bg-surface aspect-[4/5] w-full max-w-sm md:max-w-none ${

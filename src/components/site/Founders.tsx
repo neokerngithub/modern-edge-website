@@ -43,7 +43,7 @@ export function Founders() {
       {FOUNDERS.map((f, idx) => (
         <article
           key={f.name}
-          className="group relative grid gap-8 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:items-center md:gap-12 lg:gap-16"
+          className="grid gap-8 md:grid-cols-2 md:items-center md:gap-12 lg:gap-16"
         >
           <div
             className={`relative overflow-hidden rounded-[20px] bg-surface aspect-[4/5] w-full max-w-sm md:max-w-none ${
@@ -57,39 +57,32 @@ export function Founders() {
               height={1000}
               loading="eager"
               decoding="async"
-              className="h-full w-full object-cover transition-all duration-[900ms] ease-out scale-[1.02] group-hover:scale-100"
+              className="h-full w-full object-cover transition-transform duration-[900ms] ease-out scale-[1.02] group-hover:scale-100"
             />
-
-            <div
-              aria-hidden
-              className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"
-            />
-
-            <div className="absolute inset-x-0 bottom-0 p-8 md:p-10">
-              <div className="flex items-center gap-3 text-white/80">
-                <span className="font-display text-xs tabular-nums tracking-[0.14em]">
-                  {f.initial}
-                </span>
-
-                <span className="h-px w-8 bg-white/30" />
-
-                <span className="text-[10px] uppercase tracking-[0.28em]">
-                  {f.discipline}
-                </span>
-              </div>
-
-              <h3 className="mt-4 font-display font-light text-3xl md:text-4xl text-white tracking-[-0.02em]">
-                {f.name}
-              </h3>
-
-              <div className="mt-1 text-xs text-white/70">
-                {f.role} · {f.experience}
-              </div>
-            </div>
           </div>
 
           <div className={idx % 2 === 1 ? "md:order-1" : ""}>
-            <p className="text-[15px] leading-[1.75] text-ink-muted">
+            <div className="flex items-center gap-3 text-ink-muted">
+              <span className="font-display text-xs tabular-nums tracking-[0.14em] text-primary">
+                {f.initial}
+              </span>
+
+              <span aria-hidden className="h-px w-8 bg-hairline" />
+
+              <span className="text-[10px] uppercase tracking-[0.28em]">
+                {f.discipline}
+              </span>
+            </div>
+
+            <h3 className="mt-5 font-display font-light text-3xl md:text-4xl text-ink tracking-[-0.02em]">
+              {f.name}
+            </h3>
+
+            <div className="mt-2 text-xs text-ink-muted">
+              {f.role} · {f.experience}
+            </div>
+
+            <p className="mt-6 text-[15px] leading-[1.75] text-ink-muted">
               {f.bio}
             </p>
 

@@ -23,7 +23,7 @@ const FOUNDERS = [
     role: "Co-Founder & Director · Construction Professional",
     img: samir,
     experience: "9+ years",
-    bio: "Mr. Md. Samir Hussain brings over nine years of professional experience across construction, property valuation and project management. Prior to the establishment of Modern Edge, he gained individual professional experience through projects including Swastik Oil Industries, OCB Processing Industries, Global Plastic Industries, Vivek Automobiles and others, alongside experience across commercial and residential projects.",
+    bio: "Mr. Md. Samir Hussain brings over nine years of professional experience across construction, property valuation and project management. Prior to the establishment of Modern Edge, he gained individual professional experience through projects including Swastik Oil Industries, OCB Processing Industries, and others, alongside experience across commercial and residential projects.",
     highlights: [
       "Swastik Oil Industries",
       "OCB Processing Industries",

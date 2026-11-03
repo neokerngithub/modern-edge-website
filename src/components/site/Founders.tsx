@@ -39,78 +39,63 @@ const FOUNDERS = [
 
 export function Founders() {
   return (
-    <StaggerReveal className="flex flex-col gap-14 md:gap-20">
-      {FOUNDERS.map((f, idx) => (
+    <StaggerReveal className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+      {FOUNDERS.map((f) => (
         <article
           key={f.name}
-          className={`group grid gap-8 md:items-start md:gap-12 lg:gap-16 ${
-            idx % 2 === 1
-              ? "md:grid-cols-[1fr_240px] lg:grid-cols-[1fr_260px]"
-              : "md:grid-cols-[240px_1fr] lg:grid-cols-[260px_1fr]"
-          }`}
+          className="group flex flex-col rounded-[24px] border border-hairline bg-surface/60 p-6 sm:p-7 lg:p-8"
         >
-          <div
-            className={`relative overflow-hidden rounded-[20px] bg-surface aspect-[4/5] w-full max-w-sm md:max-w-full md:aspect-auto md:h-[300px] lg:h-[320px] ${
-              idx % 2 === 1 ? "md:order-2 md:justify-self-end" : ""
-            }`}
-          >
-            <img
-              src={f.img}
-              alt={`Portrait of ${f.name}, ${f.role}`}
-              width={800}
-              height={1000}
-              loading="eager"
-              decoding="async"
-              className="h-full w-full object-cover transition-transform duration-[900ms] ease-out scale-[1.02] group-hover:scale-100"
-            />
+          <div className="flex items-center gap-3 text-ink-muted">
+            <span className="font-display text-xs tabular-nums tracking-[0.14em] text-primary">
+              {f.initial}
+            </span>
+            <span aria-hidden className="h-px w-8 bg-hairline" />
+            <span className="text-[10px] uppercase tracking-[0.28em]">
+              {f.discipline}
+            </span>
           </div>
 
-          <div className={idx % 2 === 1 ? "md:order-1" : ""}>
-            <div className="flex items-center gap-3 text-ink-muted">
-              <span className="font-display text-xs tabular-nums tracking-[0.14em] text-primary">
-                {f.initial}
-              </span>
-
-              <span aria-hidden className="h-px w-8 bg-hairline" />
-
-              <span className="text-[10px] uppercase tracking-[0.28em]">
-                {f.discipline}
-              </span>
-            </div>
-
-            <h3 className="mt-5 font-display font-light text-3xl md:text-4xl text-ink tracking-[-0.02em]">
-              {f.name}
-            </h3>
-
-            <div className="mt-2 text-xs text-ink-muted">
-              {f.role} · {f.experience}
-            </div>
-
-            <p className="mt-6 text-[15px] leading-[1.75] text-ink-muted">
-              {f.bio}
-            </p>
-
-            <div className="mt-8">
-              <div className="text-[10px] uppercase tracking-[0.26em] text-ink-muted mb-4">
-                Selected Professional Experience
-              </div>
-
-              <ul className="flex flex-wrap gap-2">
-                {f.highlights.map((h) => (
-                  <li
-                    key={h}
-                    className="text-xs rounded-full border border-hairline px-3.5 py-1.5 text-ink/80"
-                  >
-                    {h}
-                  </li>
-                ))}
-              </ul>
-
-              <p className="mt-4 text-[12px] leading-[1.6] text-ink-muted/80">
-                Projects listed reflect the director's individual professional experience gained prior to the establishment of Modern Edge Architects & Engineers Pvt. Ltd. and are not represented as projects executed by Modern Edge.
-              </p>
-            </div>
+          <h3 className="mt-4 font-display font-light text-3xl text-ink tracking-[-0.02em]">
+            {f.name}
+          </h3>
+          <div className="mt-2 text-xs text-ink-muted">
+            {f.role} · {f.experience}
           </div>
+
+          <div className="mt-6 grid gap-6 sm:grid-cols-[180px_1fr] sm:items-start">
+            <div className="relative overflow-hidden rounded-[16px] bg-surface aspect-[4/5] w-full max-w-[220px] sm:max-w-none">
+              <img
+                src={f.img}
+                alt={`Portrait of ${f.name}, ${f.role}`}
+                width={800}
+                height={1000}
+                loading="eager"
+                decoding="async"
+                className="h-full w-full object-cover transition-transform duration-[900ms] ease-out scale-[1.02] group-hover:scale-100"
+              />
+            </div>
+            <p className="text-[15px] leading-[1.75] text-ink-muted">{f.bio}</p>
+          </div>
+
+          <div className="mt-6">
+            <div className="text-[10px] uppercase tracking-[0.26em] text-ink-muted mb-4">
+              Selected Professional Experience
+            </div>
+            <ul className="flex flex-wrap gap-2">
+              {f.highlights.map((h) => (
+                <li
+                  key={h}
+                  className="text-xs rounded-full border border-hairline px-3.5 py-1.5 text-ink/80"
+                >
+                  {h}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <p className="mt-auto pt-6 border-t border-hairline mt-6 text-[12px] leading-[1.6] text-ink-muted/80">
+            Projects listed reflect the director's individual professional experience gained prior to the establishment of Modern Edge Architects & Engineers Pvt. Ltd. and are not represented as projects executed by Modern Edge.
+          </p>
         </article>
       ))}
     </StaggerReveal>

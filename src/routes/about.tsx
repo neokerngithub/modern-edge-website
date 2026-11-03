@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
 import { Founders } from "@/components/site/Founders";
@@ -159,7 +160,7 @@ function AboutPage() {
             >
               Request Consultation
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-inverse text-inverse-foreground">
-                →
+                <ArrowUpRight size={15} aria-hidden />
               </span>
             </Link>
           </div>

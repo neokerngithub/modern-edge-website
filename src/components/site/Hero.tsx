@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Phone } from "lucide-react";
+import { ArrowUpRight, Phone } from "lucide-react";
 import hero from "@/assets/hero-architecture.jpg";
 
 const INDEX = [
@@ -73,7 +73,7 @@ export function Hero() {
             >
               Request Consultation
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-inverse text-inverse-foreground transition-colors duration-500 group-hover:bg-white group-hover:text-primary">
-                →
+                <ArrowUpRight size={15} aria-hidden />
               </span>
             </Link>
             <Link

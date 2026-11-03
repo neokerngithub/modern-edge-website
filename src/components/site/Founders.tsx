@@ -39,7 +39,7 @@ const FOUNDERS = [
 
 export function Founders() {
   return (
-    <StaggerReveal className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+    <StaggerReveal className="grid gap-6 xl:grid-cols-2 xl:gap-8">
       {FOUNDERS.map((f) => (
         <article
           key={f.name}
@@ -63,7 +63,7 @@ export function Founders() {
           </div>
 
           <div className="mt-6 grid gap-6 sm:grid-cols-[180px_1fr] sm:items-start">
-            <div className="relative overflow-hidden rounded-[16px] bg-surface aspect-[4/5] w-full max-w-[220px] sm:max-w-none">
+            <div className="relative overflow-hidden rounded-[16px] bg-surface aspect-[4/5] w-full max-w-[220px] mx-auto sm:mx-0 sm:max-w-none">
               <img
                 src={f.img}
                 alt={`Portrait of ${f.name}, ${f.role}`}
@@ -93,7 +93,8 @@ export function Founders() {
             </ul>
           </div>
 
-          <p className="mt-auto pt-6 border-t border-hairline mt-6 text-[12px] leading-[1.6] text-ink-muted/80">
+          <div className="mt-auto" />
+          <p className="mt-8 pt-6 border-t border-hairline text-[12px] leading-[1.6] text-ink-muted/80">
             Projects listed reflect the director's individual professional experience gained prior to the establishment of Modern Edge Architects & Engineers Pvt. Ltd. and are not represented as projects executed by Modern Edge.
           </p>
         </article>

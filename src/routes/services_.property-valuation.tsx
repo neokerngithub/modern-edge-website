@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { BadgeCheck, Landmark, Building, HandCoins } from "lucide-react";
+import { ArrowUpRight, BadgeCheck, Landmark, Building, HandCoins } from "lucide-react";
 import { Section } from "@/components/site/Section";
 import { PageHeader } from "@/components/site/PageHeader";
 
@@ -109,7 +109,7 @@ function PropertyValuationPage() {
             >
               Request Valuation Service
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-inverse text-inverse-foreground transition-colors duration-500 group-hover:bg-white group-hover:text-primary">
-                →
+                <ArrowUpRight size={15} aria-hidden />
               </span>
             </Link>
           </div>
@@ -179,9 +179,12 @@ function PropertyValuationPage() {
         <div className="mt-12 flex justify-center">
           <Link
             to="/contact"
-            className="interactive-press inline-flex items-center gap-3 rounded-full bg-primary px-7 py-3.5 text-[13px] font-medium text-primary-foreground hover:bg-inverse"
+            className="interactive-press inline-flex items-center gap-3 rounded-full bg-primary pl-6 pr-2 py-2 text-[13px] font-medium text-primary-foreground hover:bg-inverse"
           >
-            Request Valuation Service →
+            Request Valuation Service
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground text-primary">
+              <ArrowUpRight size={15} aria-hidden />
+            </span>
           </Link>
         </div>
       </Section>

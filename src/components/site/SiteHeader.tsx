@@ -79,6 +79,7 @@ export function SiteHeader() {
       return () => window.cancelAnimationFrame(raf);
     }
     setMenuShown(false);
+    setMSvcOpen(false);
     const timer = window.setTimeout(() => setMenuMounted(false), 200);
     return () => window.clearTimeout(timer);
   }, [open]);
@@ -133,7 +134,7 @@ export function SiteHeader() {
             item.to === "/services" ? (
               <div
                 key={item.to}
-                className="relative"
+                className="relative flex items-center"
                 onMouseEnter={() => setSvcOpen(true)}
                 onMouseLeave={() => setSvcOpen(false)}
               >

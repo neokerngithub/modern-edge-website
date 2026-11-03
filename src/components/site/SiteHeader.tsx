@@ -201,7 +201,7 @@ export function SiteHeader() {
                 solid ? "bg-white text-inverse group-hover:bg-white group-hover:text-primary" : "bg-inverse text-inverse-foreground group-hover:bg-background group-hover:text-primary"
               }`}
             >
-              →
+              <ArrowUpRight size={14} aria-hidden />
             </span>
           </Link>
         </div>

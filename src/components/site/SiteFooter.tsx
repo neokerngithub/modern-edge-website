@@ -92,9 +92,21 @@ export function SiteFooter() {
               Services
             </div>
             <ul className="mt-5 space-y-2.5 text-sm text-white/60">
-              {SERVICES.map((s) => (
-                <li key={s}>{s}</li>
-              ))}
+              {SERVICES.map((s) =>
+                s === "Property Valuation" ? (
+                  <li key={s}>
+                    <Link
+                      to="/services/property-valuation"
+                      className="text-white/80 transition-colors duration-200 hover:text-white"
+                    >
+                      {s}
+                      <span className="ml-1.5 text-[11px] text-primary">· 8 BFIs</span>
+                    </Link>
+                  </li>
+                ) : (
+                  <li key={s}>{s}</li>
+                ),
+              )}
             </ul>
           </div>
 

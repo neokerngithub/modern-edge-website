@@ -8,6 +8,7 @@ import {
   
   ClipboardCheck,
   BadgeCheck,
+  ArrowUpRight,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Link } from "@tanstack/react-router";
@@ -93,6 +94,12 @@ export function ServicesGrid() {
                 <p className="mt-5 max-w-md text-[14.5px] leading-[1.7] text-white/70">
                   {s.description}
                 </p>
+                {i === 1 && (
+                  <span className="mt-6 inline-flex items-center gap-1.5 self-start rounded-full border border-white/25 px-3.5 py-1.5 text-[11px] uppercase tracking-[0.18em] text-white/90">
+                    Empaneled with 8 BFIs · View details
+                    <ArrowUpRight size={13} aria-hidden />
+                  </span>
+                )}
               </div>
               {i === 1 && (
                 <Link

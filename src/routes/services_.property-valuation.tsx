@@ -121,8 +121,8 @@ function PropertyValuationPage() {
               {GROUPS.map((g) => (
                 <li key={g.label} className="flex items-start gap-3 text-ink">
                   <g.icon
-                    size={g.icon === HandCoins ? 22 : 18}
-                    className={`${g.icon === HandCoins ? "-mt-px" : "mt-0.5"} shrink-0 text-primary`}
+                    size={g.icon === HandCoins ? 20 : 18}
+                    className={`${g.icon === HandCoins ? "mt-0" : "mt-0.5"} shrink-0 text-primary`}
                     aria-hidden
                   />
                   <span>

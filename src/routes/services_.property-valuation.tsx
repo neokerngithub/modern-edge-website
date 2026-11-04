@@ -34,26 +34,26 @@ const GROUPS: { label: string; tag: string; icon: typeof Landmark; items: Bfi[] 
     tag: "Class 'A'",
     icon: Landmark,
     items: [
-      { name: "Agricultural Development Bank", logo: "/logos/Agricultural_Development.png" },
-      { name: "Rastriya Banijya Bank", logo: "/logos/Rastriya_Banijya.png" },
+      { name: "Agricultural Development Bank", logo: "/logos/Agricultural_Development.webp" },
+      { name: "Rastriya Banijya Bank", logo: "/logos/Rastriya_Banijya.webp" },
     ],
   },
   {
     label: "Finance Companies",
     tag: "Class 'C'",
     icon: Building,
-    items: [{ name: "Central Finance", logo: "/logos/Central_Finance.png" }],
+    items: [{ name: "Central Finance", logo: "/logos/Central_Finance.webp" }],
   },
   {
     label: "Microfinance Institutions (Laghubittas)",
     tag: "Class 'D'",
     icon: HandCoins,
     items: [
-      { name: "Chhimek Laghubitta", logo: "/logos/Chhimek_Laghubitta.png" },
-      { name: "Himalayan Laghubitta", logo: "/logos/Himalayan_Laghubitta.png" },
-      { name: "Infinity Laghubitta", logo: "/logos/Infinity_Laghubitta.png" },
-      { name: "Swabalamban Laghubitta", logo: "/logos/Swalamban_Laghubitta.png" },
-      { name: "Nerude Mirmire Laghubitta", logo: "/logos/Nerude_Mirmire_Laghubitta.png" },
+      { name: "Chhimek Laghubitta", logo: "/logos/Chhimek_Laghubitta.webp" },
+      { name: "Himalayan Laghubitta", logo: "/logos/Himalayan_Laghubitta.webp" },
+      { name: "Infinity Laghubitta", logo: "/logos/Infinity_Laghubitta.webp" },
+      { name: "Swabalamban Laghubitta", logo: "/logos/Swalamban_Laghubitta.webp" },
+      { name: "Nerude Mirmire Laghubitta", logo: "/logos/Nerude_Mirmire_Laghubitta.webp" },
     ],
   },
 ];
@@ -166,7 +166,9 @@ function PropertyValuationPage() {
                       <img
                         src={b.logo}
                         alt={`${b.name} logo`}
-                        loading="lazy"
+                        loading="eager"
+                        width={480}
+                        height={480}
                         decoding="async"
                         className="h-full w-full object-contain grayscale-0 opacity-100 md:grayscale md:opacity-60 md:hover:grayscale-0 md:hover:opacity-100 transition-all duration-300"
                       />

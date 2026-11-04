@@ -120,7 +120,11 @@ function PropertyValuationPage() {
             <ul className="mt-6 space-y-4">
               {GROUPS.map((g) => (
                 <li key={g.label} className="flex items-start gap-3 text-ink">
-                  <g.icon size={18} className="mt-0.5 text-primary" aria-hidden />
+                  <g.icon
+                    size={g.icon === HandCoins ? 22 : 18}
+                    className={`${g.icon === HandCoins ? "-mt-px" : "mt-0.5"} shrink-0 text-primary`}
+                    aria-hidden
+                  />
                   <span>
                     {g.label}
                     <span className="ml-2 text-[11px] uppercase tracking-[0.2em] text-ink-muted">{g.tag}</span>

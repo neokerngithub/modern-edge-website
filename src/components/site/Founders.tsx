@@ -93,12 +93,11 @@ export function Founders() {
             </ul>
           </div>
 
-          <div className="mt-auto" />
-          <p className="mt-8 pt-6 border-t border-hairline text-[12px] leading-[1.6] text-ink-muted/80">
-            Projects listed reflect the director's individual professional experience gained prior to the establishment of Modern Edge Architects & Engineers Pvt. Ltd. and are not represented as projects executed by Modern Edge.
-          </p>
         </article>
       ))}
     </StaggerReveal>
+    <p className="mt-8 mx-auto max-w-3xl text-center text-[12px] leading-[1.6] text-ink-muted/80">
+      * Projects listed reflect the directors' individual professional experience gained prior to the establishment of Modern Edge Architects & Engineers Pvt. Ltd. and are not represented as projects executed by Modern Edge.
+    </p>
   );
 }

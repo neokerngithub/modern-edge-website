@@ -15,6 +15,8 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ServicesConstructionRouteImport } from './routes/services_.construction'
+import { Route as ServicesInteriorExteriorLandscapeRouteImport } from './routes/services_.interior-exterior-landscape'
 import { Route as ServicesPropertyValuationRouteImport } from './routes/services_.property-valuation'
 
 const IndexRoute = IndexRouteImport.update({
@@ -47,6 +49,17 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesConstructionRoute = ServicesConstructionRouteImport.update({
+  id: '/services_/construction',
+  path: '/services/construction',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesInteriorExteriorLandscapeRoute =
+  ServicesInteriorExteriorLandscapeRouteImport.update({
+    id: '/services_/interior-exterior-landscape',
+    path: '/services/interior-exterior-landscape',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesPropertyValuationRoute =
   ServicesPropertyValuationRouteImport.update({
     id: '/services_/property-valuation',
@@ -61,6 +74,8 @@ export interface FileRoutesByFullPath {
   '/process': typeof ProcessRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/services/construction': typeof ServicesConstructionRoute
+  '/services/interior-exterior-landscape': typeof ServicesInteriorExteriorLandscapeRoute
   '/services/property-valuation': typeof ServicesPropertyValuationRoute
 }
 export interface FileRoutesByTo {
@@ -70,6 +85,8 @@ export interface FileRoutesByTo {
   '/process': typeof ProcessRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/services/construction': typeof ServicesConstructionRoute
+  '/services/interior-exterior-landscape': typeof ServicesInteriorExteriorLandscapeRoute
   '/services/property-valuation': typeof ServicesPropertyValuationRoute
 }
 export interface FileRoutesById {
@@ -80,6 +97,8 @@ export interface FileRoutesById {
   '/process': typeof ProcessRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/services_/construction': typeof ServicesConstructionRoute
+  '/services_/interior-exterior-landscape': typeof ServicesInteriorExteriorLandscapeRoute
   '/services_/property-valuation': typeof ServicesPropertyValuationRoute
 }
 export interface FileRouteTypes {
@@ -91,6 +110,8 @@ export interface FileRouteTypes {
     | '/process'
     | '/services'
     | '/sitemap.xml'
+    | '/services/construction'
+    | '/services/interior-exterior-landscape'
     | '/services/property-valuation'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -100,6 +121,8 @@ export interface FileRouteTypes {
     | '/process'
     | '/services'
     | '/sitemap.xml'
+    | '/services/construction'
+    | '/services/interior-exterior-landscape'
     | '/services/property-valuation'
   id:
     | '__root__'
@@ -109,6 +132,8 @@ export interface FileRouteTypes {
     | '/process'
     | '/services'
     | '/sitemap.xml'
+    | '/services_/construction'
+    | '/services_/interior-exterior-landscape'
     | '/services_/property-valuation'
   fileRoutesById: FileRoutesById
 }
@@ -119,6 +144,8 @@ export interface RootRouteChildren {
   ProcessRoute: typeof ProcessRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  ServicesConstructionRoute: typeof ServicesConstructionRoute
+  ServicesInteriorExteriorLandscapeRoute: typeof ServicesInteriorExteriorLandscapeRoute
   ServicesPropertyValuationRoute: typeof ServicesPropertyValuationRoute
 }
 
@@ -166,6 +193,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services_/construction': {
+      id: '/services_/construction'
+      path: '/services/construction'
+      fullPath: '/services/construction'
+      preLoaderRoute: typeof ServicesConstructionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services_/interior-exterior-landscape': {
+      id: '/services_/interior-exterior-landscape'
+      path: '/services/interior-exterior-landscape'
+      fullPath: '/services/interior-exterior-landscape'
+      preLoaderRoute: typeof ServicesInteriorExteriorLandscapeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services_/property-valuation': {
       id: '/services_/property-valuation'
       path: '/services/property-valuation'
@@ -183,6 +224,9 @@ const rootRouteChildren: RootRouteChildren = {
   ProcessRoute: ProcessRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  ServicesConstructionRoute: ServicesConstructionRoute,
+  ServicesInteriorExteriorLandscapeRoute:
+    ServicesInteriorExteriorLandscapeRoute,
   ServicesPropertyValuationRoute: ServicesPropertyValuationRoute,
 }
 export const routeTree = rootRouteImport

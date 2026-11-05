@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, BadgeCheck, Landmark, Building, HandCoins } from "lucide-react";
 import { Section } from "@/components/site/Section";
 import { PageHeader } from "@/components/site/PageHeader";
+import { ProcessSteps } from "@/components/site/ProcessTimelines";
 
 const TITLE = "Property Valuation — Empaneled with 8 Banks & Financial Institutions | Modern Edge";
 const DESC =
@@ -144,6 +145,10 @@ function PropertyValuationPage() {
             </ul>
           </div>
         </div>
+      </Section>
+
+      <Section id="process" eyebrow="Valuation process" title="Five steps to a bank-ready report.">
+        <ProcessSteps process="valuation" />
       </Section>
 
       <Section

@@ -6,7 +6,7 @@ import { TrustStrip } from "@/components/site/TrustStrip";
 
 import { ServicesGrid } from "@/components/site/ServicesGrid";
 import { WhyChooseUs } from "@/components/site/WhyChooseUs";
-import { ProcessTimelines } from "@/components/site/ProcessTimelines";
+import { ProcessHub } from "@/components/site/ProcessTimelines";
 import { Founders } from "@/components/site/Founders";
 import { Testimonials } from "@/components/site/Testimonials";
 import { ContactBlock } from "@/components/site/ContactBlock";
@@ -165,9 +165,9 @@ function HomePage() {
         index="04 — Process"
         eyebrow="How we work"
         title="Three workflows. One standard of excellence."
-        intro="Every engagement — construction, valuation, or interior & exterior — follows a structured, transparent workflow from consultation to handover."
+        intro="Every engagement — construction, valuation, or interior, exterior & landscape — follows a structured, transparent workflow from consultation to handover."
       >
-        <ProcessTimelines />
+        <ProcessHub />
       </Section>
 
       {/* Founders */}

@@ -13,6 +13,11 @@ const SERVICES = [
   "EIA / IEE",
 ];
 
+const FOOTER_LINKS: Record<string, "/services/construction" | "/services/interior-exterior-landscape"> = {
+  "Construction Services": "/services/construction",
+  "Interior, Exterior & Landscape Design": "/services/interior-exterior-landscape",
+};
+
 export function SiteFooter() {
   return (
     <footer className="bg-inverse text-inverse-foreground/80">
@@ -101,6 +106,15 @@ export function SiteFooter() {
                     >
                       {s}
                       <span className="ml-1.5 text-[11px] text-primary">· 8 BFIs</span>
+                    </Link>
+                  </li>
+                ) : FOOTER_LINKS[s] ? (
+                  <li key={s}>
+                    <Link
+                      to={FOOTER_LINKS[s]}
+                      className="text-white/80 transition-colors duration-200 hover:text-white"
+                    >
+                      {s}
                     </Link>
                   </li>
                 ) : (

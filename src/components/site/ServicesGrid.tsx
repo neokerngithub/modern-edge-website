@@ -101,6 +101,13 @@ export function ServicesGrid() {
                   </span>
                 )}
               </div>
+              {i === 0 && (
+                <Link
+                  to="/services/construction"
+                  aria-label="Construction Services — view details"
+                  className="absolute inset-0 z-10 rounded-[20px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+                />
+              )}
               {i === 1 && (
                 <Link
                   to="/services/property-valuation"
@@ -137,6 +144,13 @@ export function ServicesGrid() {
               <p className="mt-3 text-[14px] leading-[1.7] text-ink-muted">
                 {s.description}
               </p>
+              {s.title.startsWith("Interior") && (
+                <Link
+                  to="/services/interior-exterior-landscape"
+                  aria-label={`${s.title} — view details`}
+                  className="absolute inset-0 z-10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+                />
+              )}
             </article>
           );
         })}

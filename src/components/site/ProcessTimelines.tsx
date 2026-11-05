@@ -1,9 +1,15 @@
+import { Link } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
 import { StaggerReveal } from "./Reveal";
 
 type Step = { title: string; description: string };
 
+type ProcessKey = "construction" | "valuation" | "interior";
+
 const PROCESSES: {
-  key: string;
+  key: ProcessKey;
+  to: "/services/construction" | "/services/property-valuation" | "/services/interior-exterior-landscape";
+  cta: string;
   title: string;
   kicker: string;
   description: string;
@@ -11,6 +17,8 @@ const PROCESSES: {
 }[] = [
   {
     key: "construction",
+    to: "/services/construction",
+    cta: "View construction process",
     title: "Construction",
     kicker: "End-to-end delivery",
     description:
@@ -55,6 +63,8 @@ const PROCESSES: {
   },
   {
     key: "valuation",
+    to: "/services/property-valuation",
+    cta: "View valuation process",
     title: "Valuation",
     kicker: "Institutional-standard reporting",
     description:
@@ -89,10 +99,12 @@ const PROCESSES: {
   },
   {
     key: "interior",
-    title: "Interior & Exterior",
+    to: "/services/interior-exterior-landscape",
+    cta: "View design & landscape process",
+    title: "Interior, Exterior & Landscape",
     kicker: "Design to delivery, one roof",
     description:
-      "After 3D approval, drawings and the BOQ are prepared. A site survey verifies measurements before our project team coordinates civil, electrical, carpentry and finishing works — closed by styling, quality checks and handover.",
+      "After 3D approval, drawings and the BOQ are prepared. A site survey verifies measurements and outdoor conditions before our project team coordinates civil, electrical, carpentry, landscape and finishing works — closed by styling, quality checks and handover.",
     steps: [
       {
         title: "3D Approval",
@@ -115,6 +127,11 @@ const PROCESSES: {
           "On-site measurements verify the drawings against the real space.",
       },
       {
+        title: "Landscape Planning",
+        description:
+          "Levels, drainage, sun path, hardscape and planting zones are planned for the outdoor areas.",
+      },
+      {
         title: "Team Mobilization",
         description:
           "Civil, electrical, carpentry and finishing trades are scheduled and coordinated.",
@@ -130,6 +147,11 @@ const PROCESSES: {
           "Surfaces, fixtures and detailing are completed precisely to specification.",
       },
       {
+        title: "Planting & Softscape",
+        description:
+          "Lawns, plants, outdoor lighting and garden features are installed and established.",
+      },
+      {
         title: "Styling",
         description:
           "Furnishing, lighting and styling complete the intended character of the space.",
@@ -142,6 +164,72 @@ const PROCESSES: {
     ],
   },
 ];
+
+function StepGrid({ steps }: { steps: Step[] }) {
+  return (
+    <ol className="grid min-w-0 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+      {steps.map((step, idx) => (
+        <li
+          key={step.title}
+          className="group flex min-w-0 flex-col rounded-[16px] border border-hairline bg-card p-6 md:p-7 transition-colors duration-500 hover:border-primary/50 motion-reduce:transition-none"
+        >
+          <span className="font-display text-sm font-semibold tabular-nums tracking-[0.18em] text-primary">
+            {String(idx + 1).padStart(2, "0")}
+          </span>
+          <h4 className="mt-5 font-display text-lg md:text-xl font-medium leading-snug tracking-[-0.01em] text-ink">
+            {step.title}
+          </h4>
+          <p className="mt-2.5 text-[13.5px] leading-[1.7] text-ink-muted">{step.description}</p>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+/** Full step grid for a single workflow — used on its own service page. */
+export function ProcessSteps({ process }: { process: ProcessKey }) {
+  const p = PROCESSES.find((x) => x.key === process)!;
+  return (
+    <div>
+      <p className="mb-9 max-w-prose text-[15px] leading-[1.75] text-ink-muted">{p.description}</p>
+      <StepGrid steps={p.steps} />
+    </div>
+  );
+}
+
+/** Compact overview of all three workflows, each linking to its own page. */
+export function ProcessHub() {
+  return (
+    <StaggerReveal className="grid gap-5 md:grid-cols-3">
+      {PROCESSES.map((p, i) => (
+        <Link
+          key={p.key}
+          to={p.to}
+          hash="process"
+          className="group flex min-w-0 flex-col rounded-[20px] border border-hairline bg-card p-7 md:p-8 transition-colors duration-500 hover:border-primary/50 motion-reduce:transition-none"
+        >
+          <div className="flex items-baseline justify-between gap-4">
+            <span className="font-display font-light text-5xl text-ink leading-none">0{i + 1}</span>
+            <span className="text-[11px] uppercase tracking-[0.2em] text-ink-muted tabular-nums">
+              {p.steps.length} steps
+            </span>
+          </div>
+          <div className="eyebrow mt-8">{p.kicker}</div>
+          <h3 className="mt-2 font-display text-2xl md:text-[26px] text-ink tracking-[-0.02em]">
+            {p.title}
+          </h3>
+          <p className="mt-4 text-[13.5px] leading-[1.7] text-ink-muted">
+            {p.steps.map((s) => s.title).join(" · ")}
+          </p>
+          <span className="mt-auto pt-8 inline-flex items-center gap-2 text-[13px] font-medium text-primary">
+            {p.cta}
+            <ArrowUpRight size={15} aria-hidden />
+          </span>
+        </Link>
+      ))}
+    </StaggerReveal>
+  );
+}
 
 export function ProcessTimelines() {
   return (
@@ -160,29 +248,20 @@ export function ProcessTimelines() {
                 </h3>
               </div>
             </div>
-            <p className="max-w-prose text-[15px] leading-[1.75] text-ink-muted lg:col-span-7">
-              {p.description}
-            </p>
-          </div>
-
-          <ol className="mt-9 grid min-w-0 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-            {p.steps.map((step, idx) => (
-              <li
-                key={step.title}
-                className="group flex min-w-0 flex-col rounded-[16px] border border-hairline bg-card p-6 md:p-7 transition-colors duration-500 hover:border-primary/50 motion-reduce:transition-none"
+            <div className="lg:col-span-7">
+              <p className="max-w-prose text-[15px] leading-[1.75] text-ink-muted">{p.description}</p>
+              <Link
+                to={p.to}
+                className="mt-4 inline-flex items-center gap-2 text-[13px] font-medium text-primary"
               >
-                <span className="font-display text-sm font-semibold tabular-nums tracking-[0.18em] text-primary">
-                  {String(idx + 1).padStart(2, "0")}
-                </span>
-                <h4 className="mt-5 font-display text-lg md:text-xl font-medium leading-snug tracking-[-0.01em] text-ink">
-                  {step.title}
-                </h4>
-                <p className="mt-2.5 text-[13.5px] leading-[1.7] text-ink-muted">
-                  {step.description}
-                </p>
-              </li>
-            ))}
-          </ol>
+                {p.cta.replace("View", "Open")} page
+                <ArrowUpRight size={15} aria-hidden />
+              </Link>
+            </div>
+          </div>
+          <div className="mt-9">
+            <StepGrid steps={p.steps} />
+          </div>
         </div>
       ))}
     </StaggerReveal>

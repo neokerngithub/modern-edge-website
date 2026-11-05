@@ -14,18 +14,29 @@ const NAV = [
 ] as const;
 
 const STATIC_SERVICES = [
-  "Construction Services",
   "Architecture",
   "Structural & Civil Engineering",
   "Municipal Drawings",
   "DPR Preparation",
-  "Interior, Exterior & Landscape Design",
   "EIA / IEE",
 ];
+
+const LINKED_SERVICES = [
+  { to: "/services/construction", label: "Construction Services" },
+  { to: "/services/interior-exterior-landscape", label: "Interior, Exterior & Landscape Design" },
+] as const;
+
+const linkCls =
+  "flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-[14px] text-ink transition-colors duration-200 hover:bg-muted hover:text-primary";
 
 function ServicesList({ onNavigate }: { onNavigate: () => void }) {
   return (
     <ul className="flex flex-col">
+      <li>
+        <Link to={LINKED_SERVICES[0].to} onClick={onNavigate} className={linkCls}>
+          {LINKED_SERVICES[0].label}
+        </Link>
+      </li>
       <li>
         <Link
           to="/services/property-valuation"
@@ -43,6 +54,11 @@ function ServicesList({ onNavigate }: { onNavigate: () => void }) {
           {s}
         </li>
       ))}
+      <li>
+        <Link to={LINKED_SERVICES[1].to} onClick={onNavigate} className={linkCls}>
+          {LINKED_SERVICES[1].label}
+        </Link>
+      </li>
     </ul>
   );
 }

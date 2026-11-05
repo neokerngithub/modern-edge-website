@@ -49,16 +49,16 @@ function ServicesList({ onNavigate }: { onNavigate: () => void }) {
           </span>
         </Link>
       </li>
-      {STATIC_SERVICES.map((s) => (
-        <li key={s} className="px-3 py-2.5 text-[14px] text-ink-muted cursor-default">
-          {s}
-        </li>
-      ))}
       <li>
         <Link to={LINKED_SERVICES[1].to} onClick={onNavigate} className={linkCls}>
           {LINKED_SERVICES[1].label}
         </Link>
       </li>
+      {STATIC_SERVICES.map((s) => (
+        <li key={s} className="px-3 py-2.5 text-[14px] text-ink-muted cursor-default">
+          {s}
+        </li>
+      ))}
     </ul>
   );
 }

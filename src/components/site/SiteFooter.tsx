@@ -5,11 +5,11 @@ import { Mail, Phone, MapPin, ArrowUpRight, Facebook, Linkedin, Instagram } from
 const SERVICES = [
   "Construction Services",
   "Property Valuation",
+  "Interior, Exterior & Landscape Design",
   "Architecture",
-  "Civil Engineering",
+  "Structural & Civil Engineering",
   "Municipal Drawings",
   "DPR Preparation",
-  "Interior, Exterior & Landscape Design",
   "EIA / IEE",
 ];
 

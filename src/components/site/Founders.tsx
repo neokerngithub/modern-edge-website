@@ -39,6 +39,7 @@ const FOUNDERS = [
 
 export function Founders() {
   return (
+    <>
     <StaggerReveal className="grid gap-6 xl:grid-cols-2 xl:gap-8">
       {FOUNDERS.map((f) => (
         <article
@@ -99,5 +100,6 @@ export function Founders() {
     <p className="mt-8 mx-auto max-w-3xl text-center text-[12px] leading-[1.6] text-ink-muted/80">
       * Projects listed reflect the directors' individual professional experience gained prior to the establishment of Modern Edge Architects & Engineers Pvt. Ltd. and are not represented as projects executed by Modern Edge.
     </p>
+    </>
   );
 }

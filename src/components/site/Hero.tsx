@@ -47,12 +47,11 @@ export function Hero() {
           </div>
 
           <h1 className="mt-10 font-display font-light text-[13vw] sm:text-[11vw] md:text-[8vw] lg:text-[6.4vw] xl:text-[5.6vw] leading-[0.96] tracking-[-0.035em] text-white max-w-[16ch]">
-            <span className="block">Engineering</span>
             <span className="block">
-              Excellence<span className="text-primary">.</span>
+              Built on Technical Rigour<span className="text-primary">.</span>
             </span>
             <span className="block italic font-normal text-white/70">
-              Designing Tomorrow<span className="text-primary not-italic">.</span>
+              Proven in the Field<span className="text-primary not-italic">.</span>
             </span>
           </h1>
 
@@ -61,9 +60,10 @@ export function Hero() {
           </p>
 
           <p className="mt-7 max-w-2xl text-[15px] md:text-[17px] leading-[1.7] text-white/80">
-            Modern Edge Architects &amp; Engineers Pvt. Ltd. delivers construction services, certified property
-            valuation, architecture, and structural &amp; civil engineering — for homeowners, businesses,
-            industries and government agencies across Nepal.
+            Licensed engineering consultancy, construction management and certified property valuation.
+            Headquartered in Koshi Province with nationwide service delivery — covering bank-empaneled
+            valuation across Koshi Province, student visa &amp; embassy property valuation, and
+            NFRS-compliant industrial asset valuation across Nepal.
           </p>
 
           <div className="mt-12 flex flex-wrap items-center gap-3">

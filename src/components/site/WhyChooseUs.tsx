@@ -9,18 +9,18 @@ import {
 import { StaggerReveal } from "./Reveal";
 
 const REASONS = [
-  { icon: Landmark, title: "Experienced directors",
-    body: "Our directors bring extensive professional experience in property valuation, engineering and consultancy, including previous work involving financial institutions." },
+  { icon: Handshake, title: "Direct technical leadership",
+    body: "Clients work directly with our experienced directors, ensuring deep engineering scrutiny, rapid decision-making, and complete accountability across every project phase." },
   { icon: Layers, title: "Multidisciplinary under one roof",
-    body: "Architecture, structural & civil engineering, construction, valuation, interior and landscape delivered by a single accountable team." },
-  { icon: ShieldCheck, title: "Structural integrity first",
-    body: "Grounded in civil and earthquake engineering fundamentals — safety and durability are non-negotiable." },
-  { icon: Gauge, title: "Cost & timeline discipline",
-    body: "Transparent estimation, accurate BOQs and disciplined execution keep projects on track." },
-  { icon: Sparkles, title: "Design that endures",
-    body: "Considered, timeless aesthetics — refined interiors and landscapes finished with precision." },
-  { icon: Handshake, title: "Client-centered execution",
-    body: "A structured process built around clear consultation, close collaboration and a seamless handover." },
+    body: "Architecture, structural & civil engineering, construction, valuation, and interior & landscape delivered by a single coordinated team." },
+  { icon: ShieldCheck, title: "Nepal Building Code (NBC) compliant",
+    body: "Every structural design and municipal drawing is engineered strictly for seismic safety and local soil conditions." },
+  { icon: Landmark, title: "Multi-purpose valuation scope",
+    body: "Valuation reporting for bank collateral in Koshi Province, plus student visa & embassy documentation and NFRS industrial reporting nationwide." },
+  { icon: Gauge, title: "Transparent BOQs & cost discipline",
+    body: "Itemized bills of quantities and realistic material specifications before ground breaks, protecting your investment from unexpected escalations." },
+  { icon: Sparkles, title: "Local roots, nationwide delivery",
+    body: "Deep on-ground roots in Morang and Sunsari, paired with engineering, construction and valuation services delivered across Nepal." },
 ] as const;
 
 export function WhyChooseUs() {

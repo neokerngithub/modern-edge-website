@@ -63,7 +63,9 @@ const SCOPE = [
   "Residential land & buildings",
   "Commercial & industrial properties",
   "Institutional assets",
-  "Bank & financial institution reporting",
+  "Bank & financial institution valuation · Koshi Province",
+  "Student visa & embassy valuation · Nationwide",
+  "NFRS industrial asset valuation · Nationwide",
 ];
 
 function PropertyValuationPage() {

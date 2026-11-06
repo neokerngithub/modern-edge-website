@@ -36,7 +36,7 @@ const SIGNATURE: [Service, Service] = [
     icon: BadgeCheck,
     title: "Property Valuation",
     description:
-      "Accurate property assessments grounded in technical analysis and prevailing market standards — covering residential, commercial, industrial and institutional properties, land, buildings and land & building valuation, including valuations prepared in accordance with bank and professional valuation reporting standards.",
+      "Certified property assessments prepared to rigorous technical and statutory standards. Bank-empaneled property valuation across Koshi Province, alongside nationwide property valuation for student visa & embassy documentation, and NFRS (Nepal Financial Reporting Standards) industrial asset valuation across Nepal.",
   },
 ];
 

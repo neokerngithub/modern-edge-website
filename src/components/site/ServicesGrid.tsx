@@ -41,16 +41,16 @@ const SIGNATURE: [Service, Service] = [
 ];
 
 export const CORE_SERVICES: Service[] = [
+  { icon: Sofa, title: "Interior, Exterior & Landscape Design",
+    description: "Integrated interior, exterior, and landscape design, precisely crafted to reflect your lifestyle and elevate your architecture." },
   { icon: Compass, title: "Architecture",
     description: "Innovative, functional design balancing aesthetics, sustainability and your vision — for residential, commercial and institutional projects." },
-  { icon: Ruler, title: "Civil Engineering",
+  { icon: Ruler, title: "Structural & Civil Engineering",
     description: "Reliable and precise engineering grounded in structural integrity, earthquake-resistant design and long-term performance." },
   { icon: FileSignature, title: "Municipal Drawings",
     description: "Regulation-compliant drawings prepared for municipal approval, sanctioning and permit workflows across local authorities." },
   { icon: ClipboardCheck, title: "DPR Preparation",
     description: "Detailed Project Reports covering technical, financial and design aspects — supporting funding decisions and disciplined execution." },
-  { icon: Sofa, title: "Interior, Exterior & Landscape Design",
-    description: "Integrated interior, exterior, and landscape design, precisely crafted to reflect your lifestyle and elevate your architecture." },
   { icon: TreePine, title: "EIA / IEE",
     description: "Rigorous environmental assessment and compliance. Accurate documentation for seamless approvals. Delivering sustainable outcomes from start to finish." },
 ];

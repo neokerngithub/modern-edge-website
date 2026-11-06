@@ -63,7 +63,7 @@ export function SiteFooter() {
             </div>
             <p className="mt-5 max-w-sm text-sm leading-[1.7] text-white/60">
               A multidisciplinary engineering consultancy delivering architecture,
-              civil engineering, construction and property valuation across Nepal,
+              structural & civil engineering, construction and property valuation across Nepal,
               established in 2024.
             </p>
           </div>

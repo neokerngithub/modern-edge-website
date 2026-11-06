@@ -17,13 +17,13 @@ import { SiteFooter } from "../components/site/SiteFooter";
 import { THEME_SCRIPT } from "../components/site/ThemeToggle";
 
 const DESCRIPTION =
-  "Modern Edge Architects & Engineers provides architecture, civil engineering, construction, property valuation, DPR preparation and related consultancy services in Nepal.";
+  "Modern Edge Architects & Engineers provides architecture, structural & civil engineering, construction, property valuation, DPR preparation and related consultancy services in Nepal.";
 
 const CORE_DISCIPLINES = [
   "Construction Services",
   "Property Valuation",
   "Architecture",
-  "Civil Engineering",
+  "Structural & Civil Engineering",
   "Municipal Drawings",
   "DPR Preparation",
   "Interior, Exterior & Landscape Design",

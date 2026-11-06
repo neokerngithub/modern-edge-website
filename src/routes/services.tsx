@@ -8,7 +8,7 @@ const SERVICES_TITLE =
   "Services — Construction, Architecture, Engineering & Property Valuation | Nepal";
 
 const SERVICES_DESC =
-  "Eight core services under one roof: construction, property valuation, architecture, civil engineering, municipal drawings, DPR, interior, exterior & landscape design and EIA / IEE — across Nepal.";
+  "Eight core services under one roof: construction, property valuation, architecture, structural & civil engineering, municipal drawings, DPR, interior, exterior & landscape design and EIA / IEE — across Nepal.";
 
 export const Route = createFileRoute("/services")({
   component: ServicesPage,

@@ -15,7 +15,7 @@ import { ContactBlock } from "@/components/site/ContactBlock";
 const HOME_TITLE =
   "Modern Edge Architects & Engineers | Architecture, Engineering & Property Valuation Nepal";
 const HOME_DESC =
-  "Modern Edge Architects & Engineers provides architecture, civil engineering, construction, property valuation, DPR preparation and related consultancy services in Nepal.";
+  "Modern Edge Architects & Engineers provides architecture, structural & civil engineering, construction, property valuation, DPR preparation and related consultancy services in Nepal.";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -95,7 +95,7 @@ function HomePage() {
             <p className="max-w-prose text-lg md:text-xl leading-[1.55] tracking-[-0.005em] text-ink">
               Modern Edge Architects &amp; Engineers Pvt. Ltd. is a
               multidisciplinary engineering consultancy delivering construction,
-              property valuation, architecture, civil engineering and interior
+              property valuation, architecture, structural & civil engineering and interior
               &amp; landscape design under one accountable team.
             </p>
             <p className="mt-6 max-w-prose text-[15px] leading-[1.75] text-ink-muted">
@@ -142,7 +142,7 @@ function HomePage() {
             </span>
           </>
         }
-        intro="Construction Services and Property Valuation anchor the practice — supported by architecture, civil engineering, municipal drawings, DPR preparation, interior, exterior & landscape design and EIA / IEE. Our multidisciplinary team brings these services together under one professional practice."
+        intro="Construction Services and Property Valuation anchor the practice — supported by architecture, structural & civil engineering, municipal drawings, DPR preparation, interior, exterior & landscape design and EIA / IEE. Our multidisciplinary team brings these services together under one professional practice."
       >
         <ServicesGrid />
       </Section>

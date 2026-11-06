@@ -61,7 +61,7 @@ export function Hero() {
           </p>
 
           <p className="mt-7 max-w-2xl text-[15px] md:text-[17px] leading-[1.7] text-white/80">
-            Modern Edge Architects &amp; Engineers Pvt. Ltd. delivers architecture, civil
+            Modern Edge Architects &amp; Engineers Pvt. Ltd. delivers architecture, structural &amp; civil
             engineering, construction and property valuation — for homeowners, businesses,
             industries and government agencies across Nepal.
           </p>

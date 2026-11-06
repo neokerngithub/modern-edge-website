@@ -33,9 +33,9 @@ function Page() {
   return (
     <>
       <PageHeader
-        index="07 / Services"
+        index="03 / Services"
         breadcrumb="Interior, Exterior & Landscape"
-        eyebrow="Design Practice · 07"
+        eyebrow="Design Practice · 03"
         title={
           <>
             Interior, Exterior & Landscape.

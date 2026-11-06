@@ -8,7 +8,7 @@ import { PageHeader } from "@/components/site/PageHeader";
 
 const ABOUT_TITLE = "About — Modern Edge Engineering Consultancy | Nepal";
 const ABOUT_DESC =
-  "Modern Edge Architects & Engineers Pvt. Ltd. is a multidisciplinary engineering consultancy in Nepal — architecture, civil engineering, construction, valuation and interior & landscape design under one team.";
+  "Modern Edge Architects & Engineers Pvt. Ltd. is a multidisciplinary engineering consultancy in Nepal — architecture, structural & civil engineering, construction, valuation and interior & landscape design under one team.";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,

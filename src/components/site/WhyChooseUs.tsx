@@ -12,7 +12,7 @@ const REASONS = [
   { icon: Landmark, title: "Experienced directors",
     body: "Our directors bring extensive professional experience in property valuation, engineering and consultancy, including previous work involving financial institutions." },
   { icon: Layers, title: "Multidisciplinary under one roof",
-    body: "Architecture, civil, valuation, interior and landscape delivered by a single accountable team." },
+    body: "Architecture, structural & civil engineering, construction, valuation, interior and landscape delivered by a single accountable team." },
   { icon: ShieldCheck, title: "Structural integrity first",
     body: "Grounded in civil and earthquake engineering fundamentals — safety and durability are non-negotiable." },
   { icon: Gauge, title: "Cost & timeline discipline",

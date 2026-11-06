@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { BrandLogo } from "./BrandLogo";
 import { ThemeToggle } from "./ThemeToggle";
 

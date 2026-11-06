@@ -15,7 +15,7 @@ import { ContactBlock } from "@/components/site/ContactBlock";
 const HOME_TITLE =
   "Modern Edge Architects & Engineers | Architecture, Engineering & Property Valuation Nepal";
 const HOME_DESC =
-  "Modern Edge Architects & Engineers provides architecture, structural & civil engineering, construction, property valuation, DPR preparation and related consultancy services in Nepal.";
+  "Modern Edge Architects & Engineers provides construction services, certified property valuation, architecture, structural & civil engineering, DPR preparation and related consultancy services in Nepal.";
 
 export const Route = createFileRoute("/")({
   component: HomePage,

@@ -42,8 +42,8 @@ function ContactPage() {
         intro="Consultations, property valuations and project inquiries — our team responds within one business day."
         meta={
           <div className="text-[11px] uppercase tracking-[0.24em] text-ink-muted space-y-2">
-            <div>+977 98520 59599</div>
-            <div>+977 97677 84543</div>
+            <div><a href="tel:+9779852059599" className="hover:text-primary transition-colors">+977 98520 59599</a></div>
+            <div><a href="tel:+9779767784543" className="hover:text-primary transition-colors">+977 97677 84543</a></div>
             <div className="text-primary">Sun – Fri · 10:00 AM – 5:30 PM</div>
           </div>
         }

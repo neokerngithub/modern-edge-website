@@ -233,7 +233,18 @@ export function SiteHeader() {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          <span className="relative block h-[22px] w-[22px]" aria-hidden>
+            <span
+              className={`absolute left-[2px] right-[2px] h-[1.5px] rounded-full bg-current transition-all duration-300 ease-out ${
+                open ? "top-[10px] rotate-45" : "top-[7px] rotate-0"
+              }`}
+            />
+            <span
+              className={`absolute left-[2px] right-[2px] h-[1.5px] rounded-full bg-current transition-all duration-300 ease-out ${
+                open ? "top-[10px] -rotate-45" : "top-[14px] rotate-0"
+              }`}
+            />
+          </span>
         </button>
         </div>
       </div>
